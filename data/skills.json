@@ -1,0 +1,67 @@
+{
+    "skills": [
+        {
+            "category": "Web Development",
+            "items": [
+                "HTML5",
+                "CSS3",
+                "JavaScript (ES6+)",
+                "React.js",
+                "Node.js",
+                "Express.js",
+                "MongoDB",
+                "REST APIs",
+                "Responsive Design",
+                "Bootstrap"
+            ]
+        },
+
+        {
+            "category": "Data Science",
+            "items": [
+                "Pandas",
+                "NumPy",
+                "Matplotlib",
+                "Seaborn",
+                "Jupyter Notebooks",
+                "Data Visualization",
+                "Statistical Analysis",
+                "Exploratory Data Analysis (EDA)",
+                "Data Cleaning",
+                "Excel"
+            ]
+        },
+
+        {
+            "category": "Python Development",
+            "items": [
+                "Core Python",
+                "Object-Oriented Programming (OOP)",
+                "File Handling",
+                "Exception Handling",
+                "Automation Scripts",
+                "Problem Solving",
+                "Data Structures & Algorithms",
+                "Web Scraping",
+                "API Integration",
+                "Code Optimization"
+            ]
+        },
+        {
+            "category": "Tools & Technologies",
+            "items": [
+                "C Programming",
+                "Java",
+                "Cyber Security",
+                "MySQL",
+                "Git", 
+                "GitHub", 
+                "VS Code", 
+                "Linux", 
+                "Docker", 
+                "Postman", 
+                "REST APIs"
+            ]
+        }
+    ]
+}
