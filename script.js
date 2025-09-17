@@ -9,7 +9,7 @@ class Portfolio {
         this.featuredProject = null;
         this.activeFilters = new Set(['All']);
         this.searchTerm = '';
-        
+
         this.init();
     }
 
@@ -17,19 +17,19 @@ class Portfolio {
         try {
             // Initialize theme
             this.initTheme();
-            
+
             // Initialize navigation
             this.initNavigation();
-            
+
             // Load data
             await this.loadData();
-            
+
             // Initialize components
             this.initSearch();
             this.initContactForm();
             this.initModal();
             this.initAnimations();
-            
+
             console.log('Portfolio initialized successfully');
         } catch (error) {
             console.error('Error initializing portfolio:', error);
@@ -41,16 +41,16 @@ class Portfolio {
     initTheme() {
         const themeToggle = document.getElementById('theme-toggle');
         const savedTheme = localStorage.getItem('theme') || 'light';
-        
+
         // Set initial theme
         document.documentElement.setAttribute('data-theme', savedTheme);
         this.updateThemeIcon(savedTheme);
-        
+
         // Theme toggle event listener
         themeToggle.addEventListener('click', () => {
             const currentTheme = document.documentElement.getAttribute('data-theme');
             const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-            
+
             document.documentElement.setAttribute('data-theme', newTheme);
             localStorage.setItem('theme', newTheme);
             this.updateThemeIcon(newTheme);
@@ -90,11 +90,11 @@ class Portfolio {
                 e.preventDefault();
                 const targetId = link.getAttribute('href');
                 const targetElement = document.querySelector(targetId);
-                
+
                 if (targetElement) {
                     const headerHeight = document.querySelector('.nav').offsetHeight;
                     const targetPosition = targetElement.offsetTop - headerHeight;
-                    
+
                     window.scrollTo({
                         top: targetPosition,
                         behavior: 'smooth'
@@ -120,11 +120,11 @@ class Portfolio {
             const projectsData = await projectsResponse.json();
             this.projects = projectsData.projects;
             this.featuredProject = projectsData.projects.find(p => p.id === projectsData.featured);
-            
+
             this.renderFeaturedProject();
             this.renderProjects();
             this.renderFilters();
-            
+
         } catch (error) {
             console.error('Error loading data:', error);
             this.showError('Unable to load portfolio data. Some sections may not display correctly.');
@@ -169,11 +169,11 @@ class Portfolio {
     renderFeaturedProject() {
         const featuredContainer = document.getElementById('featured-project-container');
         const featuredBtn = document.getElementById('featured-project-btn');
-        
+
         if (!featuredContainer || !this.featuredProject) return;
 
         const project = this.featuredProject;
-        
+
         featuredContainer.innerHTML = `
             <div class="featured-card fade-in">
                 <h3 class="featured-title">${project.title}</h3>
@@ -199,6 +199,48 @@ class Portfolio {
             </div>
         `;
 
+        // Inside openProjectModal, before assembling modalHTML
+        const imagesHTML = (project.images && project.images.length > 0)
+            ? `
+    <div class="modal-images">
+      <div class="image-carousel">
+        ${project.images.map((src, i) => `
+          <img class="carousel-item"
+               src="${src}"
+               alt="${project.title} image ${i + 1}"
+               loading="lazy">
+        `).join('')}
+      </div>
+    </div>
+  `
+            : `
+    <div class="modal-images">
+      <div class="image-carousel">
+        <div class="carousel-placeholder">
+          <i class="fas fa-image"></i>
+          <p>Project Images</p>
+        </div>
+      </div>
+    </div>
+  `;
+
+        // Then include ${imagesHTML} in modalHTML after the tech tags
+        const modalHTML = `
+  <div class="modal-header">
+    <h2 class="modal-title">${project.title}</h2>
+    <p class="modal-description">${project.description}</p>
+    <div class="modal-tech">
+      ${project.tech.map(tech => `<span class="tech-tag">${tech}</span>`).join('')}
+    </div>
+  </div>
+  ${imagesHTML}
+  <div class="modal-links">
+    ${project.github ? `<a href="${project.github}" target="_blank" rel="noopener" class="btn btn-secondary"><i class="fab fa-github"></i> View Code</a>` : ''}
+    ${project.live ? `<a href="${project.live}" target="_blank" rel="noopener" class="btn btn-primary"><i class="fas fa-external-link-alt"></i> Live Demo</a>` : ''}
+  </div>
+`;
+
+
         // Featured project button in hero
         if (featuredBtn) {
             featuredBtn.addEventListener('click', () => {
@@ -213,7 +255,7 @@ class Portfolio {
         if (!projectsGrid || !this.projects.length) return;
 
         const filteredProjects = this.getFilteredProjects();
-        
+
         if (filteredProjects.length === 0) {
             projectsGrid.innerHTML = `
                 <div class="no-results">
@@ -224,31 +266,37 @@ class Portfolio {
         }
 
         const projectsHTML = filteredProjects.map(project => `
-            <div class="project-card fade-in" onclick="portfolio.openProjectModal('${project.id}')">
-                <div class="project-image">
-                    <i class="fas fa-laptop-code"></i>
-                </div>
-                <div class="project-content">
-                    <h3 class="project-title">${project.title}</h3>
-                    <p class="project-description">${project.short}</p>
-                    <div class="project-tech">
-                        ${project.tech.map(tech => `<span class="tech-tag">${tech}</span>`).join('')}
-                    </div>
-                    <div class="project-links">
-                        ${project.github ? `
-                            <a href="${project.github}" target="_blank" rel="noopener" class="project-link project-link-github" onclick="event.stopPropagation()">
-                                <i class="fab fa-github"></i> Code
-                            </a>
-                        ` : ''}
-                        ${project.live ? `
-                            <a href="${project.live}" target="_blank" rel="noopener" class="project-link project-link-live" onclick="event.stopPropagation()">
-                                <i class="fas fa-external-link-alt"></i> Live
-                            </a>
-                        ` : ''}
-                    </div>
-                </div>
-            </div>
-        `).join('');
+  <div class="project-card fade-in" onclick="portfolio.openProjectModal('${project.id}')">
+    <div class="project-image">
+      ${project.images && project.images.length > 0
+                ? `<img src="${project.images}"
+                   alt="${project.title} thumbnail"
+                   loading="lazy"
+                   decoding="async"
+                   onerror="this.onerror=null; this.replaceWith(document.createElement('i')).className='fas fa-laptop-code';" />`
+                : `<i class="fas fa-laptop-code"></i>`
+            }
+    </div>
+    <div class="project-content">
+      <h3 class="project-title">${project.title}</h3>
+      <p class="project-description">${project.short}</p>
+      <div class="project-tech">
+        ${project.tech.map(tech => `<span class="tech-tag">${tech}</span>`).join('')}
+      </div>
+      <div class="project-links">
+        ${project.github ? `
+          <a href="${project.github}" target="_blank" rel="noopener" class="project-link project-link-github" onclick="event.stopPropagation()">
+            <i class="fab fa-github"></i> Code
+          </a>` : ''}
+        ${project.live ? `
+          <a href="${project.live}" target="_blank" rel="noopener" class="project-link project-link-live" onclick="event.stopPropagation()">
+            <i class="fas fa-external-link-alt"></i> Live
+          </a>` : ''}
+      </div>
+    </div>
+  </div>
+`).join('');
+
 
         projectsGrid.innerHTML = projectsHTML;
     }
@@ -285,7 +333,7 @@ class Portfolio {
             } else {
                 this.activeFilters.add(tag);
             }
-            
+
             if (this.activeFilters.size === 0) {
                 this.activeFilters.add('All');
             }
@@ -300,14 +348,14 @@ class Portfolio {
 
         // Filter by tags
         if (!this.activeFilters.has('All')) {
-            filtered = filtered.filter(project => 
+            filtered = filtered.filter(project =>
                 project.tags.some(tag => this.activeFilters.has(tag))
             );
         }
 
         // Filter by search term
         if (this.searchTerm) {
-            filtered = filtered.filter(project => 
+            filtered = filtered.filter(project =>
                 project.title.toLowerCase().includes(this.searchTerm.toLowerCase()) ||
                 project.short.toLowerCase().includes(this.searchTerm.toLowerCase()) ||
                 project.tech.some(tech => tech.toLowerCase().includes(this.searchTerm.toLowerCase()))
@@ -358,46 +406,75 @@ class Portfolio {
         const project = this.projects.find(p => p.id === projectId);
         const modal = document.getElementById('project-modal');
         const modalBody = document.getElementById('modal-body');
-        
+
         if (!project || !modal || !modalBody) return;
 
+        // Before building modalHTML:
+        const hasImages = Array.isArray(project.images) && project.images.length > 0;
+
+        let imagesHTML = '';
+        if (hasImages) {
+            const imgs = project.images.map((src, i) =>
+                '<img class="carousel-item' + (i === 0 ? ' active' : '') + '"' +
+                ' src="' + src + '"' +
+                ' alt="' + project.title + ' image ' + (i + 1) + '"' +
+                ' loading="lazy" decoding="async"' +
+                " onerror=\"this.style.display='none'\">"
+            ).join('');
+
+            const controls = project.images.length > 1
+                ? '<button class="carousel-prev" aria-label="Previous image"><i class="fas fa-chevron-left"></i></button>' +
+                '<button class="carousel-next" aria-label="Next image"><i class="fas fa-chevron-right"></i></button>'
+                : '';
+
+            imagesHTML =
+                '<div class="modal-images">' +
+                '<div class="image-carousel" data-index="0">' +
+                imgs + controls +
+                '</div>' +
+                '</div>';
+        } else {
+            imagesHTML =
+                '<div class="modal-images">' +
+                '<div class="image-carousel">' +
+                '<div class="carousel-placeholder">' +
+                '<i class="fas fa-image"></i>' +
+                '<p>Project Images</p>' +
+                '</div>' +
+                '</div>' +
+                '</div>';
+        }
+
+        // Then your modalHTML uses the prebuilt imagesHTML:
         const modalHTML = `
-            <div class="modal-header">
-                <h2 class="modal-title">${project.title}</h2>
-                <p class="modal-description">${project.description}</p>
-                <div class="modal-tech">
-                    ${project.tech.map(tech => `<span class="tech-tag">${tech}</span>`).join('')}
-                </div>
-            </div>
-            
-            ${project.images && project.images.length > 0 ? `
-                <div class="modal-images">
-                    <div class="image-carousel">
-                        <div class="carousel-placeholder">
-                            <i class="fas fa-image"></i>
-                            <p>Project Images</p>
-                        </div>
-                    </div>
-                </div>
-            ` : ''}
-            
-            <div class="modal-links">
-                ${project.github ? `
-                    <a href="${project.github}" target="_blank" rel="noopener" class="btn btn-secondary">
-                        <i class="fab fa-github"></i> View Code
-                    </a>
-                ` : ''}
-                ${project.live ? `
-                    <a href="${project.live}" target="_blank" rel="noopener" class="btn btn-primary">
-                        <i class="fas fa-external-link-alt"></i> Live Demo
-                    </a>
-                ` : ''}
-            </div>
-        `;
+  <div class="modal-header">
+    <h2 class="modal-title">${project.title}</h2>
+    <p class="modal-description">${project.description}</p>
+    <div class="modal-tech">
+      ${(project.tech || []).map(tech => `<span class="tech-tag">${tech}</span>`).join('')}
+    </div>
+  </div>
+
+  ${imagesHTML}
+
+  <div class="modal-links">
+    ${project.github ? `
+      <a href="${project.github}" target="_blank" rel="noopener" class="btn btn-secondary">
+        <i class="fab fa-github"></i> View Code
+      </a>
+    ` : ''}
+    ${project.live ? `
+      <a href="${project.live}" target="_blank" rel="noopener" class="btn btn-primary">
+        <i class="fas fa-external-link-alt"></i> Live Demo
+      </a>
+    ` : ''}
+  </div>
+`;
+
 
         modalBody.innerHTML = modalHTML;
         modal.classList.add('active');
-        
+
         // Focus management for accessibility
         modal.querySelector('.modal-close')?.focus();
         document.body.style.overflow = 'hidden';
@@ -415,20 +492,20 @@ class Portfolio {
     initContactForm() {
         const form = document.getElementById('contact-form');
         const status = document.getElementById('form-status');
-        
+
         if (!form) return;
 
         form.addEventListener('submit', async (e) => {
             e.preventDefault();
-            
+
             const formData = new FormData(form);
             const submitBtn = form.querySelector('button[type="submit"]');
             const originalText = submitBtn.innerHTML;
-            
+
             // Show loading state
             submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
             submitBtn.disabled = true;
-            
+
             try {
                 const response = await fetch(form.action, {
                     method: 'POST',
@@ -437,7 +514,7 @@ class Portfolio {
                         'Accept': 'application/json'
                     }
                 });
-                
+
                 if (response.ok) {
                     this.showFormStatus('Message sent successfully! I\'ll get back to you soon.', 'success');
                     form.reset();
@@ -462,7 +539,7 @@ class Portfolio {
         status.textContent = message;
         status.className = `form-status ${type}`;
         status.style.display = 'block';
-        
+
         // Hide after 5 seconds
         setTimeout(() => {
             status.style.display = 'none';
@@ -494,10 +571,10 @@ class Portfolio {
             mutations.forEach(mutation => {
                 mutation.addedNodes.forEach(node => {
                     if (node.nodeType === Node.ELEMENT_NODE) {
-                        const fadeElements = node.querySelectorAll ? 
+                        const fadeElements = node.querySelectorAll ?
                             node.querySelectorAll('.fade-in') : [];
                         fadeElements.forEach(el => observer.observe(el));
-                        
+
                         if (node.classList?.contains('fade-in')) {
                             observer.observe(node);
                         }
@@ -539,9 +616,9 @@ class Portfolio {
                 </button>
             </div>
         `;
-        
+
         document.body.appendChild(errorDiv);
-        
+
         // Auto remove after 8 seconds
         setTimeout(() => {
             errorDiv.remove();

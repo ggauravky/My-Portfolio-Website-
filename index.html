@@ -47,15 +47,14 @@
                 <p class="hero-subtitle">A BCA Student passionate about Data Science, Web Development, AI/ML, and Python
                     Development.</p>
                 <div class="hero-buttons">
-                    <button id="featured-project-btn" class="btn btn-primary">
-                        <i class="fas fa-star"></i> View Featured Project
-                    </button>
+                    <a href="#skills" class="btn btn-secondary">
+                        <i class="fas fa-star"></i> See My Skills
+                    </a>
                     <a href="#projects" class="btn btn-secondary">
                         <i class="fas fa-code"></i> See All Projects
                     </a>
                 </div>
                 <div class="hero-socials">
-                    <!-- EDIT: Update these social links -->
                     <a href="https://github.com/ggauravky" target="_blank" rel="noopener" class="social-link">
                         <i class="fab fa-github"></i>
                     </a>
@@ -73,18 +72,22 @@
             <h2 class="section-title">About Me</h2>
             <div class="about-content">
                 <p>
-                    <!-- EDIT: Customize this about section -->
-                    I'm a passionate BCA student currently in my second year, diving deep into the world of technology.
-                    My journey spans across multiple domains including Data Science, Web Development, AI/ML, and Python
-                    Development.
-                    I love turning complex problems into simple, elegant solutions through code.
+                    Hi, I’m Gaurav Kumar Yadav — a passionate BCA student at BBD University, Lucknow, exploring the
+                    world of programming, web development, data science, and cybersecurity.
                 </p>
                 <p>
-                    When I'm not coding, you'll find me exploring the latest tech trends, contributing to open-source
-                    projects,
-                    or learning new frameworks and libraries. I believe in continuous learning and applying theoretical
-                    knowledge
-                    to real-world projects.
+                    I love transforming ideas into interactive, user-friendly digital experiences while constantly
+                    learning new technologies. From building responsive websites to solving real-world problems with
+                    Python and data, I focus on writing clean, efficient code and crafting projects that make an impact.
+                <p>
+                    Curious by nature and driven by growth, I enjoy exploring multiple domains — whether it’s full-stack
+                    development, data visualization, or cyber defense — and I’m always open to collaborating on exciting
+                    projects.
+                </p>
+                </p>
+                <p>
+                    Outside of coding, I’m on a journey of self-improvement, creativity, and building things that truly
+                    add value. 🚀
                 </p>
             </div>
         </div>
@@ -100,7 +103,7 @@
         </div>
     </section>
 
-        <!-- Experience Section -->
+    <!-- Experience Section -->
     <section id="experience" class="experience section">
         <div class="container">
             <h2 class="section-title">Experience</h2>
@@ -111,22 +114,23 @@
                         <div class="experience-info">
                             <h3 class="experience-title">MERN Stack Developer Intern</h3>
                             <h4 class="company-name">Codec Technologies India</h4>
-                            <!-- EDIT: Update the period -->
                             <span class="experience-period">June 2024 — August 2024</span>
                         </div>
                     </div>
                     <div class="experience-description">
                         <p>
-                            <!-- EDIT: Customize experience description -->
-                            Gained hands-on experience in full-stack development using MongoDB, Express.js, React.js, and Node.js. 
-                            Worked on real-world projects, collaborated with senior developers, and enhanced my problem-solving skills.
+                            Gained hands-on experience in full-stack development using MongoDB, Express.js, React.js,
+                            and Node.js.
+                            Worked on real-world projects, collaborated with senior developers, and enhanced my
+                            problem-solving skills.
                         </p>
                     </div>
                     <div class="experience-certificate">
                         <img src="./assets/codec-cert.png" alt="Certificate" class="cert-thumbnail">
                         <div class="cert-info">
                             <span class="cert-badge">Certified</span>
-                            <a href="https://drive.google.com/file/d/1sHpltrFbsMl327KQf4ph2NE7xFkVBvbt/view?usp=drive_link" target="_blank" rel="noopener" class="cert-link">View Certificate</a>
+                            <a href="https://drive.google.com/file/d/1sHpltrFbsMl327KQf4ph2NE7xFkVBvbt/view?usp=drive_link"
+                                target="_blank" rel="noopener" class="cert-link">View Certificate</a>
                         </div>
                     </div>
                 </div>
@@ -134,15 +138,15 @@
         </div>
     </section>
 
-    <!-- Featured Project Section -->
+    <!-- Featured Project Section
     <section id="featured" class="featured section">
         <div class="container">
             <h2 class="section-title">Featured Project</h2>
             <div id="featured-project-container" class="featured-project">
                 <!-- Featured project will be loaded dynamically -->
-            </div>
-        </div>
-    </section>
+    </div>
+    </div>
+    </section> -->
 
     <!-- Projects Section -->
     <section id="projects" class="projects section">
@@ -163,11 +167,74 @@
         </div>
     </section>
 
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Let's Connect</h3>
+                    <p>I'm always interested in discussing new opportunities, collaborating on projects, or just having
+                        a tech conversation.</p>
+                    <div class="contact-socials">
+                        <a href="https://github.com/ggauravky" target="_blank" rel="noopener" class="contact-social">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/gauravky/" target="_blank" rel="noopener"
+                            class="contact-social">
+                            <i class="fab fa-linkedin"></i>
+                            <span>LinkedIn</span>
+                        </a>
+                    </div>
+                </div>
+                <form id="contact-form" class="contact-form" action="https://formspree.io/f/meolbadr" method="POST">
+                    <div class="form-group">
+                        <label for="name">Name *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                    <div id="form-status" class="form-status"></div>
+                </form>
+            </div>
+        </div>
+    </section>
 
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Gaurav. Built with ❤️ using HTML, CSS & JavaScript.</p>
+        </div>
+    </footer>
 
+    <!-- Project Modal -->
+    <div id="project-modal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close modal">
+                <i class="fas fa-times"></i>
+            </button>
+            <div id="modal-body" class="modal-body">
+                <!-- Modal content will be populated dynamically -->
+            </div>
+        </div>
+    </div>
 
-
-
+    <!-- JavaScript -->
+    <script src="script.js"></script>
 </body>
 
 </html>

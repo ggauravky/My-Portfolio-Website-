@@ -10,7 +10,6 @@
                 "Node.js",
                 "Express.js",
                 "MongoDB",
-                "REST APIs",
                 "Responsive Design",
                 "Bootstrap"
             ]
@@ -23,6 +22,8 @@
                 "NumPy",
                 "Matplotlib",
                 "Seaborn",
+                "Scikit-learn",
+                "PyTorch",
                 "Jupyter Notebooks",
                 "Data Visualization",
                 "Statistical Analysis",
@@ -54,13 +55,15 @@
                 "Java",
                 "Cyber Security",
                 "MySQL",
+                "Google Cloud & AWS" ,
+                "Figma & Canva",
                 "Git", 
                 "GitHub", 
                 "VS Code", 
                 "Linux", 
-                "Docker", 
-                "Postman", 
-                "REST APIs"
+                "Docker",
+                "Notion",
+                "Postman"
             ]
         }
     ]

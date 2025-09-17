@@ -1,0 +1,169 @@
+{
+    "featured": "aireel-studio",
+    "projects": [
+        {
+            "id": "aireel-studio",
+            "title": "AIReel Studio",
+            "short": "A tool to generate short, AI-assisted video reels with auto-captions and smart edits.",
+            "description": "AIReel Studio is an innovative web application that leverages AI to help content creators produce engaging short-form videos automatically. The platform uses advanced algorithms to analyze video content, generate captions, apply smart edits, and optimize for social media platforms. Built with a modern tech stack, it features real-time processing, intuitive UI, and seamless integration with popular video formats. This project showcases my skills in full-stack development, AI integration, and media processing.",
+            "tech": [
+                "Python",
+                "Flask",
+                " ffmpeg",
+                "ElevenLabs API"
+            ],
+            "github": "https://github.com/ggauravky/My-all-Python-Projects-/tree/main/AI%20Reel-Studio",
+            "live": "",
+            "tags": [
+                "AI",
+                "Python"
+            ],
+            "images": [
+                "assets/aireel.png"
+            ]
+        },
+        {
+            "id": "DishDash",
+            "title": "DishDash",
+            "short": "A responsive and animated food delivery website with seamless UI/UX and interactivity.",
+            "description": "DishDash is a responsive and animated food delivery website built with HTML5, CSS3, and JavaScript (ES6+). It features an interactive meal catalog, add-to-cart functionality, animated navigation, and a secure login/registration system. Designed with a mobile-first approach using CSS Grid and Flexbox, it ensures smooth performance, accessibility, and seamless adaptability across devices. As the sole developer, I was responsible for UI/UX design, responsive layouts, animations, interactivity, authentication, and testing.",
+            "tech": [
+                "HTML5",
+                "CSS3",
+                "JavaScript (ES6+)",
+                "Responsive Design Principles",
+                "Front-End Performance Optimization",
+                "Accessibility Tools"
+            ],
+            "github": "https://github.com/ggauravky/My-all-Web-Dev-Projects/tree/main/food%20delivery%20website",
+            "live": "https://gfooddelievery.netlify.app/",
+            "tags": [
+                "Web Dev",
+                "Full-Stack"
+            ],
+            "images": [
+                "assets/dishdash.png"
+            ]
+        },
+        {
+            "id": "ShopEase",
+            "title": "ShopEase",
+            "short": "A tool to generate short, AI-assisted video reels with auto-captions and smart edits.",
+            "description": "ShopEase is a responsive e-commerce shopping website designed to provide a seamless online shopping experience. It features a clean homepage with product categories, a promotional banner, and a newsletter subscription popup. Users can browse products, view details, and manage their cart with an intuitive interface. The site is built with HTML5, CSS3, and JavaScript (ES6+), focusing on responsiveness, interactivity, and performance optimization. I implemented modern UI/UX design principles, animations, and accessibility support to ensure it works smoothly across devices and browsers.",
+            "tech": [
+                "HTML5",
+                "CSS3 (Flexbox & Grid)",
+                "JavaScript (ES6+)",
+                "Responsive Design",
+                "Animations & Transitions",
+                "Accessibility",
+                "Performance Optimization"
+            ],
+            "github": "https://github.com/ggauravky/My-all-Web-Dev-Projects/tree/main/ecommerce-website-master",
+            "live": "https://gshoppingweb.netlify.app/",
+            "tags": [
+                "Web Development",
+                "E-Commerce",
+                "Frontend"
+            ],
+            "images": [
+                "assets/shopp1.png"
+            ]
+        },
+        {
+            "id": "FlappyBirdClone",
+            "title": "Flappy Bird Game",
+            "short": "A fun browser-based Flappy Bird clone built using HTML, CSS, and JavaScript.",
+            "description": "Flappy Bird Game is a simple yet addictive browser-based clone of the classic Flappy Bird. Developed using HTML5, CSS3, and JavaScript (ES6+), it features smooth gameplay, gravity mechanics, collision detection, score tracking, and a restart option. The project demonstrates the use of JavaScript for game logic, animations, and event handling, while CSS ensures a visually appealing layout. Designed to run seamlessly in modern browsers, the game highlights core concepts of front-end game development.",
+            "tech": [
+                "HTML5",
+                "CSS3",
+                "JavaScript (ES6+)",
+                "Canvas API",
+                "Game Loop Logic",
+                "Collision Detection"
+            ],
+            "github": "https://github.com/ggauravky/My-all-Web-Dev-Projects/tree/main/flappy-bird",
+            "live": "https://flappy-bird-game-gaurav.netlify.app/",
+            "tags": [
+                "Web Dev",
+                "Game Development",
+                "JavaScript"
+            ],
+            "images": [
+                "assets/flappy.png"
+            ]
+        },
+        {
+            "id": "ToDoListApp",
+            "title": "To-Do List",
+            "short": "A simple and interactive To-Do List app to manage daily tasks effectively.",
+            "description": "To-Do List App is a lightweight and responsive task management tool built with HTML5, CSS3, and JavaScript (ES6+). It allows users to add, edit, mark as complete, and delete tasks, offering a smooth and intuitive experience. The app is designed with a clean UI and local storage integration to persist tasks even after page reload. This project demonstrates DOM manipulation, event handling, and front-end interactivity using vanilla JavaScript.",
+            "tech": [
+                "HTML5",
+                "CSS3",
+                "JavaScript (ES6+)",
+                "Local Storage",
+                "DOM Manipulation",
+                "Responsive Design"
+            ],
+            "github": "https://github.com/ggauravky/My-all-Web-Dev-Projects/tree/main/TO-DO-LIST",
+            "live": "https://g-to-do-list-g.netlify.app/",
+            "tags": [
+                "Web Dev",
+                "Productivity",
+                "JavaScript"
+            ],
+            "images": [
+                "assets/todo.png"
+            ]
+        },
+        {
+            "id": "RubixCube",
+            "title": "Rubik's Cube",
+            "short": "A fully functional 3D Rubik’s Cube simulation built with HTML, CSS, and JavaScript.",
+            "description": "Rubik’s Cube is an interactive and fully functional 3D cube simulation created using HTML5, CSS3, and JavaScript (ES6+). Users can rotate the cube in real time, shuffle it, and attempt to solve it just like a physical cube. The project demonstrates advanced CSS transforms, 3D animations, and logic handling for cube movements. With a smooth and responsive design, it provides an engaging puzzle-solving experience directly in the browser.",
+            "tech": [
+                "HTML5",
+                "CSS3",
+                "JavaScript (ES6+)",
+                "3D CSS Transforms",
+                "Animations",
+                "Responsive Design"
+            ],
+            "github": "https://github.com/ggauravky/My-all-Web-Dev-Projects/tree/main/rubix%20cube",
+            "live": "https://g-rubix-cube.netlify.app/",
+            "tags": [
+                "Web Dev",
+                "Game",
+                "JavaScript"
+            ],
+            "images": [
+                "assets/rubix.png"
+            ]
+        },
+        {
+            "id": "PDFToAudioBook",
+            "title": "PDF to Audio Book",
+            "short": "A Python tool that converts PDF documents into audiobooks using text-to-speech.",
+            "description": "PDF to Audio Book is a Python-based project that transforms PDF documents into audio format, making reading more accessible and convenient. It extracts text from PDF files and converts it into natural-sounding speech using Python libraries. This project is designed for students, researchers, and readers who prefer listening to content on the go. It highlights text extraction, text-to-speech integration, file handling, and automation through Python.",
+            "tech": [
+                "Python",
+                "PyPDF2 / fitz (PyMuPDF)",
+                "pyttsx3 / gTTS",
+                "File Handling",
+                "Automation Scripts"
+            ],
+            "github": "https://github.com/ggauravky/My-all-Python-Projects-/tree/main/PDF_to_Audio_Book_using_Python",
+            "live": "",
+            "tags": [
+                "Python",
+                "Automation",
+                "AI"
+            ],
+            "images": [
+                "assets/pdftoaudio.png"
+            ]
+        }
+    ]
+}
