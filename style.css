@@ -161,6 +161,26 @@ body {
   width: 100%;
 }
 
+/* External Link Icon */
+.nav-link.external-link {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+}
+
+.nav-link.external-link i {
+    font-size: var(--font-size-xs);
+    opacity: 0.7;
+    transition: all var(--transition-fast);
+}
+
+.nav-link.external-link:hover i {
+    opacity: 1;
+    transform: translateX(2px) translateY(-1px);
+    color: var(--secondary-color);
+}
+
+
 /* Theme Toggle */
 .theme-toggle {
   background: none;

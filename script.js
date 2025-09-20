@@ -87,6 +87,11 @@ class Portfolio {
         // Smooth scrolling for navigation links
         navLinks.forEach(link => {
             link.addEventListener('click', (e) => {
+                // Skip smooth scrolling for external pages
+                if (link.classList.contains('external-page')) {
+                    return; // Let the link work normally
+                }
+
                 e.preventDefault();
                 const targetId = link.getAttribute('href');
                 const targetElement = document.querySelector(targetId);
@@ -102,6 +107,7 @@ class Portfolio {
                 }
             });
         });
+
     }
 
     // Data Loading
