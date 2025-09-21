@@ -1,38 +1,305 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <!-- SEO Meta Tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coming Soon - Gaurav</title>
-    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👨‍💻</text></svg>">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Gaurav">
+    <meta name="keywords"
+        content="Gaurav, Blog, Data Science, Web Development, AI, Machine Learning, Python, Programming, Tech Articles">
+
+    <!-- Primary Meta Tags -->
+    <title>Blog - Gaurav's Tech Insights | Data Science & Web Development</title>
+    <meta name="title" content="Blog - Gaurav's Tech Insights | Data Science & Web Development">
+    <meta name="description"
+        content="Explore in-depth articles about Data Science, Web Development, AI/ML, and Python programming. Learn from practical examples and industry insights by Gaurav.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://your-domain.com/blog.html">
+    <meta property="og:title" content="Blog - Gaurav's Tech Insights | Data Science & Web Development">
+    <meta property="og:description"
+        content="Explore in-depth articles about Data Science, Web Development, AI/ML, and Python programming. Learn from practical examples and industry insights.">
+    <meta property="og:image" content="https://your-domain.com/assets/blog-og-image.jpg">
+    <meta property="og:site_name" content="Gaurav's Portfolio">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://your-domain.com/blog.html">
+    <meta property="twitter:title" content="Blog - Gaurav's Tech Insights | Data Science & Web Development">
+    <meta property="twitter:description"
+        content="Explore in-depth articles about Data Science, Web Development, AI/ML, and Python programming.">
+    <meta property="twitter:image" content="https://your-domain.com/assets/blog-og-image.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👨‍💻</text></svg>">
+    <link rel="apple-touch-icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👨‍💻</text></svg>">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://your-domain.com/blog.html">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="blog.css">
+
+    <!-- Preconnect for performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="blog.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        crossorigin="anonymous">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      "name": "Gaurav's Tech Blog",
+      "description": "A blog about Data Science, Web Development, AI/ML, and Python programming",
+      "url": "https://your-domain.com/blog.html",
+      "author": {
+        "@type": "Person",
+        "name": "Gaurav",
+        "url": "https://your-domain.com"
+      },
+      "publisher": {
+        "@type": "Person",
+        "name": "Gaurav"
+      }
+    }
+    </script>
 </head>
+
 <body>
-    <div class="container">
-        <div class="icon">
-            👨‍💻
-        </div>
-        
-        <h1>Coming Soon</h1>
-        
-        <p>Something awesome is on the way!</p>
-        
-        <div class="buttons">
-            <a href="index.html" class="btn">
-                <i class="fas fa-home"></i> Home
-            </a>
-            <a href="blog.html" class="btn">
-                <i class="fas fa-blog"></i> Blog
-            </a>
-        </div>
-        
-        <div class="footer">
-            <p>&copy; 2025 Gaurav</p>
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loading-overlay">
+        <div class="loading-spinner">
+            <div class="spinner-ring"></div>
+            <p>Loading amazing content...</p>
         </div>
     </div>
+
+    <!-- Navigation -->
+    <nav class="nav" role="navigation" aria-label="Main navigation">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo" aria-label="Home">Gaurav</a>
+            <ul class="nav-menu" role="menubar">
+                <li role="none"><a href="index.html" class="nav-link" role="menuitem">Home</a></li>
+                <li role="none"><a href="index.html#about" class="nav-link" role="menuitem">About</a></li>
+                <li role="none"><a href="index.html#projects" class="nav-link" role="menuitem">Projects</a></li>
+                <li role="none"><a href="index.html#contact" class="nav-link" role="menuitem">Contact</a></li>
+                <li role="none"><a href="blog.html" class="nav-link active" role="menuitem" aria-current="page">Blog (under Process)</a>
+                </li>
+            </ul>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                <i class="fas fa-moon"></i>
+            </button>
+            <div class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Enhanced Hero Section -->
+    <section class="hero blog-hero">
+        <div class="hero-background">
+            <div class="hero-particles">
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge fade-in">
+                    <i class="fas fa-blog"></i>
+                    <span>Tech Blog</span>
+                </div>
+                <h1 class="hero-title fade-in">
+                    Insights & <span class="gradient-text">Innovation</span>
+                </h1>
+                <p class="hero-subtitle fade-in">
+                    Diving deep into <strong>Data Science</strong>, <strong>Web Development</strong>,
+                    <strong>AI/ML</strong>, and sharing my coding adventures
+                </p>
+
+                <div class="hero-features fade-in">
+                    <div class="feature-item">
+                        <i class="fas fa-lightbulb"></i>
+                        <span>In-depth Tutorials</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-code"></i>
+                        <span>Practical Examples</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-rocket"></i>
+                        <span>Latest Trends</span>
+                    </div>
+                </div>
+
+                <div class="blog-stats fade-in">
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="fas fa-newspaper"></i>
+                        </div>
+                        <span class="stat-number" id="total-posts">0</span>
+                        <span class="stat-label">Articles</span>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="fas fa-tags"></i>
+                        </div>
+                        <span class="stat-number" id="total-categories">0</span>
+                        <span class="stat-label">Categories</span>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <span class="stat-number" id="total-reads">2.5k</span>
+                        <span class="stat-label">Reads</span>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <span class="stat-number">150+</span>
+                        <span class="stat-label">Likes</span>
+                    </div>
+                </div>
+
+                <div class="hero-cta fade-in">
+                    <button class="btn-cta"
+                        onclick="document.getElementById('blog-grid').scrollIntoView({behavior: 'smooth'})">
+                        <span>Start Reading</span>
+                        <i class="fas fa-arrow-down"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Blog Controls -->
+    <section class="section controls-section">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 class="section-title">Latest Articles</h2>
+                <p class="section-subtitle">Discover insights, tutorials, and experiences from the world of technology
+                </p>
+            </div>
+
+            <div class="blog-controls fade-in">
+                <div class="search-container">
+                    <div class="search-wrapper">
+                        <input type="text" id="blog-search" class="search-input" placeholder="Search articles..."
+                            aria-label="Search articles">
+                        <i class="fas fa-search search-icon"></i>
+                    </div>
+                </div>
+
+                <div class="filter-section">
+                    <span class="filter-label">Filter by:</span>
+                    <div class="filter-tags" id="blog-filters" role="group" aria-label="Article categories">
+                        <button class="filter-tag active" data-category="all">
+                            <i class="fas fa-th-large"></i>
+                            All
+                        </button>
+                        <!-- Dynamic filters will be added here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Posts Grid -->
+    <section class="section posts-section">
+        <div class="container">
+            <div class="error-container" id="error-container" style="display: none;">
+                <div class="error-message">
+                    <div class="error-icon">
+                        <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <h3>Oops! Something went wrong</h3>
+                    <p id="error-text">We couldn't load the blog posts right now.</p>
+                    <button class="btn btn-primary" onclick="blog.retry()">
+                        <i class="fas fa-redo"></i>
+                        Try Again
+                    </button>
+                </div>
+            </div>
+
+            <div class="blog-grid" id="blog-grid">
+                <!-- Posts will be loaded here by JavaScript -->
+            </div>
+
+            <div class="load-more-container">
+                <button class="btn-load-more" id="load-more-btn" style="display: none;">
+                    <span>Load More Articles</span>
+                    <i class="fas fa-plus"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Newsletter Section -->
+    <section class="section newsletter-section">
+        <div class="container">
+            <div class="newsletter fade-in">
+                <div class="newsletter-bg">
+                    <div class="newsletter-pattern"></div>
+                </div>
+                <div class="newsletter-content">
+                    <div class="newsletter-icon">
+                        <i class="fas fa-envelope-open"></i>
+                    </div>
+                    <h3>Stay in the Loop</h3>
+                    <p>Get the latest articles delivered straight to your inbox. No spam, just quality content about
+                        technology and programming.</p>
+
+                    <form class="newsletter-form" id="newsletter-form" novalidate>
+                        <div class="form-group">
+                            <div class="input-wrapper">
+                                <input type="email" id="newsletter-email" class="newsletter-input"
+                                    placeholder="Enter your email address" required autocomplete="email"
+                                    aria-label="Email address">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <button type="submit" class="btn-subscribe" id="newsletter-submit">
+                                <span>Subscribe</span>
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                        <p class="newsletter-note" id="newsletter-message" style="display:none"></p>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Article Modal -->
+    <div class="modal" id="article-modal" role="dialog" aria-labelledby="modal-title" aria-hidden="true">
+        <div class="modal-content article-modal-content">
+            <button class="modal-close" id="article-close" aria-label="Close article">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-body article-body" id="article-body">
+                <!-- Article content will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="blog.js"></script>
 </body>
+
 </html>

@@ -1,1 +1,15 @@
-// soon
+{
+  "posts": [
+    {
+      "id": "Comming Soon",
+      "title": "Comming Soon",
+      "excerpt": "Comming Soon",
+      "content": "## Comming Soon",
+      "category": "data-science",
+      "date": "2025-09-15",
+      "readTime": "8 min",
+      "icon": "fas fa-chart-line",
+      "image": "assets/"
+    }
+  ]
+}
