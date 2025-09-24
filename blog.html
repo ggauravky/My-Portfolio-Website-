@@ -1,104 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" data-theme="light">
 <head>
-    <!-- SEO Meta Tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="index, follow">
-    <meta name="author" content="Gaurav">
-    <meta name="keywords"
-        content="Gaurav, Blog, Data Science, Web Development, AI, Machine Learning, Python, Programming, Tech Articles">
+    <meta name="description" content="Gaurav's tech blog featuring insights on data science, web development, AI/ML, and programming tutorials">
+    <meta name="keywords" content="Data Science, Web Development, AI/ML, Python, JavaScript, Blog, Programming">
+    <meta name="author" content="Gaurav Kumar Yadav">
+    <title>Gaurav's Tech Blog - Data Science, AI/ML & Web Development Insights</title>
 
-    <!-- Primary Meta Tags -->
-    <title>Blog - Gaurav's Tech Insights | Data Science & Web Development</title>
-    <meta name="title" content="Blog - Gaurav's Tech Insights | Data Science & Web Development">
-    <meta name="description"
-        content="Explore in-depth articles about Data Science, Web Development, AI/ML, and Python programming. Learn from practical examples and industry insights by Gaurav.">
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://your-domain.com/blog.html">
-    <meta property="og:title" content="Blog - Gaurav's Tech Insights | Data Science & Web Development">
-    <meta property="og:description"
-        content="Explore in-depth articles about Data Science, Web Development, AI/ML, and Python programming. Learn from practical examples and industry insights.">
-    <meta property="og:image" content="https://your-domain.com/assets/blog-og-image.jpg">
-    <meta property="og:site_name" content="Gaurav's Portfolio">
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://your-domain.com/blog.html">
-    <meta property="twitter:title" content="Blog - Gaurav's Tech Insights | Data Science & Web Development">
-    <meta property="twitter:description"
-        content="Explore in-depth articles about Data Science, Web Development, AI/ML, and Python programming.">
-    <meta property="twitter:image" content="https://your-domain.com/assets/blog-og-image.jpg">
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon"
-        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👨‍💻</text></svg>">
-    <link rel="apple-touch-icon"
-        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👨‍💻</text></svg>">
-
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://your-domain.com/blog.html">
-
-    <!-- CSS Files -->
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="blog.css">
-
-    <!-- Preconnect for performance -->
+    <!-- Preconnect to external domains -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-        crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
 
-    <!-- JSON-LD Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Blog",
-      "name": "Gaurav's Tech Blog",
-      "description": "A blog about Data Science, Web Development, AI/ML, and Python programming",
-      "url": "https://your-domain.com/blog.html",
-      "author": {
-        "@type": "Person",
-        "name": "Gaurav",
-        "url": "https://your-domain.com"
-      },
-      "publisher": {
-        "@type": "Person",
-        "name": "Gaurav"
-      }
-    }
-    </script>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
+          integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" 
+          crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="blog.css">
 </head>
-
 <body>
     <!-- Loading Overlay -->
-    <div class="loading-overlay" id="loading-overlay">
+    <div id="loading-overlay" class="loading-overlay">
         <div class="loading-spinner">
             <div class="spinner-ring"></div>
             <p>Loading amazing content...</p>
         </div>
     </div>
 
-    <!-- Navigation -->
-    <nav class="nav" role="navigation" aria-label="Main navigation">
+    <!-- Navigation - EXACTLY matching portfolio structure -->
+    <nav class="nav">
         <div class="nav-container">
-            <a href="index.html" class="nav-logo" aria-label="Home">Gaurav</a>
-            <ul class="nav-menu" role="menubar">
-                <li role="none"><a href="index.html" class="nav-link" role="menuitem">Home</a></li>
-                <li role="none"><a href="index.html#about" class="nav-link" role="menuitem">About</a></li>
-                <li role="none"><a href="index.html#projects" class="nav-link" role="menuitem">Projects</a></li>
-                <li role="none"><a href="index.html#contact" class="nav-link" role="menuitem">Contact</a></li>
-                <li role="none"><a href="blog.html" class="nav-link active" role="menuitem" aria-current="page">Blog (under Process)</a>
-                </li>
+            <a href="index.html" class="nav-logo">
+                <i class="fas fa-code"></i> Gaurav
+            </a>
+
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="index.html#about" class="nav-link">About</a></li>
+                <li><a href="index.html#experience" class="nav-link">Experience</a></li>
+                <li><a href="index.html#projects" class="nav-link">Projects</a></li>
+                <li><a href="blog.html" class="nav-link active">Blog</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
             </ul>
-            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+
+            <!-- Theme Toggle - EXACT same ID as portfolio -->
+            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
                 <i class="fas fa-moon"></i>
             </button>
-            <div class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+
+            <!-- Mobile Menu Toggle - EXACT same class as portfolio -->
+            <div class="nav-toggle">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -106,47 +64,55 @@
         </div>
     </nav>
 
-    <!-- Enhanced Hero Section -->
-    <section class="hero blog-hero">
-        <div class="hero-background">
-            <div class="hero-particles">
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-            </div>
+    <!-- Blog Hero Section -->
+    <section class="blog-hero">
+        <div class="hero-background"></div>
+        <div class="hero-particles">
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
         </div>
+
         <div class="container">
             <div class="hero-content">
-                <div class="hero-badge fade-in">
+                <div class="hero-badge">
                     <i class="fas fa-blog"></i>
                     <span>Tech Blog</span>
                 </div>
-                <h1 class="hero-title fade-in">
-                    Insights & <span class="gradient-text">Innovation</span>
+
+                <h1 class="hero-title">
+                    Diving deep into <span class="gradient-text">Data Science</span>,
+                    <span class="gradient-text">Web Development</span>,
+                    <span class="gradient-text">AI/ML</span>, and sharing my coding adventures
                 </h1>
-                <p class="hero-subtitle fade-in">
-                    Diving deep into <strong>Data Science</strong>, <strong>Web Development</strong>,
-                    <strong>AI/ML</strong>, and sharing my coding adventures
+
+                <p class="hero-subtitle">
+                    Discover insights, tutorials, and experiences from the world of technology. 
+                    Join me on this journey of continuous learning and innovation.
                 </p>
 
-                <div class="hero-features fade-in">
+                <div class="hero-features">
                     <div class="feature-item">
                         <i class="fas fa-lightbulb"></i>
                         <span>In-depth Tutorials</span>
                     </div>
                     <div class="feature-item">
-                        <i class="fas fa-code"></i>
-                        <span>Practical Examples</span>
+                        <i class="fas fa-rocket"></i>
+                        <span>Real Projects</span>
                     </div>
                     <div class="feature-item">
-                        <i class="fas fa-rocket"></i>
-                        <span>Latest Trends</span>
+                        <i class="fas fa-brain"></i>
+                        <span>AI/ML Insights</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-code"></i>
+                        <span>Code Snippets</span>
                     </div>
                 </div>
 
-                <div class="blog-stats fade-in">
+                <div class="blog-stats">
                     <div class="stat-item">
                         <div class="stat-icon">
                             <i class="fas fa-newspaper"></i>
@@ -163,143 +129,342 @@
                     </div>
                     <div class="stat-item">
                         <div class="stat-icon">
-                            <i class="fas fa-eye"></i>
+                            <i class="fas fa-clock"></i>
                         </div>
-                        <span class="stat-number" id="total-reads">2.5k</span>
-                        <span class="stat-label">Reads</span>
+                        <span class="stat-number" id="avg-read-time">0</span>
+                        <span class="stat-label">Min Read</span>
                     </div>
                     <div class="stat-item">
                         <div class="stat-icon">
-                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-calendar"></i>
                         </div>
-                        <span class="stat-number">150+</span>
-                        <span class="stat-label">Likes</span>
+                        <span class="stat-number" id="latest-post">New</span>
+                        <span class="stat-label">Latest</span>
                     </div>
                 </div>
 
-                <div class="hero-cta fade-in">
-                    <button class="btn-cta"
-                        onclick="document.getElementById('blog-grid').scrollIntoView({behavior: 'smooth'})">
-                        <span>Start Reading</span>
+                <div class="hero-cta">
+                    <button class="btn-cta" onclick="document.getElementById('blog-content').scrollIntoView({behavior: 'smooth'})">
                         <i class="fas fa-arrow-down"></i>
+                        <span>Explore Articles</span>
                     </button>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Enhanced Blog Controls -->
-    <section class="section controls-section">
-        <div class="container">
-            <div class="section-header fade-in">
-                <h2 class="section-title">Latest Articles</h2>
-                <p class="section-subtitle">Discover insights, tutorials, and experiences from the world of technology
-                </p>
-            </div>
+    <!-- Main Blog Content -->
+    <main id="blog-content">
+        <!-- Controls Section -->
+        <section class="section controls-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Latest Articles</h2>
+                    <p class="section-subtitle">Discover the latest insights and tutorials from the world of technology</p>
+                </div>
 
-            <div class="blog-controls fade-in">
-                <div class="search-container">
+                <div class="blog-controls">
                     <div class="search-wrapper">
-                        <input type="text" id="blog-search" class="search-input" placeholder="Search articles..."
-                            aria-label="Search articles">
                         <i class="fas fa-search search-icon"></i>
+                        <input 
+                            type="text" 
+                            id="search-input" 
+                            class="search-input" 
+                            placeholder="Search articles..."
+                            aria-label="Search blog articles"
+                        >
                     </div>
-                </div>
 
-                <div class="filter-section">
-                    <span class="filter-label">Filter by:</span>
-                    <div class="filter-tags" id="blog-filters" role="group" aria-label="Article categories">
-                        <button class="filter-tag active" data-category="all">
-                            <i class="fas fa-th-large"></i>
-                            All
-                        </button>
-                        <!-- Dynamic filters will be added here -->
+                    <div class="filter-section">
+                        <span class="filter-label">Categories:</span>
+                        <div id="filter-tags" class="filter-tags">
+                            <button class="filter-tag active" data-filter="all">
+                                <i class="fas fa-th"></i>
+                                All
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Blog Posts Grid -->
-    <section class="section posts-section">
-        <div class="container">
-            <div class="error-container" id="error-container" style="display: none;">
-                <div class="error-message">
-                    <div class="error-icon">
-                        <i class="fas fa-exclamation-triangle"></i>
-                    </div>
-                    <h3>Oops! Something went wrong</h3>
-                    <p id="error-text">We couldn't load the blog posts right now.</p>
-                    <button class="btn btn-primary" onclick="blog.retry()">
-                        <i class="fas fa-redo"></i>
-                        Try Again
-                    </button>
+        <!-- Error Container -->
+        <div id="error-container" class="error-container" style="display: none;">
+            <div class="error-message">
+                <div class="error-icon">
+                    <i class="fas fa-exclamation-triangle"></i>
                 </div>
-            </div>
-
-            <div class="blog-grid" id="blog-grid">
-                <!-- Posts will be loaded here by JavaScript -->
-            </div>
-
-            <div class="load-more-container">
-                <button class="btn-load-more" id="load-more-btn" style="display: none;">
-                    <span>Load More Articles</span>
-                    <i class="fas fa-plus"></i>
+                <h3>Oops! Something went wrong</h3>
+                <p id="error-text">We couldn't load the blog posts right now.</p>
+                <button onclick="window.blog.retry()" class="btn btn-primary">
+                    <i class="fas fa-refresh"></i>
+                    Try Again
                 </button>
             </div>
         </div>
-    </section>
 
-    <!-- Enhanced Newsletter Section -->
-    <section class="section newsletter-section">
-        <div class="container">
-            <div class="newsletter fade-in">
-                <div class="newsletter-bg">
-                    <div class="newsletter-pattern"></div>
+        <!-- Blog Grid -->
+        <section class="section">
+            <div class="container">
+                <div id="blog-grid" class="blog-grid">
+                    <!-- Blog posts will be rendered here dynamically -->
                 </div>
-                <div class="newsletter-content">
-                    <div class="newsletter-icon">
-                        <i class="fas fa-envelope-open"></i>
-                    </div>
-                    <h3>Stay in the Loop</h3>
-                    <p>Get the latest articles delivered straight to your inbox. No spam, just quality content about
-                        technology and programming.</p>
 
-                    <form class="newsletter-form" id="newsletter-form" novalidate>
+                <div class="load-more-container" style="text-align: center; margin-top: 2rem;">
+                    <button id="load-more-btn" class="btn-load-more" style="display: none;">
+                        <i class="fas fa-chevron-down"></i>
+                        <span>Load More Articles</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section class="section newsletter-section">
+            <div class="container">
+                <div class="newsletter">
+                    <div class="newsletter-bg">
+                        <div class="newsletter-pattern"></div>
+                    </div>
+
+                    <div class="newsletter-icon">
+                        <i class="fas fa-paper-plane"></i>
+                    </div>
+
+                    <h3>Stay Updated</h3>
+                    <p>Get the latest articles delivered straight to your inbox. No spam, just quality content about technology and programming.</p>
+
+                    <form id="newsletter-form" class="newsletter-form">
                         <div class="form-group">
                             <div class="input-wrapper">
-                                <input type="email" id="newsletter-email" class="newsletter-input"
-                                    placeholder="Enter your email address" required autocomplete="email"
-                                    aria-label="Email address">
                                 <i class="fas fa-envelope"></i>
+                                <input 
+                                    type="email" 
+                                    id="newsletter-email" 
+                                    class="newsletter-input" 
+                                    placeholder="Enter your email address"
+                                    required
+                                    aria-label="Email address for newsletter"
+                                >
                             </div>
-                            <button type="submit" class="btn-subscribe" id="newsletter-submit">
-                                <span>Subscribe</span>
+                            <button type="submit" class="btn-subscribe">
                                 <i class="fas fa-paper-plane"></i>
+                                <span>Subscribe</span>
                             </button>
                         </div>
-                        <p class="newsletter-note" id="newsletter-message" style="display:none"></p>
-                    </form>
 
+                        <div class="newsletter-note">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Your privacy is important to us. Unsubscribe anytime.</span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Enhanced Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-main">
+                    <div class="footer-brand">
+                        <div class="footer-logo">
+                            <i class="fas fa-code"></i>
+                            <span>Gaurav Kumar Yadav</span>
+                        </div>
+                        <p class="footer-tagline">BCA Student passionate about Data Science, Web Development, AI/ML, and Python Development</p>
+                        <div class="footer-socials">
+                            <a href="https://github.com/your-github" class="footer-social-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://linkedin.com/in/your-linkedin" class="footer-social-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="https://twitter.com/your-twitter" class="footer-social-link" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="mailto:your-email@example.com" class="footer-social-link" aria-label="Email">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="footer-links">
+                        <div class="footer-section">
+                            <h4>Navigation</h4>
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="index.html#about">About</a></li>
+                                <li><a href="index.html#experience">Experience</a></li>
+                                <li><a href="index.html#projects">Projects</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="footer-section">
+                            <h4>Blog</h4>
+                            <ul>
+                                <li><a href="blog.html">Latest Articles</a></li>
+                                <li><a href="blog.html?category=data-science">Data Science</a></li>
+                                <li><a href="blog.html?category=web-development">Web Development</a></li>
+                                <li><a href="blog.html?category=ai-ml">AI/ML</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="footer-section">
+                            <h4>Resources</h4>
+                            <ul>
+                                <li><a href="#newsletter">Newsletter</a></li>
+                                <li><a href="index.html#contact">Contact</a></li>
+                                <li><a href="#" onclick="document.getElementById('theme-toggle').click(); return false;">Dark Mode</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="footer-section">
+                            <h4>Connect</h4>
+                            <ul>
+                                <li>
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    Lucknow, India
+                                </li>
+                                <li>
+                                    <i class="fas fa-graduation-cap"></i>
+                                    BBD University
+                                </li>
+                                <li>
+                                    <i class="fas fa-code"></i>
+                                    BCA Student
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <div class="footer-bottom-content">
+                        <p>&copy; 2024 Gaurav Kumar Yadav. All rights reserved.</p>
+                        <div class="footer-bottom-links">
+                            <a href="#privacy">Privacy Policy</a>
+                            <a href="#terms">Terms of Service</a>
+                            <a href="#sitemap">Sitemap</a>
+                        </div>
+                    </div>
+                    <div class="footer-tech-note">
+                        <p>
+                            <i class="fas fa-heart text-red-500"></i>
+                            Made with passion using HTML, CSS, JavaScript
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
+    </footer>
 
-    <!-- Article Modal -->
-    <div class="modal" id="article-modal" role="dialog" aria-labelledby="modal-title" aria-hidden="true">
-        <div class="modal-content article-modal-content">
-            <button class="modal-close" id="article-close" aria-label="Close article">
+    <!-- Blog Post Modal -->
+    <div id="blog-modal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close modal">
                 <i class="fas fa-times"></i>
             </button>
-            <div class="modal-body article-body" id="article-body">
-                <!-- Article content will be loaded here -->
+            <div class="modal-body">
+                <article class="modal-article">
+                    <header class="modal-header">
+                        <div class="modal-meta">
+                            <span class="modal-category"></span>
+                            <span class="modal-date"></span>
+                            <span class="modal-read-time">
+                                <i class="fas fa-clock"></i>
+                                <span></span>
+                            </span>
+                        </div>
+                        <h1 class="modal-title"></h1>
+                        <div class="modal-author">
+                            <div class="author-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="author-info">
+                                <span class="author-name">Gaurav Kumar Yadav</span>
+                                <span class="author-title">BCA Student & Tech Enthusiast</span>
+                            </div>
+                        </div>
+                    </header>
+
+                    <div class="modal-content-body">
+                        <!-- Article content will be inserted here -->
+                    </div>
+
+                    <footer class="modal-footer">
+                        <div class="modal-tags">
+                            <!-- Tags will be inserted here -->
+                        </div>
+
+                        <div class="modal-share">
+                            <h4>Share this article</h4>
+                            <div class="share-buttons">
+                                <button class="share-btn share-twitter" onclick="shareArticle('twitter')">
+                                    <i class="fab fa-twitter"></i>
+                                </button>
+                                <button class="share-btn share-linkedin" onclick="shareArticle('linkedin')">
+                                    <i class="fab fa-linkedin"></i>
+                                </button>
+                                <button class="share-btn share-copy" onclick="shareArticle('copy')">
+                                    <i class="fas fa-link"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </footer>
+                </article>
             </div>
         </div>
     </div>
 
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
     <!-- Scripts -->
     <script src="blog.js"></script>
-</body>
 
+    <!-- Share functionality -->
+    <script>
+        function shareArticle(platform) {
+            const title = document.querySelector('.modal-title')?.textContent || 'Check out this article';
+            const url = window.location.href;
+
+            switch(platform) {
+                case 'twitter':
+                    window.open(
+                        `https://twitter.com/intent/tweet?text=${encodeURIComponent(title)}&url=${encodeURIComponent(url)}`,
+                        '_blank',
+                        'width=600,height=400'
+                    );
+                    break;
+                case 'linkedin':
+                    window.open(
+                        `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`,
+                        '_blank',
+                        'width=600,height=400'
+                    );
+                    break;
+                case 'copy':
+                    if (navigator.clipboard) {
+                        navigator.clipboard.writeText(url).then(() => {
+                            const btn = document.querySelector('.share-copy');
+                            const originalIcon = btn.innerHTML;
+                            btn.innerHTML = '<i class="fas fa-check"></i>';
+                            btn.title = 'Copied!';
+                            setTimeout(() => {
+                                btn.innerHTML = originalIcon;
+                                btn.title = 'Copy link';
+                            }, 2000);
+                        }).catch(err => {
+                            console.error('Failed to copy: ', err);
+                        });
+                    }
+                    break;
+            }
+        }
+    </script>
+</body>
 </html>
