@@ -1,15 +1,15 @@
 {
   "posts": [
     {
-      "id": "Comming Soon",
-      "title": "Comming Soon",
-      "excerpt": "Comming Soon",
-      "content": "## Comming Soon",
-      "category": "data-science",
-      "date": "2025-09-15",
-      "readTime": "8 min",
-      "icon": "fas fa-chart-line",
-      "image": "assets/"
+      "id": 1,
+      "title": "🚨 The AI on Your Desk Might Be Working for a Cybercriminal",
+      "excerpt": "74% of companies are already under attack from AI-powered threats. Learn how AI is being weaponized and how to protect yourself before it’s too late.",
+      "content": "🚨 The AI on your desk might be working for a cybercriminal right now. And you’d never know until it’s too late.\n\n74% of companies are already under attack from AI-powered threats. The worst part? Most have no idea it’s happening.\n\n## 💥 The $25 Million Deepfake Wake-Up Call\nIn 2024, global engineering firm Arup lost $25M in a single attack. The CFO thought he was on a Zoom call with colleagues. The faces looked real. The voices sounded right. It was all AI-generated — and it convinced him to transfer millions.\n\nThis isn’t sci-fi. It happened. And it’s just the beginning.\n\n## ⚡ The Hidden AI War You Don’t See\nWhile you use ChatGPT to write emails or Claude to summarize reports, here’s what’s really going on:\n\n### 🎭 AI-Phishing: Now Superhuman\n- +1,265% increase in AI-generated phishing attacks\n- No spelling mistakes, no weird grammar — just perfectly personalized messages\n- Scans your LinkedIn, social media, and company news for context\n- 40% of phishing emails are now AI-written\n\n**Dark Web Tools:** WormGPT and FraudGPT — criminal AI chatbots that generate flawless scam scripts with zero ethics.\n\n### 💉 Prompt Injection: The #1 AI Risk Nobody Talks About\nRanked #1 AI security risk of 2025 by OWASP.\n- You tell your AI to summarize a website\n- That site hides malicious instructions\n- Your AI follows them — not you — and leaks data or executes harmful actions\n\n**Real case:** Researchers made ChatGPT send entire chat histories to attacker servers without the user knowing.\n\n### 🧬 Model Poisoning: When AI Learns to Lie\nIf even 0.001% of AI training data is compromised, results can collapse:\n- −27% accuracy in image recognition\n- −22% fraud detection effectiveness\n- Wrong diagnoses in healthcare AI\n\n**Recent case:** 100 poisoned models uploaded to Hugging Face — some containing malicious code.\n\n### 👻 The $670K ‘Shadow AI’ Problem\nEmployees secretly use unauthorized AI tools for work:\n- Personal ChatGPT accounts\n- Unofficial browser extensions\n- Third-party AI with zero oversight\n\n**Stat:** Breaches cost $670,000 more when Shadow AI is involved.\n\n### 🌙 Real-World AI Attacks That Should Keep You Up at Night\n- Remoteli.io Bot Hack — GPT-3 Twitter bot hijacked via prompt injection, leaking programming and posting offensive content.\n- ConfusedPilot Attack — Malicious data poisoned RAG-based AI (like Microsoft Copilot) to return altered facts.\n- Insurance Fraud Collapse — A poisoned fraud detection AI dropped from 97.2% accuracy to 74.5%, letting fake claims slide.\n\n## 🌍 The Global Attack Landscape Is Exploding\n93% of businesses expect to face daily AI attacks by the end of 2025.\n\n## 💸 The Investment Reality Check\nAI/ML security investments now account for 21% of total cybersecurity budgets as organizations prioritize AI threat defense.\n\n## 🛡 How to Protect Yourself — Before It’s Too Late\n### For Individuals\n- Never paste sensitive data into AI tools\n- Verify unusual requests via another channel\n- Be skeptical of perfectly crafted unexpected emails\n- Stick to company-approved AI tools\n\n### For Companies\n- Create AI governance policies now\n- Monitor AI usage across all teams\n- Train employees on AI-specific risks\n- Validate training data sources\n- Use AI-powered defenses to fight AI-powered attacks\n\n**The “Three-Question Rule” before trusting AI output:**\n1. Who trained this AI?\n2. What data was used?\n3. Can I verify this somewhere else?\n\n## 🏁 We’re in an AI Arms Race\n- Companies using strong AI security tools save $1.9M per breach\n- 93% of businesses expect daily AI attacks by 2025\n\nYou have two choices: Adapt now… or become the next statistic.\n\n💬 What’s your biggest AI security concern? Share it in the comments.\n🔁 Repost to protect your network.\n🚀 Follow for more AI & cybersecurity insights that could save your business.",
+      "category": "AI & Cybersecurity",
+      "date": "2025-08-10",
+      "readTime": 7,
+      "tags": ["ai", "cybersecurity", "threats", "deepfake", "phishing"],
+      "image": "assets/ai-cybersecurity.png"
     }
   ]
 }
