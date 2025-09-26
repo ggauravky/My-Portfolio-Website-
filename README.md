@@ -1,153 +1,96 @@
-# Gaurav’s Portfolio Website
+# My Portfolio & Blog
 
-"Hi, I’m Gaurav 👋 — A BCA Student passionate about Data Science, Web Development, AI/ML, and Python Development."  
-A single-page responsive portfolio site to showcase skills, projects, and experience.
+A personal portfolio website designed to showcase my skills, projects, and experience in web development, data science, and AI/ML. It features a clean, responsive, single-page layout with a separate, fully-functional blog.
 
 ## Features
-- Single-page design
-- Responsive layout
-- Light/dark theme with localStorage
-- Dynamic skills and projects via JSON
-- Filters and search for projects
-- Accessible modal for project details
-- Smooth IntersectionObserver reveal animations
-- Contact form with Formspree
-- SEO meta tags and Open Graph image
-- No build tools required (plain HTML, CSS, JS)
+
+-   **Fully Responsive**: Adapts seamlessly to all screen sizes, from mobile to desktop.
+-   **Light/Dark Theme**: A user-friendly theme switcher that saves your preference in local storage.
+-   **Dynamic Content**: Skills, projects, and blog posts are loaded from external `JSON` files, making content updates simple and quick without touching the HTML.
+-   **Interactive Projects Section**: Includes live search and tag-based filtering to easily navigate through projects.
+-   **Detailed Project Modals**: Click on any project to view more details, including descriptions, tech stack, and links, in an accessible modal window.
+-   **Functional Blog**: A complete blog with a dedicated page, search, and category filters, also powered by a `JSON` file.
+-   **Smooth Animations**: Subtle scroll-based animations using the Intersection Observer API for a modern user experience.
+-   **Contact Form**: Integrated with Formspree for a hassle-free way to get in touch.
+
+## Tech Stack
+
+-   **Frontend**: HTML5, CSS3 (Flexbox & Grid), Vanilla JavaScript (ES6+)
+-   **Content Management**: `JSON` files for skills, projects, and blog posts.
+-   **Deployment**: Ready to be deployed on any static hosting platform (Vercel, Netlify, GitHub Pages).
 
 ## Project Structure
+
 ```
-portfolio-gav/
-├─ index.html
-├─ styles.css
-├─ script.js
-├─ data/
-│  ├─ skills.json
-│  └─ projects.json
-├─ assets/
-│  ├─ profile.jpg
-│  ├─ codec-logo.png
-│  ├─ codec-cert.jpg
-│  └─ og-image.jpg
-├─ README.md
-└─ LICENSE
-```
-
-## Editing Guide
-- Edit About text, socials, and experience details in `index.html` (look for `EDIT` comments).
-- Update experience period, description, and certificate “Verify” link in `index.html`.
-- Replace images in `assets/` (profile, logo, certificate, og-image) with your own.
-
-## Skills (data/skills.json)
-Skills are fetched at runtime.
-
-```json
-{
-  "skills": [
-    { "category": "Web Development", "items": ["HTML", "CSS", "JavaScript"] },
-    { "category": "Data Science", "items": ["Pandas", "NumPy", "Matplotlib", "Seaborn", "EDA"] },
-    { "category": "AI/ML", "items": ["Scikit-learn", "TensorFlow (optional)", "Regression", "Classification", "Clustering"] },
-    { "category": "Python Development", "items": ["Core Python (OOP)", "File Handling", "Automation & Scripting", "Problem Solving / DSA"] }
-  ]
-}
+.
+├── index.html          # The main portfolio page
+├── blog.html           # The blog page
+├── projects.html       # A placeholder page for all projects
+├── style.css           # Main stylesheet for the portfolio
+├── script.js           # Main JavaScript for the portfolio
+├── blog.css            # Stylesheet for the blog page
+├── blog.js             # JavaScript for the blog page
+├── data/
+│   ├── projects.json   # Data for the project showcase
+│   └── skills.json     # Data for the skills section
+├── blog.json           # Data for the blog posts
+├── assets/             # Images, logos, and other static files
+└── README.md
 ```
 
-## Projects (data/projects.json)
-Projects are fetched at runtime. AIReel Studio is the featured project.
+## Getting Started
 
-```json
-{
-  "featured": "aireel-studio",
-  "projects": [
-    {
-      "id": "aireel-studio",
-      "title": "AIReel Studio",
-      "short": "A tool to generate short, AI-assisted video reels with auto-captions and smart edits.",
-      "description": "Longer description for modal...",
-      "tech": ["React (demo)", "Node.js", "FFmpeg", "Python"],
-      "github": "https://github.com/ggauravky/AIReel-Studio",
-      "live": "",
-      "tags": ["AI", "Video", "MERN"],
-      "images": ["assets/aireel-1.jpg", "assets/aireel-2.jpg"]
-    }
-  ]
-}
-```
+To get a local copy up and running, follow these simple steps.
 
-## Experience (Codec Technologies India)
-- Role: MERN Stack Developer Intern  
-- Period: June 2024 — Aug 2024  
-- Logo: `assets/codec-logo.png`  
-- Certificate: [Certified — View certificate](assets/codec-cert.jpg)  
-- Verification link: [External verification URL](#)
+### Prerequisites
 
-## Contact Form
-- Default: Formspree — replace the `action` URL with your endpoint.  
-- Netlify Forms: remove `action`, add `netlify` and `name` attributes to the `<form>`.
+You need a local server to run the project due to the use of the `fetch` API to load JSON data.
 
-## SEO
-Update in `index.html`:  
-- `<title>` meta title  
-- Meta description  
-- Open Graph image → `assets/og-image.jpg`  
-- Canonical URL placeholder
+### Installation & Setup
 
-## Local Preview
-```bash
-cd portfolio-gav
-python -m http.server 8000
+1.  **Clone the repository:**
+    ```bash
+    git clone [https://github.com/your-username/my-portfolio-website.git](https://github.com/your-username/my-portfolio-website.git)
+    cd my-portfolio-website
+    ```
+2.  **Run a local server.** Here are a few options:
+    -   **Using Python:**
+        ```bash
+        python -m http.server
+        ```
+    -   **Using Node.js (with `http-server` package):**
+        ```bash
+        npx http-server
+        ```
+    -   **Using the VS Code Live Server extension.**
 
-open http://localhost:8000
-```
+3.  Open your browser and navigate to `http://localhost:8000` (or the address provided by your local server).
 
-```bash
-cd portfolio-gav
-npx http-server -p 8000
+## Customization Guide
 
-open http://localhost:8000
-```
+1.  **Update Personal Information (`index.html`):**
+    -   Change the page `<title>` and meta tags.
+    -   Edit the "About Me" section with your own bio.
+    -   Update social media `href` attributes in the hero and contact sections.
+    -   Modify the "Experience" section with your work history.
+    -   Replace the `action` URL in the `<form>` tag with your own Formspree endpoint.
 
-## Deployment
+2.  **Update Skills (`data/skills.json`):**
+    -   Edit the skill categories and the list of items under each to match your skillset.
 
-### Vercel
-```bash
-npx vercel --prod
-```
+3.  **Update Projects (`data/projects.json`):**
+    -   Add your project objects to the `projects` array.
+    -   Set the `id` of your top project as the value for the `featured` key.
+    -   Make sure all image paths in the `images` array are correct.
 
-### Netlify
-- In UI: no build command; publish directory = root  
-- CLI:
-```bash
-npm i -g netlify-cli
-netlify deploy --prod --dir .
-```
+4.  **Update Blog Posts (`blog.json`):**
+    -   Add new post objects to the `posts` array.
+    -   Ensure the image paths are correct.
 
-### GitHub Pages
-Enable Pages in repository settings:  
-- Branch: `main`  
-- Folder: `/ (root)`  
-- Use the provided GitHub Pages URL
-
-## Checklist
-- [ ] Replace images in assets/  
-- [ ] Update Formspree ID  
-- [ ] Update About and Experience info  
-- [ ] Skills/projects render correctly  
-- [ ] Theme toggle works  
-- [ ] Filters and search work  
-- [ ] Featured project modal opens  
-- [ ] Test a form submission
-
-## Changelog / What to replace
-- assets/profile.jpg  
-- assets/codec-logo.png  
-- assets/codec-cert.jpg  
-- assets/og-image.jpg  
-- Certificate verification URL  
-- Canonical URL  
-- Formspree ID  
-- skills.json  
-- projects.json
+5.  **Replace Images (`assets/`):**
+    -   Add your own images (profile picture, project screenshots, etc.) to the `assets` folder.
+    -   Update the corresponding paths in the `.html` and `.json` files.
 
 ## License
-[MIT License](LICENSE)
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
