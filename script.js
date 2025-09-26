@@ -264,48 +264,65 @@ class Portfolio {
 
         if (filteredProjects.length === 0) {
             projectsGrid.innerHTML = `
-                <div class="no-results">
-                    <p>No projects found matching your criteria.</p>
-                </div>
-            `;
+            <div class="no-results">
+                <p>No projects found matching your criteria.</p>
+            </div>
+        `;
             return;
         }
 
-        const projectsHTML = filteredProjects.map(project => `
-  <div class="project-card fade-in" onclick="portfolio.openProjectModal('${project.id}')">
-    <div class="project-image">
-      ${project.images && project.images.length > 0
-                ? `<img src="${project.images}"
-                   alt="${project.title} thumbnail"
-                   loading="lazy"
-                   decoding="async"
-                   onerror="this.onerror=null; this.replaceWith(document.createElement('i')).className='fas fa-laptop-code';" />`
+        // Limit to 7 projects for the main page
+        const displayProjects = filteredProjects.slice(0, 7);
+
+        // Regular project cards
+        const projectsHTML = displayProjects.map(project => `
+        <div class="project-card fade-in" onclick="portfolio.openProjectModal('${project.id}')">
+            <div class="project-image">
+                ${project.images && project.images.length > 0
+                ? `<img src="${project.images[0]}" alt="${project.title} thumbnail" loading="lazy" decoding="async" onerror="this.onerror=null; this.replaceWith(document.createElement('i').className='fas fa-laptop-code')">`
                 : `<i class="fas fa-laptop-code"></i>`
             }
-    </div>
-    <div class="project-content">
-      <h3 class="project-title">${project.title}</h3>
-      <p class="project-description">${project.short}</p>
-      <div class="project-tech">
-        ${project.tech.map(tech => `<span class="tech-tag">${tech}</span>`).join('')}
-      </div>
-      <div class="project-links">
-        ${project.github ? `
-          <a href="${project.github}" target="_blank" rel="noopener" class="project-link project-link-github" onclick="event.stopPropagation()">
-            <i class="fab fa-github"></i> Code
-          </a>` : ''}
-        ${project.live ? `
-          <a href="${project.live}" target="_blank" rel="noopener" class="project-link project-link-live" onclick="event.stopPropagation()">
-            <i class="fas fa-external-link-alt"></i> Live
-          </a>` : ''}
-      </div>
-    </div>
-  </div>
-`).join('');
+            </div>
+            <div class="project-content">
+                <h3 class="project-title">${project.title}</h3>
+                <p class="project-description">${project.short}</p>
+                <div class="project-tech">
+                    ${project.tech.map(tech => `<span class="tech-tag">${tech}</span>`).join('')}
+                </div>
+                <div class="project-links">
+                    ${project.github ? `<a href="${project.github}" target="_blank" rel="noopener" class="project-link project-link-github" onclick="event.stopPropagation()"><i class="fab fa-github"></i> Code</a>` : ''}
+                    ${project.live ? `<a href="${project.live}" target="_blank" rel="noopener" class="project-link project-link-live" onclick="event.stopPropagation()"><i class="fas fa-external-link-alt"></i> Live</a>` : ''}
+                </div>
+            </div>
+        </div>
+    `).join('');
 
+        // Create the "More Projects" card with the image
+        const moreProjectsCard = `
+        <div class="project-card more-projects-card fade-in" onclick="window.location.href='projects.html'">
+            <div class="project-image">
+                <img src="./assets/morep.png" alt="Click for More Projects" loading="lazy" decoding="async">
+            </div>
+            <div class="project-content">
+                <h3 class="project-title">More Projects</h3>
+                <p class="project-description">Explore all my projects sorted by technology and category</p>
+                <div class="project-tech">
+                    <span class="tech-tag">View All</span>
+                    <span class="tech-tag">Categorized</span>
+                </div>
+                <div class="project-links">
+                    <span class="more-projects-link">
+                        <i class="fas fa-arrow-right"></i> Next Page
+                    </span>
+                </div>
+            </div>
+        </div>
+    `;
 
-        projectsGrid.innerHTML = projectsHTML;
+        // Combine and render both regular projects and the more projects card
+        projectsGrid.innerHTML = projectsHTML + moreProjectsCard;
     }
+
 
     // Project Filtering
     renderFilters() {

@@ -1212,3 +1212,93 @@ textarea:focus {
   object-position: center;     /* keep centered */
   display: block;
 }
+
+/* More Projects Card Styles */
+.more-projects-card {
+    cursor: pointer;
+    transition: all var(--transition-normal);
+    background: var(--bg-color);
+    border: 1px solid var(--border-color);
+}
+
+.more-projects-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px var(--shadow-hover);
+    border-color: var(--primary-color);
+}
+
+.more-projects-card .project-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform var(--transition-normal);
+}
+
+.more-projects-card:hover .project-image img {
+    transform: scale(1.02);
+}
+
+.more-projects-card .project-title {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.more-projects-card .project-description {
+    color: var(--text-secondary);
+}
+
+.more-projects-card .tech-tag {
+    background: var(--primary-color);
+    color: white;
+}
+
+.more-projects-link {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    color: var(--primary-color);
+    font-weight: 500;
+    font-size: var(--font-size-sm);
+    transition: color var(--transition-fast);
+}
+
+.more-projects-card:hover .more-projects-link {
+    color: var(--secondary-color);
+}
+
+.more-projects-card:hover .more-projects-link i {
+    transform: translateX(3px);
+}
+
+.more-projects-link i {
+    transition: transform var(--transition-fast);
+}
+
+/* Dark theme support */
+[data-theme="dark"] .more-projects-card {
+    background: var(--bg-color);
+    border-color: var(--border-color);
+}
+
+[data-theme="dark"] .more-projects-card:hover {
+    border-color: var(--primary-color);
+}
+
+
+/* Dark theme support */
+[data-theme="dark"] .more-projects-card {
+    background: var(--bg-color);
+    border-color: var(--border-color);
+}
+
+[data-theme="dark"] .more-projects-card:hover {
+    border-color: var(--primary-color);
+}
+
+[data-theme="dark"] .more-projects-card .project-title {
+    color: var(--primary-color);
+}
+
+[data-theme="dark"] .more-projects-card .project-description {
+    color: var(--text-secondary);
+}
