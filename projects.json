@@ -1,0 +1,33 @@
+{
+  "projects": [
+    {
+      "id": "1",
+      "title": "AIReel Studio",
+      "description": "A tool to generate short, AI-assisted video reels with auto-captions and smart edits.",
+      "longDescription": "AIReel Studio is an innovative web application that leverages AI to help content creators produce engaging short-form videos automatically. The platform uses advanced algorithms to analyze video content, generate captions, apply smart edits, and optimize for social media platforms. Built with a modern tech stack, it features real-time processing, intuitive UI, and seamless integration with popular video formats. This project showcases my skills in full-stack development, AI integration, and media processing.",
+      "tech": [
+        "Python",
+        "Flask",
+        " ffmpeg",
+        "ElevenLabs API"
+      ],
+      "category": "Python",
+      "difficulty": "hard",
+      "status": "completed",
+      "duration": "2 weeks",
+      "github": "https://github.com/ggauravky/My-all-Python-Projects-/tree/main/AI%20Reel-Studio",
+      "live": "",
+      "images": [
+        "assets/aireel.png" , "assets/propyai1.png"
+      ],
+      "features": [
+        "AI-powered automatic caption generation",
+        "Smart video trimming and editing",
+        "Real-time video processing with ffmpeg",
+        "Voiceover integration using ElevenLabs API",
+        "Optimized export for social media platforms",
+        "User-friendly web interface built with Flask"
+      ]
+    }
+  ]
+}

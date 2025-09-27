@@ -1,20 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects - Gaurav Kumar Yadav</title>
-    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>">
+    <title>All Projects — Gaurav | Complete Portfolio Collection</title>
+    
+    <link rel="icon" type="image/x-icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👨‍💻</text></svg>">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Import main portfolio styles first, then projects-specific styles -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="projects.css">
+    
+    <meta name="description" content="Explore all of Gaurav's projects across web development, AI/ML, data science, and more. Complete collection with advanced filtering and search.">
 </head>
+
 <body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-content">
+            <div class="loading-spinner"></div>
+            <p class="loading-text">Loading Projects...</p>
+        </div>
+    </div>
+
+    <!-- Navigation (Same as main portfolio) -->
     <nav class="nav">
         <div class="nav-container">
-            <a href="index.html" class="nav-logo">
-                <i class="fas fa-code"></i> Gaurav
-            </a>
+            <a href="index.html" class="nav-logo"><i class="fas fa-code"></i> Gaurav</a>
             <ul class="nav-menu">
                 <li><a href="index.html#about" class="nav-link">About</a></li>
                 <li><a href="index.html#skills" class="nav-link">Skills</a></li>
@@ -23,11 +39,9 @@
                 <li><a href="projects.html" class="nav-link active">All Projects</a></li>
                 <li><a href="blog.html" class="nav-link external-page">Blog</a></li>
                 <li><a href="index.html#contact" class="nav-link">Contact</a></li>
-                <li>
-                    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+                <li><button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
                         <i class="fas fa-moon"></i>
-                    </button>
-                </li>
+                    </button></li>
             </ul>
             <div class="nav-toggle">
                 <span></span>
@@ -37,32 +51,203 @@
         </div>
     </nav>
 
-    <div class="coming-soon-container">
-        <div class="coming-soon-content">
-            <i class="fas fa-rocket coming-soon-icon"></i>
-            <h1 class="coming-soon-title">Coming Soon</h1>
-            <p class="coming-soon-subtitle">I'm working on something amazing. Stay tuned!</p>
-            <a href="index.html" class="back-home-btn">
-                <i class="fas fa-home"></i> Back to Home
-            </a>
+    <!-- Hero Section -->
+    <section id="projects-hero" class="projects-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">My Projects</h1>
+                <p class="hero-subtitle">
+                    A comprehensive showcase of my work across various technologies and domains. 
+                    From AI-powered applications to responsive web solutions.
+                </p>
+
+                            <!-- Statistics Dashboard -->
+            <div class="stats-grid">
+                <div class="stat-card" id="total-projects-stat">
+                    <div class="stat-number">0</div>
+                    <div class="stat-label">Total Projects</div>
+                </div>
+                <div class="stat-card" id="completed-projects-stat">
+                    <div class="stat-number">0</div>
+                    <div class="stat-label">Completed</div>
+                </div>
+                <div class="stat-card" id="technologies-stat">
+                    <div class="stat-number">0</div>
+                    <div class="stat-label">Technologies</div>
+                </div>
+                <div class="stat-card" id="categories-stat">
+                    <div class="stat-number">0</div>
+                    <div class="stat-label">Categories</div>
+                </div>
+            </div>
+            
+            <!-- Quick Project Overview -->
+            <div class="project-overview">
+                <div class="overview-section">
+                    <h3><i class="fas fa-chart-pie"></i> Project Distribution</h3>
+                    <div id="category-breakdown" class="category-breakdown">
+                        <!-- Will be populated by JavaScript -->
+                    </div>
+                </div>
+                
+                <div class="overview-section">
+                    <h3><i class="fas fa-tasks"></i> Development Status</h3>
+                    <div id="status-breakdown" class="status-breakdown">
+                        <!-- Will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+
+                
+                <!-- Statistics Cards -->
+                <div class="stats-grid">
+                    <div class="stat-card fade-in">
+                        <div class="stat-number" id="total-projects">0</div>
+                        <div class="stat-label">Total Projects</div>
+                    </div>
+                    <div class="stat-card fade-in">
+                        <div class="stat-number" id="total-categories">0</div>
+                        <div class="stat-label">Categories</div>
+                    </div>
+                    <div class="stat-card fade-in">
+                        <div class="stat-number" id="total-technologies">0</div>
+                        <div class="stat-label">Technologies</div>
+                    </div>
+                </div>
+                
+                <!-- Floating Background Elements -->
+                <div class="hero-bg-elements">
+                    <div class="bg-element bg-element-1"></div>
+                    <div class="bg-element bg-element-2"></div>
+                    <div class="bg-element bg-element-3"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Projects Section -->
+    <section id="projects-main" class="projects-main section">
+        <div class="container">
+            
+            <!-- Advanced Search & Filters -->
+            <div class="projects-controls-advanced">
+                <!-- Search and Sort Bar -->
+                <div class="search-sort-bar">
+                    <div class="search-container-advanced">
+                        <input type="text" id="projects-search" placeholder="Search projects by name, description, or technology..." class="search-input-advanced">
+                        <i class="fas fa-search search-icon-advanced"></i>
+                    </div>
+                    
+                    <div class="sort-container">
+                        <label for="projects-sort" class="sort-label">Sort by:</label>
+                        <select id="projects-sort" class="sort-select">
+                            <option value="default">Default</option>
+                            <option value="title">Title (A-Z)</option>
+                            <option value="category">Category</option>
+                            <option value="difficulty">Difficulty</option>
+                            <option value="status">Status</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <!-- Category Filters -->
+                <div class="filter-section">
+                    <h3 class="filter-section-title">
+                        <i class="fas fa-folder"></i> Categories
+                    </h3>
+                    <div id="category-filters" class="filter-buttons">
+                        <!-- Category filters will be populated dynamically -->
+                    </div>
+                </div>
+                
+                <!-- Technology Filters -->
+                <div class="filter-section">
+                    <h3 class="filter-section-title">
+                        <i class="fas fa-code"></i> Technologies
+                    </h3>
+                    <div class="tech-filter-container">
+                        <div id="tech-filters" class="tech-filters">
+                            <!-- Technology filters will be populated dynamically -->
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- View Toggle & Clear Filters -->
+                <div class="controls-footer">
+                    <div class="view-toggle">
+                        <button id="grid-view" class="view-btn active" title="Grid View">
+                            <i class="fas fa-th"></i>
+                        </button>
+                        <button id="list-view" class="view-btn" title="List View">
+                            <i class="fas fa-list"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="filter-actions">
+                        <button id="clear-filters" class="btn btn-secondary clear-filters-btn" style="display: none;">
+                            <i class="fas fa-times"></i> Clear Filters
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Results Information -->
+            <div class="results-info">
+                <p id="results-count" class="results-count">Loading projects...</p>
+            </div>
+            
+            <!-- Projects Grid -->
+            <div id="projects-grid-advanced" class="projects-grid-advanced grid-view">
+                <!-- Projects will be populated dynamically -->
+            </div>
+            
+            <!-- No Results State -->
+            <div id="no-results" class="no-results" style="display: none;">
+                <div class="no-results-content">
+                    <i class="fas fa-search no-results-icon"></i>
+                    <h3>No Projects Found</h3>
+                    <p>Try adjusting your search criteria or clearing some filters.</p>
+                    <button id="clear-filters-no-results" class="btn btn-primary">
+                        <i class="fas fa-refresh"></i> Clear All Filters
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top" title="Back to Top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Gaurav. Built with ❤️ using HTML, CSS & JavaScript.</p>
+                <div class="footer-links">
+                    <a href="index.html" class="footer-link">Home</a>
+                    <a href="blog.html" class="footer-link">Blog</a>
+                    <a href="index.html#contact" class="footer-link">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Enhanced Project Modal -->
+    <div id="project-modal-advanced" class="modal-advanced">
+        <div class="modal-content-advanced">
+            <button class="modal-close-advanced" aria-label="Close modal">
+                <i class="fas fa-times"></i>
+            </button>
+            <div id="modal-body-advanced" class="modal-body-advanced">
+                <!-- Modal content will be populated dynamically -->
+            </div>
         </div>
     </div>
 
-    <script>
-        const themeToggle = document.getElementById('theme-toggle');
-        const savedTheme = localStorage.getItem('theme') || 'light';
-        
-        document.documentElement.setAttribute('data-theme', savedTheme);
-        themeToggle.querySelector('i').className = savedTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
-        
-        themeToggle.addEventListener('click', () => {
-            const currentTheme = document.documentElement.getAttribute('data-theme');
-            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-            
-            document.documentElement.setAttribute('data-theme', newTheme);
-            localStorage.setItem('theme', newTheme);
-            themeToggle.querySelector('i').className = newTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
-        });
-    </script>
+    <!-- JavaScript -->
+    <script src="projects.js"></script>
 </body>
+
 </html>
