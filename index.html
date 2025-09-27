@@ -42,6 +42,13 @@
     <!-- Hero Section -->
     <section id="hero" class="hero">
         <div class="container">
+
+            <div class="hero-bg-elements">
+                <div class="bg-element bg-element-1"></div>
+                <div class="bg-element bg-element-2"></div>
+                <div class="bg-element bg-element-3"></div>
+            </div>
+
             <div class="hero-content">
                 <img src="./assets/profile.jpg" alt="Gaurav's Profile" class="hero-image">
                 <h1 class="hero-title">Hi, I'm Gaurav 👋</h1>
@@ -139,93 +146,95 @@
         </div>
 
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects section">
-        <div class="container">
-            <h2 class="section-title">All Projects</h2>
-            <div class="projects-controls">
-                <div class="search-container">
-                    <input type="text" id="project-search" placeholder="Search projects..." class="search-input">
-                    <i class="fas fa-search search-icon"></i>
-                </div>
-                <div id="project-filters" class="filter-tags">
-                    <!-- Filter tags will be generated dynamically -->
-                </div>
-            </div>
-            <div id="projects-grid" class="projects-grid">
-                <!-- Projects will be loaded dynamically from data/projects.json -->
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact section">
-        <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h3>Let's Connect</h3>
-                    <p>I'm always interested in discussing new opportunities, collaborating on projects, or just having
-                        a tech conversation.</p>
-                    <div class="contact-socials">
-                        <a href="https://github.com/ggauravky" target="_blank" rel="noopener" class="contact-social">
-                            <i class="fab fa-github"></i>
-                            <span>GitHub</span>
-                        </a>
-                        <a href="https://www.linkedin.com/in/gauravky/" target="_blank" rel="noopener"
-                            class="contact-social">
-                            <i class="fab fa-linkedin"></i>
-                            <span>LinkedIn</span>
-                        </a>
+        <!-- Projects Section -->
+        <section id="projects" class="projects section">
+            <div class="container">
+                <h2 class="section-title">All Projects</h2>
+                <div class="projects-controls">
+                    <div class="search-container">
+                        <input type="text" id="project-search" placeholder="Search projects..." class="search-input">
+                        <i class="fas fa-search search-icon"></i>
+                    </div>
+                    <div id="project-filters" class="filter-tags">
+                        <!-- Filter tags will be generated dynamically -->
                     </div>
                 </div>
-                <form id="contact-form" class="contact-form" action="https://formspree.io/f/meolbadr" method="POST">
-                    <div class="form-group">
-                        <label for="name">Name *</label>
-                        <input type="text" id="name" name="name" required>
+                <div id="projects-grid" class="projects-grid">
+                    <!-- Projects will be loaded dynamically from data/projects.json -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact section">
+            <div class="container">
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h3>Let's Connect</h3>
+                        <p>I'm always interested in discussing new opportunities, collaborating on projects, or just
+                            having
+                            a tech conversation.</p>
+                        <div class="contact-socials">
+                            <a href="https://github.com/ggauravky" target="_blank" rel="noopener"
+                                class="contact-social">
+                                <i class="fab fa-github"></i>
+                                <span>GitHub</span>
+                            </a>
+                            <a href="https://www.linkedin.com/in/gauravky/" target="_blank" rel="noopener"
+                                class="contact-social">
+                                <i class="fab fa-linkedin"></i>
+                                <span>LinkedIn</span>
+                            </a>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="email">Email *</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="subject">Subject</label>
-                        <input type="text" id="subject" name="subject">
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message *</label>
-                        <textarea id="message" name="message" rows="5" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">
-                        <i class="fas fa-paper-plane"></i> Send Message
-                    </button>
-                    <div id="form-status" class="form-status"></div>
-                </form>
+                    <form id="contact-form" class="contact-form" action="https://formspree.io/f/meolbadr" method="POST">
+                        <div class="form-group">
+                            <label for="name">Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                        <div id="form-status" class="form-status"></div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <p>&copy; 2025 Gaurav. Built with ❤️ using HTML, CSS & JavaScript.</p>
+            </div>
+        </footer>
+
+        <!-- Project Modal -->
+        <div id="project-modal" class="modal">
+            <div class="modal-content">
+                <button class="modal-close" aria-label="Close modal">
+                    <i class="fas fa-times"></i>
+                </button>
+                <div id="modal-body" class="modal-body">
+                    <!-- Modal content will be populated dynamically -->
+                </div>
             </div>
         </div>
-    </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 Gaurav. Built with ❤️ using HTML, CSS & JavaScript.</p>
-        </div>
-    </footer>
-
-    <!-- Project Modal -->
-    <div id="project-modal" class="modal">
-        <div class="modal-content">
-            <button class="modal-close" aria-label="Close modal">
-                <i class="fas fa-times"></i>
-            </button>
-            <div id="modal-body" class="modal-body">
-                <!-- Modal content will be populated dynamically -->
-            </div>
-        </div>
-    </div>
-
-    <!-- JavaScript -->
-    <script src="script.js"></script>
+        <!-- JavaScript -->
+        <script src="script.js"></script>
 </body>
 
 </html>
