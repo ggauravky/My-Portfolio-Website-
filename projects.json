@@ -18,7 +18,8 @@
       "github": "https://github.com/ggauravky/My-all-Python-Projects-/tree/main/AI%20Reel-Studio",
       "live": "",
       "images": [
-        "assets/aireel.png" , "assets/propyai1.png"
+        "assets/aireel.png",
+        "assets/propyai1.png"
       ],
       "features": [
         "AI-powered automatic caption generation",
@@ -27,6 +28,123 @@
         "Voiceover integration using ElevenLabs API",
         "Optimized export for social media platforms",
         "User-friendly web interface built with Flask"
+      ]
+    },
+    {
+      "id": "2",
+      "title": "Modern Calculator",
+      "description": "A beautiful, responsive calculator with glass-morphism design and full functionality.",
+      "longDescription": "This modern calculator features a sleek glass-morphism design with backdrop blur effects, smooth animations, and complete mathematical operations. Built with vanilla HTML, CSS, and JavaScript, it showcases advanced CSS techniques including CSS Grid, custom properties, and responsive design principles. The calculator includes keyboard support, visual feedback animations, error handling, and optimized touch targets for mobile devices. This project demonstrates proficiency in front-end development, UI/UX design, and modern web standards.",
+      "tech": [
+        "HTML5",
+        "CSS3",
+        "JavaScript",
+        "CSS Grid",
+        "Responsive Design"
+      ],
+      "category": "Frontend",
+      "difficulty": "medium",
+      "status": "completed",
+      "duration": "1 week",
+      "github": "https://github.com/ggauravky/My-all-Web-Dev-Projects/tree/main/calculator",
+      "live": "https://gkycalculator.netlify.app/",
+      "images": [
+        "assets/prowebc1.png",
+        "assets/prowebc2.png"
+      ],
+      "features": [
+        "Glass-morphism UI design with backdrop blur",
+        "Responsive layout for all screen sizes",
+        "Complete mathematical operations (+, -, ×, ÷, %)",
+        "Keyboard support for desktop users",
+        "Visual button press feedback animations",
+        "Error handling for division by zero",
+        "Number formatting with comma separators",
+        "Modern CSS techniques and custom properties"
+      ]
+    },
+    {
+      "id": "3",
+      "title": "Custom CAPTCHA Generator",
+      "description": "A secure and interactive CAPTCHA generator with random character generation and real-time verification.",
+      "longDescription": "This custom CAPTCHA generator creates secure 6-character verification codes using a combination of uppercase letters, lowercase letters, and numbers. The project features a modern UI with a textured background overlay, reload functionality, and instant verification feedback. Built with vanilla HTML, CSS, and JavaScript, it demonstrates security-focused web development, DOM manipulation, and user experience design. The CAPTCHA system includes visual feedback for correct/incorrect entries, automatic regeneration after successful verification, and responsive design for all devices.",
+      "tech": [
+        "HTML5",
+        "CSS3",
+        "JavaScript",
+        "FontAwesome Icons",
+        "Responsive Design"
+      ],
+      "category": "Frontend",
+      "difficulty": "beginner",
+      "status": "completed",
+      "duration": "3-4 days",
+      "github": "https://github.com/ggauravky/My-all-Web-Dev-Projects/tree/main/captcha-generator",
+      "live": "https://gcapcha.netlify.app/",
+      "images": [
+        "assets/prowebcap3.png",
+        "assets/prowebcap2.png",
+        "assets/prowebcap1.png"
+      ],
+      "features": [
+        "Random 6-character CAPTCHA generation (A-Z, a-z, 0-9)",
+        "Textured background overlay with noisy pattern",
+        "One-click reload/refresh functionality",
+        "Real-time input verification with color-coded feedback",
+        "Automatic CAPTCHA regeneration after successful verification",
+        "Input validation with 6-character limit",
+        "Responsive design for mobile and desktop",
+        "Clean, centered UI with modern styling",
+        "FontAwesome icons integration",
+        "Form prevention of default submission behavior"
+      ]
+    },
+    {
+      "id": "4",
+      "title": "TaskMaster Pro - Advanced Todo App",
+      "description": "A comprehensive, modern todo list application with dark mode, focus timer, and AI-inspired features.",
+      "longDescription": "TaskMaster Pro is a feature-rich todo list application that combines modern web technologies with intelligent user experience design. Built with vanilla HTML, CSS, and JavaScript, it features natural language input processing, drag-and-drop task management, focus timer (Pomodoro technique), advanced filtering and search capabilities, and comprehensive statistics tracking. The application includes dark/light mode themes, responsive design for all devices, keyboard shortcuts, task categorization with priority levels, due date management, and local storage persistence. This project demonstrates advanced frontend development skills, complex state management, user experience design, and modern web application architecture following 2025 design trends.",
+      "tech": [
+        "HTML5",
+        "CSS3",
+        "JavaScript ES6+",
+        "Local Storage API",
+        "CSS Grid",
+        "Flexbox",
+        "CSS Custom Properties",
+        "Responsive Design"
+      ],
+      "category": "Frontend",
+      "difficulty": "hard",
+      "status": "completed",
+      "duration": "3 weeks",
+      "github": "https://github.com/ggauravky/My-all-Web-Dev-Projects/tree/main/Todo%20List%20-%20Advanced",
+      "live": "https://gtodolista.netlify.app/",
+      "images": [
+        "assets/prowebtodo1.png",
+        "assets/prowebtodo2.png",
+        "assets/prowebtodo3.png",
+        "assets/prowebtodo4.png",
+        "assets/prowebtodo5.png",
+        "assets/prowebtodo6.png"
+      ],
+      "features": [
+        "AI-inspired natural language task input processing",
+        "Dark/light mode toggle with theme persistence",
+        "Focus timer (Pomodoro) with customizable durations",
+        "Drag and drop task reordering functionality",
+        "Advanced filtering by status, priority, category, and date",
+        "Real-time search across task titles and descriptions",
+        "Task categorization with color-coded priority levels",
+        "Due date management with overdue detection",
+        "Comprehensive statistics and productivity tracking",
+        "Keyboard shortcuts for power users",
+        "Responsive design optimized for all screen sizes",
+        "Local storage persistence with export/import capabilities",
+        "Smooth animations and micro-interactions",
+        "Task completion streaks and daily goal tracking",
+        "Visual feedback notifications for user actions",
+        "Accessibility features with focus indicators"
       ]
     }
   ]
