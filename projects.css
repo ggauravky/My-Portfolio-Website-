@@ -520,7 +520,7 @@
 
 .project-difficulty-advanced.easy {
   background: #10b981;
-  color: white;
+  color: rgb(255, 255, 255);
 }
 
 .project-difficulty-advanced.medium {

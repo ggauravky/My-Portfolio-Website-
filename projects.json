@@ -107,7 +107,7 @@
       "tech": [
         "HTML5",
         "CSS3",
-        "JavaScript ES6+",
+        "JavaScript (ES6+)",
         "Local Storage API",
         "CSS Grid",
         "Flexbox",
@@ -145,6 +145,140 @@
         "Task completion streaks and daily goal tracking",
         "Visual feedback notifications for user actions",
         "Accessibility features with focus indicators"
+      ]
+    },
+    {
+      "id": "5",
+      "title": "Flappy Bird Game",
+      "description": "A fun browser-based Flappy Bird clone built using HTML, CSS, and JavaScript.",
+      "longDescription": "Flappy Bird Game is a simple yet addictive browser-based clone of the classic Flappy Bird. Developed using HTML5, CSS3, and JavaScript (ES6+), it features smooth gameplay, gravity mechanics, collision detection, score tracking, and a restart option. The project demonstrates the use of JavaScript for game logic, animations, and event handling, while CSS ensures a visually appealing layout. Designed to run seamlessly in modern browsers, the game highlights core concepts of front-end game development.",
+      "tech": [
+        "HTML5",
+        "CSS3",
+        "JavaScript (ES6+)",
+        "Canvas API",
+        "Game Loop Logic",
+        "Collision Detection"
+      ],
+      "category": "Game",
+      "difficulty": "beginner",
+      "status": "completed",
+      "duration": "4-5 days",
+      "github": "https://github.com/ggauravky/My-all-Web-Dev-Projects/tree/main/flappy-bird",
+      "live": "https://flappy-bird-game-gaurav.netlify.app/",
+      "images": [
+        "assets/flappy.png"
+      ],
+      "features": [
+        "Smooth gameplay with gravity-based mechanics",
+        "Obstacle generation with collision detection",
+        "Real-time score tracking system",
+        "Game-over screen with restart option",
+        "Canvas API-based rendering and animations",
+        "Responsive design for browser compatibility",
+        "Keyboard/mouse input handling for controls",
+        "Lightweight and optimized game loop logic"
+      ]
+    },
+    {
+      "id": "6",
+      "title": "PDF to Audio Book",
+      "description": "A Python tool that converts PDF documents into audiobooks using text-to-speech.",
+      "longDescription": "PDF to Audio Book is a Python-based project that transforms PDF documents into audio format, making reading more accessible and convenient. It extracts text from PDF files and converts it into natural-sounding speech using Python libraries. This project is designed for students, researchers, and readers who prefer listening to content on the go. It highlights text extraction, text-to-speech integration, file handling, and automation through Python.",
+      "tech": [
+        "Python",
+        "PyPDF2",
+        "pyttsx3 / gTTS",
+        "File Handling",
+        "Automation Scripts"
+      ],
+      "category": "Python",
+      "difficulty": "beginner",
+      "status": "completed",
+      "duration": "2-3 days",
+      "github": "https://github.com/ggauravky/My-all-Python-Projects-/tree/main/PDF_to_Audio_Book_using_Python",
+      "live": "",
+      "images": [
+        "assets/pdftoaudio.png"
+      ],
+      "features": [
+        "Extracts text from PDF files accurately",
+        "Converts text into natural-sounding speech",
+        "Supports multiple text-to-speech libraries (pyttsx3, gTTS)",
+        "Handles large PDF documents efficiently",
+        "Enables easy creation of audiobooks for accessibility",
+        "Customizable voice and speech rate options",
+        "Automation scripts for quick PDF to audio conversion",
+        "Lightweight and beginner-friendly Python project"
+      ]
+    },
+    {
+      "id": "7",
+      "title": "Rubik's Cube",
+      "description": "A fully functional 3D Rubik’s Cube simulation built with HTML, CSS, and JavaScript.",
+      "longDescription": "Rubik’s Cube is an interactive and fully functional 3D cube simulation created using HTML5, CSS3, and JavaScript (ES6+). Users can rotate the cube in real time, shuffle it, and attempt to solve it just like a physical cube. The project demonstrates advanced CSS transforms, 3D animations, and logic handling for cube movements. With a smooth and responsive design, it provides an engaging puzzle-solving experience directly in the browser.",
+      "tech": [
+        "HTML5",
+        "CSS3",
+        "JavaScript (ES6+)",
+        "3D CSS Transforms",
+        "Animations",
+        "Responsive Design"
+      ],
+      "category": "Game",
+      "difficulty": "intermediate",
+      "status": "completed",
+      "duration": "5-6 days",
+      "github": "https://github.com/ggauravky/My-all-Web-Dev-Projects/tree/main/rubix%20cube",
+      "live": "https://g-rubix-cube.netlify.app/",
+      "images": [
+        "assets/rubix.png"
+      ],
+      "features": [
+        "Fully functional 3D Rubik’s Cube simulation",
+        "Real-time cube rotation with smooth animations",
+        "Shuffle option for randomizing cube state",
+        "Interactive controls for solving the puzzle",
+        "Advanced CSS 3D transforms and animations",
+        "Logic handling for cube face rotations",
+        "Responsive design for different devices",
+        "Lightweight, browser-based puzzle experience"
+      ]
+    },
+    {
+      "id": "7",
+      "title": "ShopEase",
+      "description": "A responsive e-commerce shopping website with product browsing, cart management, and modern UI/UX design.",
+      "longDescription": "ShopEase is a responsive e-commerce shopping website designed to provide a seamless online shopping experience. It features a clean homepage with product categories, a promotional banner, and a newsletter subscription popup. Users can browse products, view details, and manage their cart with an intuitive interface. The site is built with HTML5, CSS3, and JavaScript (ES6+), focusing on responsiveness, interactivity, and performance optimization. I implemented modern UI/UX design principles, animations, and accessibility support to ensure it works smoothly across devices and browsers.",
+      "tech": [
+        "HTML5",
+        "CSS3",
+        "JavaScript (ES6+)",
+        "Responsive Design",
+        "Animations & Transitions",
+        "Accessibility",
+        "Performance Optimization"
+      ],
+      "category": 
+        "E-Commerce"
+      ,
+      "difficulty": "intermediate",
+      "status": "completed",
+      "duration": "5-6 days",
+      "github": "https://github.com/ggauravky/My-all-Web-Dev-Projects/tree/main/ecommerce-website-master",
+      "live": "https://gshoppingweb.netlify.app/",
+      "images": [
+        "assets/shopp1.png"
+      ],
+      "features": [
+        "Clean homepage with product categories and promotional banner",
+        "Product browsing with detail view",
+        "Cart management functionality",
+        "Newsletter subscription popup",
+        "Responsive design for all devices",
+        "Smooth animations and transitions",
+        "Accessibility support for inclusive design",
+        "Performance-optimized layout and resources"
       ]
     }
   ]
