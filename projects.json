@@ -246,7 +246,7 @@
       ]
     },
     {
-      "id": "7",
+      "id": "8",
       "title": "ShopEase",
       "description": "A responsive e-commerce shopping website with product browsing, cart management, and modern UI/UX design.",
       "longDescription": "ShopEase is a responsive e-commerce shopping website designed to provide a seamless online shopping experience. It features a clean homepage with product categories, a promotional banner, and a newsletter subscription popup. Users can browse products, view details, and manage their cart with an intuitive interface. The site is built with HTML5, CSS3, and JavaScript (ES6+), focusing on responsiveness, interactivity, and performance optimization. I implemented modern UI/UX design principles, animations, and accessibility support to ensure it works smoothly across devices and browsers.",
@@ -259,9 +259,7 @@
         "Accessibility",
         "Performance Optimization"
       ],
-      "category": 
-        "E-Commerce"
-      ,
+      "category": "E-Commerce",
       "difficulty": "intermediate",
       "status": "completed",
       "duration": "5-6 days",
@@ -279,6 +277,45 @@
         "Smooth animations and transitions",
         "Accessibility support for inclusive design",
         "Performance-optimized layout and resources"
+      ]
+    },
+    {
+      "id": "9",
+      "title": "DishDash",
+      "description": "A responsive and animated food delivery website with seamless UI/UX and interactivity.",
+      "longDescription": "DishDash is a responsive and animated food delivery website built with HTML5, CSS3, and JavaScript (ES6+). It features an interactive meal catalog, add-to-cart functionality, animated navigation, and a secure login/registration system. Designed with a mobile-first approach using CSS Grid and Flexbox, it ensures smooth performance, accessibility, and seamless adaptability across devices. As the sole developer, I was responsible for UI/UX design, responsive layouts, animations, interactivity, authentication, and testing.",
+      "tech": [
+        "HTML5",
+        "CSS3",
+        "JavaScript (ES6+)",
+        "Responsive Design Principles",
+        "Front-End Performance Optimization",
+        "Accessibility Tools"
+      ],
+      "category": 
+        "Food Delivery",
+      "difficulty": "intermediate",
+      "status": "completed",
+      "duration": "5-6 days",
+      "github": "https://github.com/ggauravky/My-all-Web-Dev-Projects/tree/main/food%20delivery%20website",
+      "live": "https://gfooddelievery.netlify.app/",
+      "images": [
+        "assets/dishdash.png",
+        "assets/profood1.png",
+        "assets/profood2.png",
+        "assets/profood3.png",
+        "assets/profood4.png",
+        "assets/profood5.png"
+      ],
+      "features": [
+        "Interactive meal catalog with product details",
+        "Add-to-cart functionality for food items",
+        "Animated navigation with smooth transitions",
+        "Secure login and registration system",
+        "Mobile-first responsive design using CSS Grid and Flexbox",
+        "Accessibility features for inclusive design",
+        "Optimized performance for fast loading",
+        "Seamless adaptability across devices and browsers"
       ]
     }
   ]
