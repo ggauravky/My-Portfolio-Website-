@@ -1,6 +1,13 @@
 // Advanced Projects Page JavaScript
 // Author: Gaurav
-// Description: Complete functionality for the advanced projects showcase
+
+// © 2025 Gaurav Kumar Yadav — All rights reserved.
+
+// GitHub: https://github.com/the-gaurav-codes
+// Instagram: https://www.instagram.com/the_gau_rav/
+// Email: kumar.gaurav.yadav2007@gmail.com
+
+// Unauthorized copying or use of this code is prohibited.
 
 class ProjectsPage {
     constructor() {
@@ -33,7 +40,13 @@ class ProjectsPage {
 
             // Load project data
             await this.loadProjects();
+// © 2025 Gaurav Kumar Yadav — All rights reserved.
 
+// GitHub: https://github.com/the-gaurav-codes
+// Instagram: https://www.instagram.com/the_gau_rav/
+// Email: kumar.gaurav.yadav2007@gmail.com
+
+// Unauthorized copying or use of this code is prohibited.
             // Initialize all components
             this.initSearch();
             this.initFilters();
@@ -46,7 +59,13 @@ class ProjectsPage {
             this.renderFilters();
             this.renderProjects();
             this.updateStatistics();
+// © 2025 Gaurav Kumar Yadav — All rights reserved.
 
+// GitHub: https://github.com/the-gaurav-codes
+// Instagram: https://www.instagram.com/the_gau_rav/
+// Email: kumar.gaurav.yadav2007@gmail.com
+
+// Unauthorized copying or use of this code is prohibited.
             // Hide loading screen
             this.hideLoading();
 
@@ -57,7 +76,13 @@ class ProjectsPage {
             this.hideLoading();
         }
     }
+// © 2025 Gaurav Kumar Yadav — All rights reserved.
 
+// GitHub: https://github.com/the-gaurav-codes
+// Instagram: https://www.instagram.com/the_gau_rav/
+// Email: kumar.gaurav.yadav2007@gmail.com
+
+// Unauthorized copying or use of this code is prohibited.
     // Loading Management
     showLoading() {
         const loadingScreen = document.getElementById('loading-screen');
@@ -74,7 +99,13 @@ class ProjectsPage {
             }, 500);
         }
     }
+// © 2025 Gaurav Kumar Yadav — All rights reserved.
 
+// GitHub: https://github.com/the-gaurav-codes
+// Instagram: https://www.instagram.com/the_gau_rav/
+// Email: kumar.gaurav.yadav2007@gmail.com
+
+// Unauthorized copying or use of this code is prohibited.
     // Theme Management (matches main portfolio)
     initTheme() {
         const themeToggle = document.getElementById('theme-toggle');
@@ -94,14 +125,26 @@ class ProjectsPage {
             });
         }
     }
+// © 2025 Gaurav Kumar Yadav — All rights reserved.
 
+// GitHub: https://github.com/the-gaurav-codes
+// Instagram: https://www.instagram.com/the_gau_rav/
+// Email: kumar.gaurav.yadav2007@gmail.com
+
+// Unauthorized copying or use of this code is prohibited.
     updateThemeIcon(theme) {
         const themeIcon = document.querySelector('#theme-toggle i');
         if (themeIcon) {
             themeIcon.className = theme === 'light' ? 'fas fa-moon' : 'fas fa-sun';
         }
     }
+// © 2025 Gaurav Kumar Yadav — All rights reserved.
 
+// GitHub: https://github.com/the-gaurav-codes
+// Instagram: https://www.instagram.com/the_gau_rav/
+// Email: kumar.gaurav.yadav2007@gmail.com
+
+// Unauthorized copying or use of this code is prohibited.
     // Navigation (matches main portfolio)
     initNavigation() {
         const navToggle = document.querySelector('.nav-toggle');
@@ -112,7 +155,13 @@ class ProjectsPage {
                 navMenu.classList.toggle('active');
             });
         }
+// © 2025 Gaurav Kumar Yadav — All rights reserved.
 
+// GitHub: https://github.com/the-gaurav-codes
+// Instagram: https://www.instagram.com/the_gau_rav/
+// Email: kumar.gaurav.yadav2007@gmail.com
+
+// Unauthorized copying or use of this code is prohibited.
         // Close mobile menu on link click
         document.querySelectorAll('.nav-link').forEach(link => {
             link.addEventListener('click', () => {
@@ -120,7 +169,13 @@ class ProjectsPage {
             });
         });
     }
+// © 2025 Gaurav Kumar Yadav — All rights reserved.
 
+// GitHub: https://github.com/the-gaurav-codes
+// Instagram: https://www.instagram.com/the_gau_rav/
+// Email: kumar.gaurav.yadav2007@gmail.com
+
+// Unauthorized copying or use of this code is prohibited.
     // Data Loading - Fixed to use correct path
     async loadProjects() {
         try {
@@ -142,7 +197,13 @@ class ProjectsPage {
             this.projects = this.getSampleProjects();
             this.filteredProjects = [...this.projects];
         }
-    }
+    }// © 2025 Gaurav Kumar Yadav — All rights reserved.
+
+// GitHub: https://github.com/the-gaurav-codes
+// Instagram: https://www.instagram.com/the_gau_rav/
+// Email: kumar.gaurav.yadav2007@gmail.com
+
+// Unauthorized copying or use of this code is prohibited.
 
     // Search Functionality
     initSearch() {
@@ -157,7 +218,13 @@ class ProjectsPage {
             }, 300);
         });
     }
+// © 2025 Gaurav Kumar Yadav — All rights reserved.
 
+// GitHub: https://github.com/the-gaurav-codes
+// Instagram: https://www.instagram.com/the_gau_rav/
+// Email: kumar.gaurav.yadav2007@gmail.com
+
+// Unauthorized copying or use of this code is prohibited.
     // Filter System
     initFilters() {
         // Sort dropdown
@@ -181,7 +248,13 @@ class ProjectsPage {
             }
         });
     }
+// © 2025 Gaurav Kumar Yadav — All rights reserved.
 
+// GitHub: https://github.com/the-gaurav-codes
+// Instagram: https://www.instagram.com/the_gau_rav/
+// Email: kumar.gaurav.yadav2007@gmail.com
+
+// Unauthorized copying or use of this code is prohibited.
     renderFilters() {
         this.renderCategoryFilters();
         this.renderTechnologyFilters();
@@ -190,7 +263,13 @@ class ProjectsPage {
     renderCategoryFilters() {
         const container = document.getElementById('category-filters');
         if (!container) return;
+// © 2025 Gaurav Kumar Yadav — All rights reserved.
 
+// GitHub: https://github.com/the-gaurav-codes
+// Instagram: https://www.instagram.com/the_gau_rav/
+// Email: kumar.gaurav.yadav2007@gmail.com
+
+// Unauthorized copying or use of this code is prohibited.
         // Get unique categories
         const categories = new Set(['All']);
         this.projects.forEach(project => {
@@ -214,7 +293,13 @@ class ProjectsPage {
             });
         });
     }
+// © 2025 Gaurav Kumar Yadav — All rights reserved.
 
+// GitHub: https://github.com/the-gaurav-codes
+// Instagram: https://www.instagram.com/the_gau_rav/
+// Email: kumar.gaurav.yadav2007@gmail.com
+
+// Unauthorized copying or use of this code is prohibited.
     renderTechnologyFilters() {
         const container = document.getElementById('tech-filters');
         if (!container) return;
@@ -226,7 +311,13 @@ class ProjectsPage {
                 project.tech.forEach(tech => technologies.add(tech));
             }
         });
+// © 2025 Gaurav Kumar Yadav — All rights reserved.
 
+// GitHub: https://github.com/the-gaurav-codes
+// Instagram: https://www.instagram.com/the_gau_rav/
+// Email: kumar.gaurav.yadav2007@gmail.com
+
+// Unauthorized copying or use of this code is prohibited.
         const filtersHTML = Array.from(technologies).sort().map(tech => `
             <button class="tech-filter ${this.activeFilters.technologies.has(tech) ? 'active' : ''}"
                     data-tech="${tech}">
@@ -244,7 +335,13 @@ class ProjectsPage {
             });
         });
     }
+// © 2025 Gaurav Kumar Yadav — All rights reserved.
 
+// GitHub: https://github.com/the-gaurav-codes
+// Instagram: https://www.instagram.com/the_gau_rav/
+// Email: kumar.gaurav.yadav2007@gmail.com
+
+// Unauthorized copying or use of this code is prohibited.
     toggleCategoryFilter(category) {
         if (category === 'All') {
             this.activeFilters.categories.clear();
@@ -265,7 +362,13 @@ class ProjectsPage {
         this.applyFilters();
         this.renderCategoryFilters();
     }
+// © 2025 Gaurav Kumar Yadav — All rights reserved.
 
+// GitHub: https://github.com/the-gaurav-codes
+// Instagram: https://www.instagram.com/the_gau_rav/
+// Email: kumar.gaurav.yadav2007@gmail.com
+
+// Unauthorized copying or use of this code is prohibited.
     toggleTechnologyFilter(tech) {
         if (this.activeFilters.technologies.has(tech)) {
             this.activeFilters.technologies.delete(tech);
@@ -276,7 +379,13 @@ class ProjectsPage {
         this.applyFilters();
         this.renderTechnologyFilters();
     }
+// © 2025 Gaurav Kumar Yadav — All rights reserved.
 
+// GitHub: https://github.com/the-gaurav-codes
+// Instagram: https://www.instagram.com/the_gau_rav/
+// Email: kumar.gaurav.yadav2007@gmail.com
+
+// Unauthorized copying or use of this code is prohibited.
     clearAllFilters() {
         this.activeFilters.categories.clear();
         this.activeFilters.categories.add('All');
@@ -294,7 +403,13 @@ class ProjectsPage {
         this.renderFilters();
         this.applyFilters();
     }
+// © 2025 Gaurav Kumar Yadav — All rights reserved.
 
+// GitHub: https://github.com/the-gaurav-codes
+// Instagram: https://www.instagram.com/the_gau_rav/
+// Email: kumar.gaurav.yadav2007@gmail.com
+
+// Unauthorized copying or use of this code is prohibited.
     applyFilters() {
         let filtered = [...this.projects];
 
@@ -313,7 +428,13 @@ class ProjectsPage {
                 )
             );
         }
+// © 2025 Gaurav Kumar Yadav — All rights reserved.
 
+// GitHub: https://github.com/the-gaurav-codes
+// Instagram: https://www.instagram.com/the_gau_rav/
+// Email: kumar.gaurav.yadav2007@gmail.com
+
+// Unauthorized copying or use of this code is prohibited.
         // Apply search filter
         if (this.activeFilters.search) {
             filtered = filtered.filter(project =>
@@ -324,7 +445,13 @@ class ProjectsPage {
                 ))
             );
         }
+// © 2025 Gaurav Kumar Yadav — All rights reserved.
 
+// GitHub: https://github.com/the-gaurav-codes
+// Instagram: https://www.instagram.com/the_gau_rav/
+// Email: kumar.gaurav.yadav2007@gmail.com
+
+// Unauthorized copying or use of this code is prohibited.
         // Apply sorting
         this.sortProjects(filtered);
 
@@ -333,7 +460,13 @@ class ProjectsPage {
         this.updateResultsInfo();
         this.updateClearFiltersVisibility();
     }
+// © 2025 Gaurav Kumar Yadav — All rights reserved.
 
+// GitHub: https://github.com/the-gaurav-codes
+// Instagram: https://www.instagram.com/the_gau_rav/
+// Email: kumar.gaurav.yadav2007@gmail.com
+
+// Unauthorized copying or use of this code is prohibited.
     sortProjects(projects) {
         switch (this.activeFilters.sort) {
             case 'title':
@@ -359,7 +492,13 @@ class ProjectsPage {
                 break;
         }
     }
+// © 2025 Gaurav Kumar Yadav — All rights reserved.
 
+// GitHub: https://github.com/the-gaurav-codes
+// Instagram: https://www.instagram.com/the_gau_rav/
+// Email: kumar.gaurav.yadav2007@gmail.com
+
+// Unauthorized copying or use of this code is prohibited.
     // View Toggle
     initViewToggle() {
         const gridViewBtn = document.getElementById('grid-view');
@@ -373,7 +512,13 @@ class ProjectsPage {
                 gridViewBtn.classList.add('active');
                 listViewBtn.classList.remove('active');
             });
+// © 2025 Gaurav Kumar Yadav — All rights reserved.
 
+// GitHub: https://github.com/the-gaurav-codes
+// Instagram: https://www.instagram.com/the_gau_rav/
+// Email: kumar.gaurav.yadav2007@gmail.com
+
+// Unauthorized copying or use of this code is prohibited.
             listViewBtn.addEventListener('click', () => {
                 this.currentView = 'list';
                 projectsGrid.className = 'projects-grid-advanced list-view';
@@ -382,7 +527,13 @@ class ProjectsPage {
             });
         }
     }
+// © 2025 Gaurav Kumar Yadav — All rights reserved.
 
+// GitHub: https://github.com/the-gaurav-codes
+// Instagram: https://www.instagram.com/the_gau_rav/
+// Email: kumar.gaurav.yadav2007@gmail.com
+
+// Unauthorized copying or use of this code is prohibited.
     // Project Rendering
     renderProjects() {
         const container = document.getElementById('projects-grid-advanced');
@@ -395,7 +546,13 @@ class ProjectsPage {
             if (noResults) noResults.style.display = 'block';
             return;
         }
+// © 2025 Gaurav Kumar Yadav — All rights reserved.
 
+// GitHub: https://github.com/the-gaurav-codes
+// Instagram: https://www.instagram.com/the_gau_rav/
+// Email: kumar.gaurav.yadav2007@gmail.com
+
+// Unauthorized copying or use of this code is prohibited.
         container.style.display = this.currentView === 'grid' ? 'grid' : 'flex';
         if (noResults) noResults.style.display = 'none';
 
@@ -471,7 +628,13 @@ class ProjectsPage {
         `).join('');
 
         container.innerHTML = projectsHTML;
+// © 2025 Gaurav Kumar Yadav — All rights reserved.
 
+// GitHub: https://github.com/the-gaurav-codes
+// Instagram: https://www.instagram.com/the_gau_rav/
+// Email: kumar.gaurav.yadav2007@gmail.com
+
+// Unauthorized copying or use of this code is prohibited.
         // Trigger animations
         this.triggerStaggeredAnimations();
     }
@@ -485,7 +648,13 @@ class ProjectsPage {
     formatStatus(status) {
         return status.replace('-', ' ');
     }
+// © 2025 Gaurav Kumar Yadav — All rights reserved.
 
+// GitHub: https://github.com/the-gaurav-codes
+// Instagram: https://www.instagram.com/the_gau_rav/
+// Email: kumar.gaurav.yadav2007@gmail.com
+
+// Unauthorized copying or use of this code is prohibited.
     // Modal Functionality
     initModal() {
         const modal = document.getElementById('project-modal-advanced');
@@ -502,7 +671,13 @@ class ProjectsPage {
                 }
             });
         }
+// © 2025 Gaurav Kumar Yadav — All rights reserved.
 
+// GitHub: https://github.com/the-gaurav-codes
+// Instagram: https://www.instagram.com/the_gau_rav/
+// Email: kumar.gaurav.yadav2007@gmail.com
+
+// Unauthorized copying or use of this code is prohibited.
         // ESC key
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape' && modal?.classList.contains('active')) {
@@ -510,7 +685,13 @@ class ProjectsPage {
             }
         });
     }
+// © 2025 Gaurav Kumar Yadav — All rights reserved.
 
+// GitHub: https://github.com/the-gaurav-codes
+// Instagram: https://www.instagram.com/the_gau_rav/
+// Email: kumar.gaurav.yadav2007@gmail.com
+
+// Unauthorized copying or use of this code is prohibited.
     openProjectModal(projectId) {
         const project = this.projects.find(p => p.id === projectId);
         const modal = document.getElementById('project-modal-advanced');
@@ -529,7 +710,13 @@ class ProjectsPage {
         if (project.images && project.images.length > 1) {
             this.initCarousel();
         }
+// © 2025 Gaurav Kumar Yadav — All rights reserved.
 
+// GitHub: https://github.com/the-gaurav-codes
+// Instagram: https://www.instagram.com/the_gau_rav/
+// Email: kumar.gaurav.yadav2007@gmail.com
+
+// Unauthorized copying or use of this code is prohibited.
         // Show modal
         modal.classList.add('active');
         document.body.style.overflow = 'hidden';
@@ -540,7 +727,13 @@ class ProjectsPage {
 
     buildModalContent(project) {
         const hasImages = project.images && project.images.length > 0;
+// © 2025 Gaurav Kumar Yadav — All rights reserved.
 
+// GitHub: https://github.com/the-gaurav-codes
+// Instagram: https://www.instagram.com/the_gau_rav/
+// Email: kumar.gaurav.yadav2007@gmail.com
+
+// Unauthorized copying or use of this code is prohibited.
         let imagesHTML = '';
         if (hasImages) {
             if (project.images.length === 1) {
@@ -600,7 +793,13 @@ class ProjectsPage {
                 </div>
             `;
         }
+// © 2025 Gaurav Kumar Yadav — All rights reserved.
 
+// GitHub: https://github.com/the-gaurav-codes
+// Instagram: https://www.instagram.com/the_gau_rav/
+// Email: kumar.gaurav.yadav2007@gmail.com
+
+// Unauthorized copying or use of this code is prohibited.
         return `
             <div class="modal-header-advanced">
                 <h2 class="modal-title-advanced">${project.title}</h2>
@@ -679,7 +878,13 @@ class ProjectsPage {
             ` : ''}
         `;
     }
+// © 2025 Gaurav Kumar Yadav — All rights reserved.
 
+// GitHub: https://github.com/the-gaurav-codes
+// Instagram: https://www.instagram.com/the_gau_rav/
+// Email: kumar.gaurav.yadav2007@gmail.com
+
+// Unauthorized copying or use of this code is prohibited.
     // Carousel Methods
     initCarousel() {
         if (!this.currentModal || !this.currentModal.images || this.currentModal.images.length <= 1) return;
@@ -699,7 +904,13 @@ class ProjectsPage {
             this.nextSlide();
         }
     }
+// © 2025 Gaurav Kumar Yadav — All rights reserved.
 
+// GitHub: https://github.com/the-gaurav-codes
+// Instagram: https://www.instagram.com/the_gau_rav/
+// Email: kumar.gaurav.yadav2007@gmail.com
+
+// Unauthorized copying or use of this code is prohibited.
     nextSlide() {
         if (!this.currentModal?.images) return;
 
@@ -715,14 +926,26 @@ class ProjectsPage {
             : this.carouselIndex - 1;
         this.updateCarousel();
     }
+// © 2025 Gaurav Kumar Yadav — All rights reserved.
 
+// GitHub: https://github.com/the-gaurav-codes
+// Instagram: https://www.instagram.com/the_gau_rav/
+// Email: kumar.gaurav.yadav2007@gmail.com
+
+// Unauthorized copying or use of this code is prohibited.
     goToSlide(index) {
         if (!this.currentModal?.images || index < 0 || index >= this.currentModal.images.length) return;
 
         this.carouselIndex = index;
         this.updateCarousel();
     }
+// © 2025 Gaurav Kumar Yadav — All rights reserved.
 
+// GitHub: https://github.com/the-gaurav-codes
+// Instagram: https://www.instagram.com/the_gau_rav/
+// Email: kumar.gaurav.yadav2007@gmail.com
+
+// Unauthorized copying or use of this code is prohibited.
     updateCarousel() {
         const items = document.querySelectorAll('.carousel-item-advanced');
         const indicators = document.querySelectorAll('.carousel-indicator-advanced');
@@ -735,7 +958,13 @@ class ProjectsPage {
             indicator.classList.toggle('active', index === this.carouselIndex);
         });
     }
+// © 2025 Gaurav Kumar Yadav — All rights reserved.
 
+// GitHub: https://github.com/the-gaurav-codes
+// Instagram: https://www.instagram.com/the_gau_rav/
+// Email: kumar.gaurav.yadav2007@gmail.com
+
+// Unauthorized copying or use of this code is prohibited.
     closeModal() {
         const modal = document.getElementById('project-modal-advanced');
         if (!modal) return;
@@ -750,7 +979,13 @@ class ProjectsPage {
         // Remove keyboard listener
         document.removeEventListener('keydown', this.handleCarouselKeyboard);
     }
+// © 2025 Gaurav Kumar Yadav — All rights reserved.
 
+// GitHub: https://github.com/the-gaurav-codes
+// Instagram: https://www.instagram.com/the_gau_rav/
+// Email: kumar.gaurav.yadav2007@gmail.com
+
+// Unauthorized copying or use of this code is prohibited.
     // Utility Methods
     updateResultsInfo() {
         const resultCount = document.getElementById('results-count');
@@ -759,7 +994,13 @@ class ProjectsPage {
             resultCount.textContent = `${total} project${total !== 1 ? 's' : ''} found`;
         }
     }
+// © 2025 Gaurav Kumar Yadav — All rights reserved.
 
+// GitHub: https://github.com/the-gaurav-codes
+// Instagram: https://www.instagram.com/the_gau_rav/
+// Email: kumar.gaurav.yadav2007@gmail.com
+
+// Unauthorized copying or use of this code is prohibited.
     updateClearFiltersVisibility() {
         const hasActiveFilters =
             !this.activeFilters.categories.has('All') ||
@@ -773,7 +1014,13 @@ class ProjectsPage {
             clearBtn.style.display = hasActiveFilters ? 'inline-block' : 'none';
         }
     }
+// © 2025 Gaurav Kumar Yadav — All rights reserved.
 
+// GitHub: https://github.com/the-gaurav-codes
+// Instagram: https://www.instagram.com/the_gau_rav/
+// Email: kumar.gaurav.yadav2007@gmail.com
+
+// Unauthorized copying or use of this code is prohibited.
     updateStatistics() {
         const totalProjects = this.projects.length;
         const completedProjects = this.projects.filter(p => p.status === 'completed').length;
@@ -785,7 +1032,13 @@ class ProjectsPage {
                 project.tech.forEach(tech => technologies.add(tech));
             }
         });
+// © 2025 Gaurav Kumar Yadav — All rights reserved.
 
+// GitHub: https://github.com/the-gaurav-codes
+// Instagram: https://www.instagram.com/the_gau_rav/
+// Email: kumar.gaurav.yadav2007@gmail.com
+
+// Unauthorized copying or use of this code is prohibited.
         // Get unique categories  
         const categories = new Set();
         this.projects.forEach(project => {
@@ -797,12 +1050,24 @@ class ProjectsPage {
         this.animateCounter('completed-projects-stat', completedProjects);
         this.animateCounter('technologies-stat', technologies.size);
         this.animateCounter('categories-stat', categories.size);
+// © 2025 Gaurav Kumar Yadav — All rights reserved.
 
+// GitHub: https://github.com/the-gaurav-codes
+// Instagram: https://www.instagram.com/the_gau_rav/
+// Email: kumar.gaurav.yadav2007@gmail.com
+
+// Unauthorized copying or use of this code is prohibited.
         // Update breakdown sections
         this.updateCategoryBreakdown();
         this.updateStatusBreakdown();
     }
+// © 2025 Gaurav Kumar Yadav — All rights reserved.
 
+// GitHub: https://github.com/the-gaurav-codes
+// Instagram: https://www.instagram.com/the_gau_rav/
+// Email: kumar.gaurav.yadav2007@gmail.com
+
+// Unauthorized copying or use of this code is prohibited.
     animateCounter(elementId, finalValue) {
         const element = document.querySelector(`#${elementId} .stat-number`);
         if (!element) return;
@@ -818,7 +1083,13 @@ class ProjectsPage {
             element.textContent = currentValue;
         }, 50);
     }
+// © 2025 Gaurav Kumar Yadav — All rights reserved.
 
+// GitHub: https://github.com/the-gaurav-codes
+// Instagram: https://www.instagram.com/the_gau_rav/
+// Email: kumar.gaurav.yadav2007@gmail.com
+
+// Unauthorized copying or use of this code is prohibited.
     updateCategoryBreakdown() {
         const container = document.getElementById('category-breakdown');
         if (!container) return;
@@ -840,7 +1111,13 @@ class ProjectsPage {
 
         container.innerHTML = breakdownHTML;
     }
+// © 2025 Gaurav Kumar Yadav — All rights reserved.
 
+// GitHub: https://github.com/the-gaurav-codes
+// Instagram: https://www.instagram.com/the_gau_rav/
+// Email: kumar.gaurav.yadav2007@gmail.com
+
+// Unauthorized copying or use of this code is prohibited.
     updateStatusBreakdown() {
         const container = document.getElementById('status-breakdown');
         if (!container) return;
@@ -856,7 +1133,13 @@ class ProjectsPage {
             'in-progress': 'In Progress',
             'planned': 'Planned'
         };
+// © 2025 Gaurav Kumar Yadav — All rights reserved.
 
+// GitHub: https://github.com/the-gaurav-codes
+// Instagram: https://www.instagram.com/the_gau_rav/
+// Email: kumar.gaurav.yadav2007@gmail.com
+
+// Unauthorized copying or use of this code is prohibited.
         const breakdownHTML = Object.entries(statusCounts)
             .map(([status, count]) => `
             <div class="breakdown-item">
@@ -871,7 +1154,13 @@ class ProjectsPage {
         container.innerHTML = breakdownHTML;
     }
 
+// © 2025 Gaurav Kumar Yadav — All rights reserved.
 
+// GitHub: https://github.com/the-gaurav-codes
+// Instagram: https://www.instagram.com/the_gau_rav/
+// Email: kumar.gaurav.yadav2007@gmail.com
+
+// Unauthorized copying or use of this code is prohibited.
 
     calculateStats() {
         const techSet = new Set();
@@ -892,7 +1181,13 @@ class ProjectsPage {
             categories: categorySet.size
         };
     }
+// © 2025 Gaurav Kumar Yadav — All rights reserved.
 
+// GitHub: https://github.com/the-gaurav-codes
+// Instagram: https://www.instagram.com/the_gau_rav/
+// Email: kumar.gaurav.yadav2007@gmail.com
+
+// Unauthorized copying or use of this code is prohibited.
     // Animations
     initAnimations() {
         // Intersection Observer for staggered animations
@@ -907,7 +1202,13 @@ class ProjectsPage {
             rootMargin: '0px 0px -50px 0px'
         });
     }
+// © 2025 Gaurav Kumar Yadav — All rights reserved.
 
+// GitHub: https://github.com/the-gaurav-codes
+// Instagram: https://www.instagram.com/the_gau_rav/
+// Email: kumar.gaurav.yadav2007@gmail.com
+
+// Unauthorized copying or use of this code is prohibited.
     triggerStaggeredAnimations() {
         // Reset and apply staggered animations
         const cards = document.querySelectorAll('.fade-in-stagger');
@@ -940,7 +1241,13 @@ class ProjectsPage {
             });
         });
     }
+// © 2025 Gaurav Kumar Yadav — All rights reserved.
 
+// GitHub: https://github.com/the-gaurav-codes
+// Instagram: https://www.instagram.com/the_gau_rav/
+// Email: kumar.gaurav.yadav2007@gmail.com
+
+// Unauthorized copying or use of this code is prohibited.
     // Error handling
     showError(message) {
         const errorDiv = document.createElement('div');
@@ -958,14 +1265,26 @@ class ProjectsPage {
             font-size: 14px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.15);
         `;
+// © 2025 Gaurav Kumar Yadav — All rights reserved.
 
+// GitHub: https://github.com/the-gaurav-codes
+// Instagram: https://www.instagram.com/the_gau_rav/
+// Email: kumar.gaurav.yadav2007@gmail.com
+
+// Unauthorized copying or use of this code is prohibited.
         document.body.appendChild(errorDiv);
 
         setTimeout(() => {
             errorDiv.remove();
         }, 5000);
     }
+// © 2025 Gaurav Kumar Yadav — All rights reserved.
 
+// GitHub: https://github.com/the-gaurav-codes
+// Instagram: https://www.instagram.com/the_gau_rav/
+// Email: kumar.gaurav.yadav2007@gmail.com
+
+// Unauthorized copying or use of this code is prohibited.
     // Enhanced sample data fallback
     getSampleProjects() {
         return [
@@ -1086,7 +1405,13 @@ class ProjectsPage {
         ];
     }
 }
+// © 2025 Gaurav Kumar Yadav — All rights reserved.
 
+// GitHub: https://github.com/the-gaurav-codes
+// Instagram: https://www.instagram.com/the_gau_rav/
+// Email: kumar.gaurav.yadav2007@gmail.com
+
+// Unauthorized copying or use of this code is prohibited.
 // Initialize the projects page when DOM is loaded
 let projectsPage;
 
@@ -1098,3 +1423,11 @@ document.addEventListener('DOMContentLoaded', () => {
 if (typeof module !== 'undefined' && module.exports) {
     module.exports = ProjectsPage;
 }
+
+// © 2025 Gaurav Kumar Yadav — All rights reserved.
+
+// GitHub: https://github.com/the-gaurav-codes
+// Instagram: https://www.instagram.com/the_gau_rav/
+// Email: kumar.gaurav.yadav2007@gmail.com
+
+// Unauthorized copying or use of this code is prohibited.

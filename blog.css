@@ -1,1222 +1,1666 @@
-/* PERFECT Blog CSS - All Issues Fixed */
-/* Importing theme variables from main portfolio CSS */
-@import url('style.css');
+/* © 2025 Gaurav Kumar Yadav — All rights reserved.
 
-/* Blog-specific variables that work with dark mode */
+GitHub: https://github.com/the-gaurav-codes
+Instagram: https://www.instagram.com/the_gau_rav/
+Email: kumar.gaurav.yadav2007@gmail.com
+
+Unauthorized copying or use of this code is prohibited. */
+
+@import url("style.css");
+
 :root {
-    --blog-max-width: 1200px;
-    --blog-card-height: auto; /* FIXED: Let cards size naturally */
-    --newsletter-gradient: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  --blog-max-width: 1200px;
+  --blog-card-height: auto; /* FIXED: Let cards size naturally */
+  --newsletter-gradient: linear-gradient(
+    135deg,
+    var(--primary-color) 0%,
+    var(--secondary-color) 100%
+  );
 }
 
-/* Dark theme support - MATCHES portfolio exactly */
+/* © 2025 Gaurav Kumar Yadav — All rights reserved.
+
+GitHub: https://github.com/the-gaurav-codes
+Instagram: https://www.instagram.com/the_gau_rav/
+Email: kumar.gaurav.yadav2007@gmail.com
+
+Unauthorized copying or use of this code is prohibited. */
+
+
 [data-theme="dark"] {
-    /* All theme variables inherited from main style.css */
+  /*  */
 }
 
 /* Loading Overlay */
 .loading-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(249, 250, 251, 0.95));
-    backdrop-filter: blur(10px);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 5000;
-    transition: opacity var(--transition-normal);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.95),
+    rgba(249, 250, 251, 0.95)
+  );
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5000;
+  transition: opacity var(--transition-normal);
 }
+/* © 2025 Gaurav Kumar Yadav — All rights reserved.
 
+GitHub: https://github.com/the-gaurav-codes
+Instagram: https://www.instagram.com/the_gau_rav/
+Email: kumar.gaurav.yadav2007@gmail.com
+
+Unauthorized copying or use of this code is prohibited. */
 [data-theme="dark"] .loading-overlay {
-    background: linear-gradient(135deg, rgba(31, 41, 55, 0.95), rgba(17, 24, 39, 0.95));
+  background: linear-gradient(
+    135deg,
+    rgba(31, 41, 55, 0.95),
+    rgba(17, 24, 39, 0.95)
+  );
 }
 
 .loading-spinner {
-    text-align: center;
-    color: var(--text-color);
+  text-align: center;
+  color: var(--text-color);
 }
+/* © 2025 Gaurav Kumar Yadav — All rights reserved.
 
+GitHub: https://github.com/the-gaurav-codes
+Instagram: https://www.instagram.com/the_gau_rav/
+Email: kumar.gaurav.yadav2007@gmail.com
+
+Unauthorized copying or use of this code is prohibited. */
 .spinner-ring {
-    width: 50px;
-    height: 50px;
-    border: 4px solid var(--border-color);
-    border-top: 4px solid var(--primary-color);
-    border-radius: 50%;
-    margin: 0 auto 1rem auto;
-    animation: spin 1s linear infinite;
+  width: 50px;
+  height: 50px;
+  border: 4px solid var(--border-color);
+  border-top: 4px solid var(--primary-color);
+  border-radius: 50%;
+  margin: 0 auto 1rem auto;
+  animation: spin 1s linear infinite;
 }
 
 @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
+/* © 2025 Gaurav Kumar Yadav — All rights reserved.
 
+GitHub: https://github.com/the-gaurav-codes
+Instagram: https://www.instagram.com/the_gau_rav/
+Email: kumar.gaurav.yadav2007@gmail.com
+
+Unauthorized copying or use of this code is prohibited. */
 .loading-spinner p {
-    font-size: var(--font-size-lg);
-    color: var(--text-secondary);
-    margin-top: var(--spacing-md);
+  font-size: var(--font-size-lg);
+  color: var(--text-secondary);
+  margin-top: var(--spacing-md);
 }
 
 /* Enhanced Hero Section */
 .blog-hero {
-    position: relative;
-    background: linear-gradient(135deg, var(--bg-color) 0%, var(--bg-secondary) 50%, var(--bg-tertiary) 100%);
-    padding: 8rem 0 6rem 0;
-    overflow: hidden;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
+  position: relative;
+  background: linear-gradient(
+    135deg,
+    var(--bg-color) 0%,
+    var(--bg-secondary) 50%,
+    var(--bg-tertiary) 100%
+  );
+  padding: 8rem 0 6rem 0;
+  overflow: hidden;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
 }
+/* © 2025 Gaurav Kumar Yadav — All rights reserved.
 
+GitHub: https://github.com/the-gaurav-codes
+Instagram: https://www.instagram.com/the_gau_rav/
+Email: kumar.gaurav.yadav2007@gmail.com
+
+Unauthorized copying or use of this code is prohibited. */
 .hero-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background:
-        radial-gradient(circle at 20% 50%, rgba(30, 58, 138, 0.05) 0%, transparent 50%),
-        radial-gradient(circle at 80% 20%, rgba(13, 148, 136, 0.05) 0%, transparent 50%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+      circle at 20% 50%,
+      rgba(30, 58, 138, 0.05) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(13, 148, 136, 0.05) 0%,
+      transparent 50%
+    );
 }
+/* © 2025 Gaurav Kumar Yadav — All rights reserved.
 
+GitHub: https://github.com/the-gaurav-codes
+Instagram: https://www.instagram.com/the_gau_rav/
+Email: kumar.gaurav.yadav2007@gmail.com
+
+Unauthorized copying or use of this code is prohibited. */
 .hero-particles {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 
 .particle {
-    position: absolute;
-    background: var(--primary-color);
-    border-radius: 50%;
-    opacity: 0.1;
-    animation: float 6s ease-in-out infinite;
+  position: absolute;
+  background: var(--primary-color);
+  border-radius: 50%;
+  opacity: 0.1;
+  animation: float 6s ease-in-out infinite;
 }
+/* © 2025 Gaurav Kumar Yadav — All rights reserved.
 
+GitHub: https://github.com/the-gaurav-codes
+Instagram: https://www.instagram.com/the_gau_rav/
+Email: kumar.gaurav.yadav2007@gmail.com
+
+Unauthorized copying or use of this code is prohibited. */
 .particle:nth-child(1) {
-    width: 4px;
-    height: 4px;
-    top: 20%;
-    left: 20%;
-    animation-delay: 0s;
+  width: 4px;
+  height: 4px;
+  top: 20%;
+  left: 20%;
+  animation-delay: 0s;
 }
 
 .particle:nth-child(2) {
-    width: 6px;
-    height: 6px;
-    top: 60%;
-    left: 80%;
-    animation-delay: 2s;
+  width: 6px;
+  height: 6px;
+  top: 60%;
+  left: 80%;
+  animation-delay: 2s;
 }
 
 .particle:nth-child(3) {
-    width: 3px;
-    height: 3px;
-    top: 80%;
-    left: 30%;
-    animation-delay: 4s;
+  width: 3px;
+  height: 3px;
+  top: 80%;
+  left: 30%;
+  animation-delay: 4s;
 }
+/* © 2025 Gaurav Kumar Yadav — All rights reserved.
 
+GitHub: https://github.com/the-gaurav-codes
+Instagram: https://www.instagram.com/the_gau_rav/
+Email: kumar.gaurav.yadav2007@gmail.com
+
+Unauthorized copying or use of this code is prohibited. */
 .particle:nth-child(4) {
-    width: 5px;
-    height: 5px;
-    top: 30%;
-    left: 70%;
-    animation-delay: 1s;
+  width: 5px;
+  height: 5px;
+  top: 30%;
+  left: 70%;
+  animation-delay: 1s;
 }
 
 .particle:nth-child(5) {
-    width: 4px;
-    height: 4px;
-    top: 70%;
-    left: 10%;
-    animation-delay: 3s;
+  width: 4px;
+  height: 4px;
+  top: 70%;
+  left: 10%;
+  animation-delay: 3s;
 }
+/* © 2025 Gaurav Kumar Yadav — All rights reserved.
 
+GitHub: https://github.com/the-gaurav-codes
+Instagram: https://www.instagram.com/the_gau_rav/
+Email: kumar.gaurav.yadav2007@gmail.com
+
+Unauthorized copying or use of this code is prohibited. */
 @keyframes float {
-    0%, 100% { transform: translateY(0px) rotate(0deg); }
-    33% { transform: translateY(-10px) rotate(120deg); }
-    66% { transform: translateY(5px) rotate(240deg); }
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  33% {
+    transform: translateY(-10px) rotate(120deg);
+  }
+  66% {
+    transform: translateY(5px) rotate(240deg);
+  }
 }
 
 .hero-content {
-    position: relative;
-    z-index: 1;
-    text-align: center;
-    max-width: 900px;
-    margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
 }
+/* © 2025 Gaurav Kumar Yadav — All rights reserved.
 
+GitHub: https://github.com/the-gaurav-codes
+Instagram: https://www.instagram.com/the_gau_rav/
+Email: kumar.gaurav.yadav2007@gmail.com
+
+Unauthorized copying or use of this code is prohibited. */
 .hero-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: var(--spacing-xs);
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    color: white;
-    padding: var(--spacing-sm) var(--spacing-lg);
-    border-radius: 50px;
-    font-size: var(--font-size-sm);
-    font-weight: 600;
-    margin-bottom: var(--spacing-xl);
-    box-shadow: 0 8px 25px rgba(30, 58, 138, 0.15);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  color: white;
+  padding: var(--spacing-sm) var(--spacing-lg);
+  border-radius: 50px;
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  margin-bottom: var(--spacing-xl);
+  box-shadow: 0 8px 25px rgba(30, 58, 138, 0.15);
 }
 
 .hero-title {
-    font-size: clamp(2.5rem, 5vw, 4rem);
-    font-weight: 800;
-    color: var(--text-color);
-    margin-bottom: var(--spacing-lg);
-    line-height: 1.1;
-    letter-spacing: -0.025em;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 800;
+  color: var(--text-color);
+  margin-bottom: var(--spacing-lg);
+  line-height: 1.1;
+  letter-spacing: -0.025em;
 }
 
 .gradient-text {
-    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+  background: linear-gradient(
+    135deg,
+    var(--primary-color) 0%,
+    var(--secondary-color) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
+/* © 2025 Gaurav Kumar Yadav — All rights reserved.
 
+GitHub: https://github.com/the-gaurav-codes
+Instagram: https://www.instagram.com/the_gau_rav/
+Email: kumar.gaurav.yadav2007@gmail.com
+
+Unauthorized copying or use of this code is prohibited. */
 .hero-subtitle {
-    font-size: clamp(1.125rem, 2vw, 1.375rem);
-    color: var(--text-secondary);
-    margin-bottom: var(--spacing-2xl);
-    line-height: 1.6;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
+  font-size: clamp(1.125rem, 2vw, 1.375rem);
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-2xl);
+  line-height: 1.6;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .hero-features {
-    display: flex;
-    justify-content: center;
-    gap: var(--spacing-xl);
-    margin-bottom: var(--spacing-3xl);
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-xl);
+  margin-bottom: var(--spacing-3xl);
+  flex-wrap: wrap;
 }
 
 .feature-item {
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-sm);
-    color: var(--text-secondary);
-    font-size: var(--font-size-sm);
-    font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  color: var(--text-secondary);
+  font-size: var(--font-size-sm);
+  font-weight: 500;
 }
 
 .feature-item i {
-    color: var(--primary-color);
-    font-size: var(--font-size-base);
+  color: var(--primary-color);
+  font-size: var(--font-size-base);
 }
 
 .blog-stats {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: var(--spacing-xl);
-    max-width: 600px;
-    margin: 0 auto var(--spacing-3xl);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: var(--spacing-xl);
+  max-width: 600px;
+  margin: 0 auto var(--spacing-3xl);
 }
+/* © 2025 Gaurav Kumar Yadav — All rights reserved.
 
+GitHub: https://github.com/the-gaurav-codes
+Instagram: https://www.instagram.com/the_gau_rav/
+Email: kumar.gaurav.yadav2007@gmail.com
+
+Unauthorized copying or use of this code is prohibited. */
 .stat-item {
-    text-align: center;
-    background: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(10px);
-    border: 1px solid var(--border-color);
-    border-radius: var(--radius-xl);
-    padding: var(--spacing-lg);
-    transition: all var(--transition-normal);
-    position: relative;
-    overflow: hidden;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-xl);
+  padding: var(--spacing-lg);
+  transition: all var(--transition-normal);
+  position: relative;
+  overflow: hidden;
 }
 
 [data-theme="dark"] .stat-item {
-    background: rgba(31, 41, 55, 0.7);
+  background: rgba(31, 41, 55, 0.7);
 }
 
 .stat-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 .stat-item::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 3px;
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
 }
+/* © 2025 Gaurav Kumar Yadav — All rights reserved.
 
+GitHub: https://github.com/the-gaurav-codes
+Instagram: https://www.instagram.com/the_gau_rav/
+Email: kumar.gaurav.yadav2007@gmail.com
+
+Unauthorized copying or use of this code is prohibited. */
 .stat-icon {
-    width: 40px;
-    height: 40px;
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto var(--spacing-sm);
-    color: white;
-    font-size: var(--font-size-lg);
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--spacing-sm);
+  color: white;
+  font-size: var(--font-size-lg);
 }
 
 .stat-number {
-    display: block;
-    font-size: var(--font-size-2xl);
-    font-weight: 700;
-    color: var(--text-color);
-    margin-bottom: var(--spacing-xs);
+  display: block;
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  color: var(--text-color);
+  margin-bottom: var(--spacing-xs);
 }
+/* © 2025 Gaurav Kumar Yadav — All rights reserved.
 
+GitHub: https://github.com/the-gaurav-codes
+Instagram: https://www.instagram.com/the_gau_rav/
+Email: kumar.gaurav.yadav2007@gmail.com
+
+Unauthorized copying or use of this code is prohibited. */
 .stat-label {
-    font-size: var(--font-size-sm);
-    color: var(--text-secondary);
-    font-weight: 500;
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+  font-weight: 500;
 }
 
 .hero-cta {
-    text-align: center;
+  text-align: center;
 }
 
 .btn-cta {
-    display: inline-flex;
-    align-items: center;
-    gap: var(--spacing-sm);
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    color: white;
-    padding: var(--spacing-lg) var(--spacing-2xl);
-    border: none;
-    border-radius: 50px;
-    font-size: var(--font-size-lg);
-    font-weight: 600;
-    cursor: pointer;
-    transition: all var(--transition-normal);
-    box-shadow: 0 8px 25px rgba(30, 58, 138, 0.25);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  color: white;
+  padding: var(--spacing-lg) var(--spacing-2xl);
+  border: none;
+  border-radius: 50px;
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  box-shadow: 0 8px 25px rgba(30, 58, 138, 0.25);
 }
+/* © 2025 Gaurav Kumar Yadav — All rights reserved.
 
+GitHub: https://github.com/the-gaurav-codes
+Instagram: https://www.instagram.com/the_gau_rav/
+Email: kumar.gaurav.yadav2007@gmail.com
+
+Unauthorized copying or use of this code is prohibited. */
 .btn-cta:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 12px 35px rgba(30, 58, 138, 0.35);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px rgba(30, 58, 138, 0.35);
 }
 
 /* Controls Section */
 .controls-section {
-    background: var(--bg-secondary);
-    border-bottom: 1px solid var(--border-color);
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border-color);
 }
 
 .section-header {
-    text-align: center;
-    margin-bottom: var(--spacing-3xl);
+  text-align: center;
+  margin-bottom: var(--spacing-3xl);
 }
 
 .section-title {
-    font-size: var(--font-size-3xl);
-    font-weight: 700;
-    color: var(--text-color);
-    margin-bottom: var(--spacing-md);
+  font-size: var(--font-size-3xl);
+  font-weight: 700;
+  color: var(--text-color);
+  margin-bottom: var(--spacing-md);
 }
 
 .section-subtitle {
-    font-size: var(--font-size-lg);
-    color: var(--text-secondary);
-    max-width: 500px;
-    margin: 0 auto;
+  font-size: var(--font-size-lg);
+  color: var(--text-secondary);
+  max-width: 500px;
+  margin: 0 auto;
 }
+/* © 2025 Gaurav Kumar Yadav — All rights reserved.
 
+GitHub: https://github.com/the-gaurav-codes
+Instagram: https://www.instagram.com/the_gau_rav/
+Email: kumar.gaurav.yadav2007@gmail.com
+
+Unauthorized copying or use of this code is prohibited. */
 .blog-controls {
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-xl);
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+  align-items: center;
 }
 
 @media (min-width: 768px) {
-    .blog-controls {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: flex-end;
-    }
+  .blog-controls {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
 }
 
 .search-wrapper {
-    position: relative;
-    width: 100%;
-    max-width: 400px;
+  position: relative;
+  width: 100%;
+  max-width: 400px;
 }
+/* © 2025 Gaurav Kumar Yadav — All rights reserved.
 
+GitHub: https://github.com/the-gaurav-codes
+Instagram: https://www.instagram.com/the_gau_rav/
+Email: kumar.gaurav.yadav2007@gmail.com
+
+Unauthorized copying or use of this code is prohibited. */
 .search-input {
-    width: 100%;
-    padding: var(--spacing-md) var(--spacing-lg);
-    padding-left: 3rem;
-    border: 2px solid var(--border-color);
-    border-radius: 50px;
-    font-size: var(--font-size-base);
-    background: var(--bg-color);
-    color: var(--text-color);
-    transition: all var(--transition-fast);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  padding: var(--spacing-md) var(--spacing-lg);
+  padding-left: 3rem;
+  border: 2px solid var(--border-color);
+  border-radius: 50px;
+  font-size: var(--font-size-base);
+  background: var(--bg-color);
+  color: var(--text-color);
+  transition: all var(--transition-fast);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 }
+/* © 2025 Gaurav Kumar Yadav — All rights reserved.
 
+GitHub: https://github.com/the-gaurav-codes
+Instagram: https://www.instagram.com/the_gau_rav/
+Email: kumar.gaurav.yadav2007@gmail.com
+
+Unauthorized copying or use of this code is prohibited. */
 .search-input:focus {
-    outline: none;
-    border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.1), 0 4px 15px rgba(0, 0, 0, 0.1);
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.1), 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .search-icon {
-    position: absolute;
-    left: 1rem;
-    top: 50%;
-    transform: translateY(-50%);
-    color: var(--text-secondary);
-    font-size: var(--font-size-lg);
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-secondary);
+  font-size: var(--font-size-lg);
 }
+/* © 2025 Gaurav Kumar Yadav — All rights reserved.
 
+GitHub: https://github.com/the-gaurav-codes
+Instagram: https://www.instagram.com/the_gau_rav/
+Email: kumar.gaurav.yadav2007@gmail.com
+
+Unauthorized copying or use of this code is prohibited. */
 .filter-section {
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-sm);
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  align-items: center;
 }
 
 @media (min-width: 768px) {
-    .filter-section {
-        flex-direction: row;
-        gap: var(--spacing-md);
-    }
+  .filter-section {
+    flex-direction: row;
+    gap: var(--spacing-md);
+  }
 }
+/* © 2025 Gaurav Kumar Yadav — All rights reserved.
 
+GitHub: https://github.com/the-gaurav-codes
+Instagram: https://www.instagram.com/the_gau_rav/
+Email: kumar.gaurav.yadav2007@gmail.com
+
+Unauthorized copying or use of this code is prohibited. */
 .filter-label {
-    font-size: var(--font-size-sm);
-    font-weight: 600;
-    color: var(--text-color);
-    white-space: nowrap;
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--text-color);
+  white-space: nowrap;
 }
 
 .filter-tags {
-    display: flex;
-    gap: var(--spacing-sm);
-    flex-wrap: wrap;
-    justify-content: center;
+  display: flex;
+  gap: var(--spacing-sm);
+  flex-wrap: wrap;
+  justify-content: center;
 }
+/* © 2025 Gaurav Kumar Yadav — All rights reserved.
 
+GitHub: https://github.com/the-gaurav-codes
+Instagram: https://www.instagram.com/the_gau_rav/
+Email: kumar.gaurav.yadav2007@gmail.com
+
+Unauthorized copying or use of this code is prohibited. */
 .filter-tag {
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-xs);
-    padding: var(--spacing-sm) var(--spacing-lg);
-    background: var(--bg-color);
-    border: 2px solid var(--border-color);
-    border-radius: 50px;
-    font-size: var(--font-size-sm);
-    font-weight: 500;
-    color: var(--text-secondary);
-    cursor: pointer;
-    transition: all var(--transition-fast);
-    white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  padding: var(--spacing-sm) var(--spacing-lg);
+  background: var(--bg-color);
+  border: 2px solid var(--border-color);
+  border-radius: 50px;
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  white-space: nowrap;
 }
+/* © 2025 Gaurav Kumar Yadav — All rights reserved.
 
+GitHub: https://github.com/the-gaurav-codes
+Instagram: https://www.instagram.com/the_gau_rav/
+Email: kumar.gaurav.yadav2007@gmail.com
+
+Unauthorized copying or use of this code is prohibited. */
 .filter-tag:hover {
-    border-color: var(--primary-color);
-    color: var(--primary-color);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(30, 58, 138, 0.15);
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(30, 58, 138, 0.15);
 }
 
 .filter-tag.active {
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    color: white;
-    border-color: transparent;
-    box-shadow: 0 4px 15px rgba(30, 58, 138, 0.25);
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  color: white;
+  border-color: transparent;
+  box-shadow: 0 4px 15px rgba(30, 58, 138, 0.25);
 }
 
 .filter-tag i {
-    font-size: var(--font-size-sm);
+  font-size: var(--font-size-sm);
 }
 
 /* Error Container */
 .error-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 400px;
-    padding: var(--spacing-3xl);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+  padding: var(--spacing-3xl);
 }
 
 .error-message {
-    text-align: center;
-    max-width: 500px;
-    background: var(--bg-color);
-    border: 1px solid var(--border-color);
-    border-radius: var(--radius-xl);
-    padding: var(--spacing-3xl);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  max-width: 500px;
+  background: var(--bg-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-xl);
+  padding: var(--spacing-3xl);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
 }
+/* © 2025 Gaurav Kumar Yadav — All rights reserved.
 
+GitHub: https://github.com/the-gaurav-codes
+Instagram: https://www.instagram.com/the_gau_rav/
+Email: kumar.gaurav.yadav2007@gmail.com
+
+Unauthorized copying or use of this code is prohibited. */
 .error-icon {
-    width: 80px;
-    height: 80px;
-    background: linear-gradient(135deg, #dc2626, #ef4444);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto var(--spacing-lg);
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #dc2626, #ef4444);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--spacing-lg);
 }
 
 .error-icon i {
-    font-size: var(--font-size-2xl);
-    color: white;
+  font-size: var(--font-size-2xl);
+  color: white;
 }
 
 .error-message h3 {
-    font-size: var(--font-size-2xl);
-    font-weight: 600;
-    color: var(--text-color);
-    margin-bottom: var(--spacing-md);
+  font-size: var(--font-size-2xl);
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: var(--spacing-md);
 }
 
 .error-message p {
-    color: var(--text-secondary);
-    margin-bottom: var(--spacing-xl);
-    line-height: 1.6;
-    font-size: var(--font-size-lg);
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-xl);
+  line-height: 1.6;
+  font-size: var(--font-size-lg);
 }
+/* © 2025 Gaurav Kumar Yadav — All rights reserved.
 
+GitHub: https://github.com/the-gaurav-codes
+Instagram: https://www.instagram.com/the_gau_rav/
+Email: kumar.gaurav.yadav2007@gmail.com
+
+Unauthorized copying or use of this code is prohibited. */
 /* PERFECT Blog Grid - FIXED SIZING ISSUES */
 .blog-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* FIXED: Better minmax */
-    gap: var(--spacing-2xl);
-    margin-bottom: var(--spacing-3xl);
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(350px, 1fr)
+  ); /* FIXED: Better minmax */
+  gap: var(--spacing-2xl);
+  margin-bottom: var(--spacing-3xl);
 }
 
 @media (max-width: 400px) {
-    .blog-grid {
-        grid-template-columns: 1fr; /* Single column on very small screens */
-    }
+  .blog-grid {
+    grid-template-columns: 1fr; /* Single column on very small screens */
+  }
 }
+/* © 2025 Gaurav Kumar Yadav — All rights reserved.
 
+GitHub: https://github.com/the-gaurav-codes
+Instagram: https://www.instagram.com/the_gau_rav/
+Email: kumar.gaurav.yadav2007@gmail.com
+
+Unauthorized copying or use of this code is prohibited. */
 /* PERFECT Blog Card - FIXED ALL SIZING ISSUES */
 .blog-card {
-    background: var(--bg-color);
-    border-radius: var(--radius-xl);
-    overflow: hidden;
-    border: 1px solid var(--border-color);
-    transition: all var(--transition-normal);
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    height: auto; /* FIXED: Let it size naturally */
-    min-height: 450px; /* FIXED: Consistent minimum height */
-    max-height: none; /* FIXED: No maximum height restriction */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-    position: relative;
+  background: var(--bg-color);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  transition: all var(--transition-normal);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  height: auto; /* FIXED: Let it size naturally */
+  min-height: 450px; /* FIXED: Consistent minimum height */
+  max-height: none; /* FIXED: No maximum height restriction */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  position: relative;
 }
+/* © 2025 Gaurav Kumar Yadav — All rights reserved.
 
+GitHub: https://github.com/the-gaurav-codes
+Instagram: https://www.instagram.com/the_gau_rav/
+Email: kumar.gaurav.yadav2007@gmail.com
+
+Unauthorized copying or use of this code is prohibited. */
 .blog-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 4px;
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    transform: scaleX(0);
-    transition: transform var(--transition-normal);
-}
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  transform: scaleX(0);
+  transition: transform var(--transition-normal);
+}/* © 2025 Gaurav Kumar Yadav — All rights reserved.
+
+GitHub: https://github.com/the-gaurav-codes
+Instagram: https://www.instagram.com/the_gau_rav/
+Email: kumar.gaurav.yadav2007@gmail.com
+
+Unauthorized copying or use of this code is prohibited. */
 
 .blog-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
 }
 
 .blog-card:hover::before {
-    transform: scaleX(1);
+  transform: scaleX(1);
 }
 
 /* PERFECT Image Container - FIXED SIZING */
 .blog-card-image {
-    width: 100%;
-    height: 200px; /* FIXED: Consistent height */
-    position: relative;
-    overflow: hidden;
-    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0; /* FIXED: Prevent shrinking */
+  width: 100%;
+  height: 200px; /* FIXED: Consistent height */
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(
+    135deg,
+    var(--primary-color) 0%,
+    var(--secondary-color) 100%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0; /* FIXED: Prevent shrinking */
 }
+/* © 2025 Gaurav Kumar Yadav — All rights reserved.
 
+GitHub: https://github.com/the-gaurav-codes
+Instagram: https://www.instagram.com/the_gau_rav/
+Email: kumar.gaurav.yadav2007@gmail.com
+
+Unauthorized copying or use of this code is prohibited. */
 .blog-card-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* FIXED: Proper image fitting */
-    transition: transform var(--transition-slow);
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* FIXED: Proper image fitting */
+  transition: transform var(--transition-slow);
 }
 
 .blog-card:hover .blog-card-image img {
-    transform: scale(1.05); /* FIXED: Subtle hover effect */
+  transform: scale(1.05); /* FIXED: Subtle hover effect */
 }
 
 .blog-card-image i {
-    font-size: var(--font-size-3xl);
-    color: white;
-    z-index: 1;
+  font-size: var(--font-size-3xl);
+  color: white;
+  z-index: 1;
 }
 
 /* PERFECT Content Container - FIXED SPACING */
 .blog-card-content {
-    padding: var(--spacing-xl);
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1; /* FIXED: Fill available space */
-    justify-content: space-between; /* FIXED: Distribute content evenly */
+  padding: var(--spacing-xl);
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* FIXED: Fill available space */
+  justify-content: space-between; /* FIXED: Distribute content evenly */
 }
+/* © 2025 Gaurav Kumar Yadav — All rights reserved.
 
+GitHub: https://github.com/the-gaurav-codes
+Instagram: https://www.instagram.com/the_gau_rav/
+Email: kumar.gaurav.yadav2007@gmail.com
+
+Unauthorized copying or use of this code is prohibited. */
 .blog-card-meta {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: var(--spacing-sm);
-    font-size: var(--font-size-sm);
-    margin-bottom: var(--spacing-lg);
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--spacing-sm);
+  font-size: var(--font-size-sm);
+  margin-bottom: var(--spacing-lg);
+  flex-wrap: wrap;
 }
 
 .blog-card-category {
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    color: white;
-    padding: var(--spacing-xs) var(--spacing-md);
-    border-radius: 50px;
-    font-weight: 600;
-    font-size: var(--font-size-xs);
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-    flex-shrink: 0; /* FIXED: Prevent shrinking */
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  color: white;
+  padding: var(--spacing-xs) var(--spacing-md);
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: var(--font-size-xs);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  flex-shrink: 0; /* FIXED: Prevent shrinking */
 }
 
 .blog-card-date {
-    color: var(--text-secondary);
-    font-size: var(--font-size-xs);
+  color: var(--text-secondary);
+  font-size: var(--font-size-xs);
 }
+/* © 2025 Gaurav Kumar Yadav — All rights reserved.
 
+GitHub: https://github.com/the-gaurav-codes
+Instagram: https://www.instagram.com/the_gau_rav/
+Email: kumar.gaurav.yadav2007@gmail.com
+
+Unauthorized copying or use of this code is prohibited. */
 .blog-card-title {
-    font-size: var(--font-size-xl);
-    font-weight: 700;
-    color: var(--text-color);
-    margin-bottom: var(--spacing-md);
-    line-height: 1.4;
-    display: -webkit-box;
-    -webkit-line-clamp: 2; /* FIXED: Limit to 2 lines */
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    min-height: 3.5rem; /* FIXED: Consistent title height */
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  color: var(--text-color);
+  margin-bottom: var(--spacing-md);
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* FIXED: Limit to 2 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  min-height: 3.5rem; /* FIXED: Consistent title height */
 }
 
 .blog-card-excerpt {
-    color: var(--text-secondary);
-    margin-bottom: var(--spacing-lg);
-    line-height: 1.7;
-    display: -webkit-box;
-    -webkit-line-clamp: 3; /* FIXED: Limit to 3 lines */
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    flex-grow: 1; /* FIXED: Take up available space */
-    min-height: 4.5rem; /* FIXED: Consistent excerpt height */
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-lg);
+  line-height: 1.7;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* FIXED: Limit to 3 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  flex-grow: 1; /* FIXED: Take up available space */
+  min-height: 4.5rem; /* FIXED: Consistent excerpt height */
 }
+/* © 2025 Gaurav Kumar Yadav — All rights reserved.
 
+GitHub: https://github.com/the-gaurav-codes
+Instagram: https://www.instagram.com/the_gau_rav/
+Email: kumar.gaurav.yadav2007@gmail.com
+
+Unauthorized copying or use of this code is prohibited. */
 .blog-card-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: var(--spacing-md);
-    border-top: 1px solid var(--border-color);
-    margin-top: auto; /* FIXED: Push to bottom */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: var(--spacing-md);
+  border-top: 1px solid var(--border-color);
+  margin-top: auto; /* FIXED: Push to bottom */
 }
 
 .read-more {
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-xs);
-    color: var(--primary-color);
-    font-weight: 600;
-    text-decoration: none;
-    font-size: var(--font-size-sm);
-    transition: all var(--transition-fast);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  color: var(--primary-color);
+  font-weight: 600;
+  text-decoration: none;
+  font-size: var(--font-size-sm);
+  transition: all var(--transition-fast);
 }
 
 .read-more:hover {
-    color: var(--secondary-color);
-    gap: var(--spacing-sm);
+  color: var(--secondary-color);
+  gap: var(--spacing-sm);
 }
+/* © 2025 Gaurav Kumar Yadav — All rights reserved.
 
+GitHub: https://github.com/the-gaurav-codes
+Instagram: https://www.instagram.com/the_gau_rav/
+Email: kumar.gaurav.yadav2007@gmail.com
+
+Unauthorized copying or use of this code is prohibited. */
 .read-time {
-    color: var(--text-secondary);
-    font-size: var(--font-size-sm);
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-xs);
+  color: var(--text-secondary);
+  font-size: var(--font-size-sm);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
 }
 
 /* Load More Button */
 .btn-load-more {
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-sm);
-    background: var(--bg-color);
-    color: var(--primary-color);
-    border: 2px solid var(--primary-color);
-    padding: var(--spacing-lg) var(--spacing-2xl);
-    border-radius: 50px;
-    font-size: var(--font-size-base);
-    font-weight: 600;
-    cursor: pointer;
-    transition: all var(--transition-normal);
-    margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  background: var(--bg-color);
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+  padding: var(--spacing-lg) var(--spacing-2xl);
+  border-radius: 50px;
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  margin: 0 auto;
 }
+/* © 2025 Gaurav Kumar Yadav — All rights reserved.
 
+GitHub: https://github.com/the-gaurav-codes
+Instagram: https://www.instagram.com/the_gau_rav/
+Email: kumar.gaurav.yadav2007@gmail.com
+
+Unauthorized copying or use of this code is prohibited. */
 .btn-load-more:hover {
-    background: var(--primary-color);
-    color: white;
-    transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(30, 58, 138, 0.25);
+  background: var(--primary-color);
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(30, 58, 138, 0.25);
 }
 
 /* Newsletter Section */
 .newsletter-section {
-    background: var(--bg-secondary);
-    position: relative;
-    overflow: hidden;
+  background: var(--bg-secondary);
+  position: relative;
+  overflow: hidden;
 }
+/* © 2025 Gaurav Kumar Yadav — All rights reserved.
 
+GitHub: https://github.com/the-gaurav-codes
+Instagram: https://www.instagram.com/the_gau_rav/
+Email: kumar.gaurav.yadav2007@gmail.com
+
+Unauthorized copying or use of this code is prohibited. */
 .newsletter {
-    position: relative;
-    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-    border-radius: var(--radius-2xl);
-    padding: var(--spacing-3xl);
-    color: white;
-    text-align: center;
-    max-width: 700px;
-    margin: 0 auto;
-    overflow: hidden;
+  position: relative;
+  background: linear-gradient(
+    135deg,
+    var(--primary-color) 0%,
+    var(--secondary-color) 100%
+  );
+  border-radius: var(--radius-2xl);
+  padding: var(--spacing-3xl);
+  color: white;
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+  overflow: hidden;
 }
 
 .newsletter-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0.1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.1;
 }
 
 .newsletter-pattern {
-    width: 100%;
-    height: 100%;
-    background-image:
-        radial-gradient(circle at 25% 25%, white 2px, transparent 2px),
-        radial-gradient(circle at 75% 75%, white 2px, transparent 2px);
-    background-size: 50px 50px;
-    background-position: 0 0, 25px 25px;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(
+      circle at 25% 25%,
+      white 2px,
+      transparent 2px
+    ),
+    radial-gradient(circle at 75% 75%, white 2px, transparent 2px);
+  background-size: 50px 50px;
+  background-position: 0 0, 25px 25px;
 }
+/* © 2025 Gaurav Kumar Yadav — All rights reserved.
 
+GitHub: https://github.com/the-gaurav-codes
+Instagram: https://www.instagram.com/the_gau_rav/
+Email: kumar.gaurav.yadav2007@gmail.com
+
+Unauthorized copying or use of this code is prohibited. */
 .newsletter-icon {
-    width: 60px;
-    height: 60px;
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto var(--spacing-lg);
-    font-size: var(--font-size-xl);
+  width: 60px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--spacing-lg);
+  font-size: var(--font-size-xl);
 }
+/* © 2025 Gaurav Kumar Yadav — All rights reserved.
 
+GitHub: https://github.com/the-gaurav-codes
+Instagram: https://www.instagram.com/the_gau_rav/
+Email: kumar.gaurav.yadav2007@gmail.com
+
+Unauthorized copying or use of this code is prohibited. */
 .newsletter h3 {
-    font-size: var(--font-size-2xl);
-    font-weight: 700;
-    margin-bottom: var(--spacing-md);
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  margin-bottom: var(--spacing-md);
 }
 
 .newsletter p {
-    font-size: var(--font-size-lg);
-    opacity: 0.95;
-    margin-bottom: var(--spacing-2xl);
-    line-height: 1.6;
+  font-size: var(--font-size-lg);
+  opacity: 0.95;
+  margin-bottom: var(--spacing-2xl);
+  line-height: 1.6;
 }
 
 .newsletter-form .form-group {
-    display: flex;
-    gap: var(--spacing-md);
-    max-width: 450px;
-    margin: 0 auto var(--spacing-lg);
-    flex-wrap: wrap;
+  display: flex;
+  gap: var(--spacing-md);
+  max-width: 450px;
+  margin: 0 auto var(--spacing-lg);
+  flex-wrap: wrap;
 }
 
 .input-wrapper {
-    position: relative;
-    flex: 1;
-    min-width: 250px;
+  position: relative;
+  flex: 1;
+  min-width: 250px;
 }
+/* © 2025 Gaurav Kumar Yadav — All rights reserved.
 
+GitHub: https://github.com/the-gaurav-codes
+Instagram: https://www.instagram.com/the_gau_rav/
+Email: kumar.gaurav.yadav2007@gmail.com
+
+Unauthorized copying or use of this code is prohibited. */
 .newsletter-input {
-    width: 100%;
-    padding: var(--spacing-md) var(--spacing-lg);
-    padding-left: 2.75rem;
-    border: 2px solid transparent;
-    border-radius: 50px;
-    font-size: var(--font-size-base);
-    background: rgba(255, 255, 255, 0.9);
-    color: var(--text-color);
-    transition: all var(--transition-fast);
+  width: 100%;
+  padding: var(--spacing-md) var(--spacing-lg);
+  padding-left: 2.75rem;
+  border: 2px solid transparent;
+  border-radius: 50px;
+  font-size: var(--font-size-base);
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--text-color);
+  transition: all var(--transition-fast);
 }
 
 .newsletter-input:focus {
-    outline: none;
-    border-color: white;
-    background: white;
-    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3);
+  outline: none;
+  border-color: white;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3);
 }
 
 .input-wrapper i {
-    position: absolute;
-    left: 1rem;
-    top: 50%;
-    transform: translateY(-50%);
-    color: var(--text-secondary);
-    pointer-events: none;
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-secondary);
+  pointer-events: none;
 }
+/* © 2025 Gaurav Kumar Yadav — All rights reserved.
 
+GitHub: https://github.com/the-gaurav-codes
+Instagram: https://www.instagram.com/the_gau_rav/
+Email: kumar.gaurav.yadav2007@gmail.com
+
+Unauthorized copying or use of this code is prohibited. */
 .btn-subscribe {
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-xs);
-    background: white;
-    color: var(--primary-color);
-    border: none;
-    padding: var(--spacing-md) var(--spacing-xl);
-    border-radius: 50px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all var(--transition-normal);
-    white-space: nowrap;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    min-width: 140px;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  background: white;
+  color: var(--primary-color);
+  border: none;
+  padding: var(--spacing-md) var(--spacing-xl);
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  white-space: nowrap;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  min-width: 140px;
 }
 
 .btn-subscribe:hover {
-    background: rgba(255, 255, 255, 0.9);
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  background: rgba(255, 255, 255, 0.9);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 
 .btn-subscribe.loading {
-    opacity: 0.7;
-    pointer-events: none;
+  opacity: 0.7;
+  pointer-events: none;
 }
+/* © 2025 Gaurav Kumar Yadav — All rights reserved.
 
+GitHub: https://github.com/the-gaurav-codes
+Instagram: https://www.instagram.com/the_gau_rav/
+Email: kumar.gaurav.yadav2007@gmail.com
+
+Unauthorized copying or use of this code is prohibited. */
 .newsletter-note {
-    font-size: var(--font-size-sm);
-    opacity: 0.8;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: var(--spacing-xs);
-    margin-top: var(--spacing-md);
+  font-size: var(--font-size-sm);
+  opacity: 0.8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-xs);
+  margin-top: var(--spacing-md);
 }
 
 .newsletter-note.error {
-    color: #dc2626;
-    background: rgba(255, 255, 255, 0.9);
-    padding: var(--spacing-sm) var(--spacing-md);
-    border-radius: var(--radius-md);
-    font-weight: 600;
+  color: #dc2626;
+  background: rgba(255, 255, 255, 0.9);
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--radius-md);
+  font-weight: 600;
 }
 
 .newsletter-note.success {
-    color: #059669;
-    background: rgba(255, 255, 255, 0.9);
-    padding: var(--spacing-sm) var(--spacing-md);
-    border-radius: var(--radius-md);
-    font-weight: 600;
+  color: #059669;
+  background: rgba(255, 255, 255, 0.9);
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--radius-md);
+  font-weight: 600;
 }
+/* © 2025 Gaurav Kumar Yadav — All rights reserved.
 
+GitHub: https://github.com/the-gaurav-codes
+Instagram: https://www.instagram.com/the_gau_rav/
+Email: kumar.gaurav.yadav2007@gmail.com
+
+Unauthorized copying or use of this code is prohibited. */
 /* PERFECT Footer */
 .footer {
-    background: var(--bg-secondary);
-    border-top: 1px solid var(--border-color);
-    padding: var(--spacing-3xl) 0 var(--spacing-xl) 0;
-    margin-top: var(--spacing-3xl);
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--border-color);
+  padding: var(--spacing-3xl) 0 var(--spacing-xl) 0;
+  margin-top: var(--spacing-3xl);
 }
 
 .footer-content {
-    max-width: var(--blog-max-width);
-    margin: 0 auto;
-    padding: 0 var(--spacing-md);
+  max-width: var(--blog-max-width);
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
 }
 
 .footer-main {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: var(--spacing-3xl);
-    margin-bottom: var(--spacing-3xl);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-3xl);
+  margin-bottom: var(--spacing-3xl);
 }
+/* © 2025 Gaurav Kumar Yadav — All rights reserved.
 
+GitHub: https://github.com/the-gaurav-codes
+Instagram: https://www.instagram.com/the_gau_rav/
+Email: kumar.gaurav.yadav2007@gmail.com
+
+Unauthorized copying or use of this code is prohibited. */
 @media (min-width: 768px) {
-    .footer-main {
-        grid-template-columns: 1fr 2fr;
-        align-items: start;
-    }
+  .footer-main {
+    grid-template-columns: 1fr 2fr;
+    align-items: start;
+  }
 }
 
 .footer-brand {
-    text-align: center;
+  text-align: center;
 }
 
 @media (min-width: 768px) {
-    .footer-brand {
-        text-align: left;
-    }
+  .footer-brand {
+    text-align: left;
+  }
 }
+/* © 2025 Gaurav Kumar Yadav — All rights reserved.
 
+GitHub: https://github.com/the-gaurav-codes
+Instagram: https://www.instagram.com/the_gau_rav/
+Email: kumar.gaurav.yadav2007@gmail.com
+
+Unauthorized copying or use of this code is prohibited. */
 .footer-logo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: var(--spacing-sm);
-    font-size: var(--font-size-xl);
-    font-weight: 700;
-    color: var(--primary-color);
-    margin-bottom: var(--spacing-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-md);
 }
 
 @media (min-width: 768px) {
-    .footer-logo {
-        justify-content: flex-start;
-    }
+  .footer-logo {
+    justify-content: flex-start;
+  }
 }
+/* © 2025 Gaurav Kumar Yadav — All rights reserved.
 
+GitHub: https://github.com/the-gaurav-codes
+Instagram: https://www.instagram.com/the_gau_rav/
+Email: kumar.gaurav.yadav2007@gmail.com
+
+Unauthorized copying or use of this code is prohibited. */
 .footer-tagline {
-    color: var(--text-secondary);
-    line-height: 1.6;
-    margin-bottom: var(--spacing-xl);
-    font-size: var(--font-size-base);
-    max-width: 300px;
-    margin-left: auto;
-    margin-right: auto;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: var(--spacing-xl);
+  font-size: var(--font-size-base);
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @media (min-width: 768px) {
-    .footer-tagline {
-        margin-left: 0;
-        margin-right: 0;
-    }
+  .footer-tagline {
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 
 .footer-socials {
-    display: flex;
-    gap: var(--spacing-md);
-    justify-content: center;
+  display: flex;
+  gap: var(--spacing-md);
+  justify-content: center;
 }
 
 @media (min-width: 768px) {
-    .footer-socials {
-        justify-content: flex-start;
-    }
+  .footer-socials {
+    justify-content: flex-start;
+  }
 }
+/* © 2025 Gaurav Kumar Yadav — All rights reserved.
 
+GitHub: https://github.com/the-gaurav-codes
+Instagram: https://www.instagram.com/the_gau_rav/
+Email: kumar.gaurav.yadav2007@gmail.com
+
+Unauthorized copying or use of this code is prohibited. */
 .footer-social-link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 2.5rem;
-    height: 2.5rem;
-    border-radius: 50%;
-    background: var(--bg-color);
-    color: var(--text-secondary);
-    text-decoration: none;
-    transition: all var(--transition-fast);
-    border: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background: var(--bg-color);
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: all var(--transition-fast);
+  border: 1px solid var(--border-color);
 }
 
 .footer-social-link:hover {
-    background: var(--primary-color);
-    color: white;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(30, 58, 138, 0.25);
+  background: var(--primary-color);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(30, 58, 138, 0.25);
 }
+/* © 2025 Gaurav Kumar Yadav — All rights reserved.
 
+GitHub: https://github.com/the-gaurav-codes
+Instagram: https://www.instagram.com/the_gau_rav/
+Email: kumar.gaurav.yadav2007@gmail.com
+
+Unauthorized copying or use of this code is prohibited. */
 .footer-links {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: var(--spacing-2xl);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: var(--spacing-2xl);
 }
 
 @media (min-width: 768px) {
-    .footer-links {
-        grid-template-columns: repeat(4, 1fr);
-        gap: var(--spacing-xl);
-    }
+  .footer-links {
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--spacing-xl);
+  }
 }
 
 .footer-section h4 {
-    font-size: var(--font-size-lg);
-    font-weight: 600;
-    color: var(--text-color);
-    margin-bottom: var(--spacing-md);
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: var(--spacing-md);
 }
+/* © 2025 Gaurav Kumar Yadav — All rights reserved.
 
+GitHub: https://github.com/the-gaurav-codes
+Instagram: https://www.instagram.com/the_gau_rav/
+Email: kumar.gaurav.yadav2007@gmail.com
+
+Unauthorized copying or use of this code is prohibited. */
 .footer-section ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .footer-section li {
-    margin-bottom: var(--spacing-sm);
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-xs);
-}
+  margin-bottom: var(--spacing-sm);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+}/* © 2025 Gaurav Kumar Yadav — All rights reserved.
+
+GitHub: https://github.com/the-gaurav-codes
+Instagram: https://www.instagram.com/the_gau_rav/
+Email: kumar.gaurav.yadav2007@gmail.com
+
+Unauthorized copying or use of this code is prohibited. */
 
 .footer-section a {
-    color: var(--text-secondary);
-    text-decoration: none;
-    font-size: var(--font-size-sm);
-    transition: color var(--transition-fast);
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-xs);
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: var(--font-size-sm);
+  transition: color var(--transition-fast);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
 }
 
 .footer-section a:hover {
-    color: var(--primary-color);
+  color: var(--primary-color);
 }
 
 .footer-section i {
-    width: 1rem;
-    font-size: var(--font-size-sm);
-    color: var(--text-secondary);
+  width: 1rem;
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
 }
 
 .footer-bottom {
-    border-top: 1px solid var(--border-color);
-    padding-top: var(--spacing-xl);
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-md);
-    align-items: center;
+  border-top: 1px solid var(--border-color);
+  padding-top: var(--spacing-xl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  align-items: center;
 }
+/* © 2025 Gaurav Kumar Yadav — All rights reserved.
 
+GitHub: https://github.com/the-gaurav-codes
+Instagram: https://www.instagram.com/the_gau_rav/
+Email: kumar.gaurav.yadav2007@gmail.com
+
+Unauthorized copying or use of this code is prohibited. */
 @media (min-width: 768px) {
-    .footer-bottom {
-        flex-direction: row;
-        justify-content: space-between;
-    }
+  .footer-bottom {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .footer-bottom-content {
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-md);
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  align-items: center;
 }
+/* © 2025 Gaurav Kumar Yadav — All rights reserved.
 
+GitHub: https://github.com/the-gaurav-codes
+Instagram: https://www.instagram.com/the_gau_rav/
+Email: kumar.gaurav.yadav2007@gmail.com
+
+Unauthorized copying or use of this code is prohibited. */
 @media (min-width: 768px) {
-    .footer-bottom-content {
-        flex-direction: row;
-        gap: var(--spacing-xl);
-    }
+  .footer-bottom-content {
+    flex-direction: row;
+    gap: var(--spacing-xl);
+  }
 }
 
 .footer-bottom p {
-    color: var(--text-secondary);
-    font-size: var(--font-size-sm);
-    margin: 0;
+  color: var(--text-secondary);
+  font-size: var(--font-size-sm);
+  margin: 0;
 }
+/* © 2025 Gaurav Kumar Yadav — All rights reserved.
 
+GitHub: https://github.com/the-gaurav-codes
+Instagram: https://www.instagram.com/the_gau_rav/
+Email: kumar.gaurav.yadav2007@gmail.com
+
+Unauthorized copying or use of this code is prohibited. */
 .footer-bottom-links {
-    display: flex;
-    gap: var(--spacing-md);
-    flex-wrap: wrap;
-    justify-content: center;
+  display: flex;
+  gap: var(--spacing-md);
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .footer-bottom-links a {
-    color: var(--text-secondary);
-    text-decoration: none;
-    font-size: var(--font-size-sm);
-    transition: color var(--transition-fast);
-}
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: var(--font-size-sm);
+  transition: color var(--transition-fast);
+}/* © 2025 Gaurav Kumar Yadav — All rights reserved.
+
+GitHub: https://github.com/the-gaurav-codes
+Instagram: https://www.instagram.com/the_gau_rav/
+Email: kumar.gaurav.yadav2007@gmail.com
+
+Unauthorized copying or use of this code is prohibited. */
 
 .footer-bottom-links a:hover {
-    color: var(--primary-color);
+  color: var(--primary-color);
 }
 
 .footer-tech-note {
-    text-align: center;
+  text-align: center;
 }
 
 .footer-tech-note p {
-    color: var(--text-secondary);
-    font-size: var(--font-size-xs);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: var(--spacing-xs);
-    margin: 0;
-}
+  color: var(--text-secondary);
+  font-size: var(--font-size-xs);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-xs);
+  margin: 0;
+}/* © 2025 Gaurav Kumar Yadav — All rights reserved.
+
+GitHub: https://github.com/the-gaurav-codes
+Instagram: https://www.instagram.com/the_gau_rav/
+Email: kumar.gaurav.yadav2007@gmail.com
+
+Unauthorized copying or use of this code is prohibited. */
 
 .text-red-500 {
-    color: #ef4444;
+  color: #ef4444;
 }
 
 /* Modal Styles */
 .modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.8);
-    backdrop-filter: blur(4px);
-    z-index: 2000;
-    display: none;
-    align-items: center;
-    justify-content: center;
-    padding: var(--spacing-lg);
-    overflow-y: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(4px);
+  z-index: 2000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-lg);
+  overflow-y: auto;
 }
 
 .modal.active {
-    display: flex;
+  display: flex;
 }
+/* © 2025 Gaurav Kumar Yadav — All rights reserved.
 
+GitHub: https://github.com/the-gaurav-codes
+Instagram: https://www.instagram.com/the_gau_rav/
+Email: kumar.gaurav.yadav2007@gmail.com
+
+Unauthorized copying or use of this code is prohibited. */
 .modal-content {
-    background: var(--bg-color);
-    border-radius: var(--radius-xl);
-    max-width: 800px;
-    width: 100%;
-    max-height: 90vh;
-    overflow-y: auto;
-    position: relative;
-    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+  background: var(--bg-color);
+  border-radius: var(--radius-xl);
+  max-width: 800px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
 }
 
 .modal-close {
-    position: absolute;
-    top: var(--spacing-lg);
-    right: var(--spacing-lg);
-    background: var(--bg-secondary);
-    border: 1px solid var(--border-color);
-    border-radius: 50%;
-    width: 3rem;
-    height: 3rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    z-index: 10;
-    transition: all var(--transition-fast);
+  position: absolute;
+  top: var(--spacing-lg);
+  right: var(--spacing-lg);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: all var(--transition-fast);
 }
+/* © 2025 Gaurav Kumar Yadav — All rights reserved.
 
+GitHub: https://github.com/the-gaurav-codes
+Instagram: https://www.instagram.com/the_gau_rav/
+Email: kumar.gaurav.yadav2007@gmail.com
+
+Unauthorized copying or use of this code is prohibited. */
 .modal-close:hover {
-    background: var(--primary-color);
-    color: white;
+  background: var(--primary-color);
+  color: white;
 }
 
 .modal-body {
-    padding: var(--spacing-3xl);
+  padding: var(--spacing-3xl);
 }
 
 .modal-header {
-    margin-bottom: var(--spacing-xl);
+  margin-bottom: var(--spacing-xl);
 }
 
 .modal-meta {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--spacing-md);
-    margin-bottom: var(--spacing-lg);
-    font-size: var(--font-size-sm);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+  font-size: var(--font-size-sm);
 }
+/* © 2025 Gaurav Kumar Yadav — All rights reserved.
 
+GitHub: https://github.com/the-gaurav-codes
+Instagram: https://www.instagram.com/the_gau_rav/
+Email: kumar.gaurav.yadav2007@gmail.com
+
+Unauthorized copying or use of this code is prohibited. */
 .modal-category {
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    color: white;
-    padding: var(--spacing-xs) var(--spacing-md);
-    border-radius: 50px;
-    font-weight: 600;
-    font-size: var(--font-size-xs);
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  color: white;
+  padding: var(--spacing-xs) var(--spacing-md);
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: var(--font-size-xs);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
 }
+/* © 2025 Gaurav Kumar Yadav — All rights reserved.
 
+GitHub: https://github.com/the-gaurav-codes
+Instagram: https://www.instagram.com/the_gau_rav/
+Email: kumar.gaurav.yadav2007@gmail.com
+
+Unauthorized copying or use of this code is prohibited. */
 .modal-date,
 .modal-read-time {
-    color: var(--text-secondary);
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-xs);
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
 }
 
 .modal-title {
-    font-size: var(--font-size-3xl);
-    font-weight: 700;
-    color: var(--text-color);
-    margin-bottom: var(--spacing-lg);
-    line-height: 1.2;
+  font-size: var(--font-size-3xl);
+  font-weight: 700;
+  color: var(--text-color);
+  margin-bottom: var(--spacing-lg);
+  line-height: 1.2;
 }
 
 .modal-author {
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-md);
-    padding: var(--spacing-md);
-    background: var(--bg-secondary);
-    border-radius: var(--radius-lg);
-    border: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  padding: var(--spacing-md);
+  background: var(--bg-secondary);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-color);
 }
+/* © 2025 Gaurav Kumar Yadav — All rights reserved.
 
+GitHub: https://github.com/the-gaurav-codes
+Instagram: https://www.instagram.com/the_gau_rav/
+Email: kumar.gaurav.yadav2007@gmail.com
+
+Unauthorized copying or use of this code is prohibited. */
 .author-avatar {
-    width: 3rem;
-    height: 3rem;
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: var(--font-size-lg);
+  width: 3rem;
+  height: 3rem;
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: var(--font-size-lg);
 }
 
 .author-info {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .author-name {
-    font-weight: 600;
-    color: var(--text-color);
-    font-size: var(--font-size-base);
+  font-weight: 600;
+  color: var(--text-color);
+  font-size: var(--font-size-base);
 }
+/* © 2025 Gaurav Kumar Yadav — All rights reserved.
 
+GitHub: https://github.com/the-gaurav-codes
+Instagram: https://www.instagram.com/the_gau_rav/
+Email: kumar.gaurav.yadav2007@gmail.com
+
+Unauthorized copying or use of this code is prohibited. */
 .author-title {
-    color: var(--text-secondary);
-    font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+  font-size: var(--font-size-sm);
 }
 
 .modal-content-body {
-    line-height: 1.8;
-    color: var(--text-secondary);
-    margin-bottom: var(--spacing-xl);
+  line-height: 1.8;
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-xl);
 }
 
 .modal-content-body h1,
@@ -1225,323 +1669,437 @@
 .modal-content-body h4,
 .modal-content-body h5,
 .modal-content-body h6 {
-    color: var(--text-color);
-    margin-top: var(--spacing-xl);
-    margin-bottom: var(--spacing-md);
+  color: var(--text-color);
+  margin-top: var(--spacing-xl);
+  margin-bottom: var(--spacing-md);
 }
 
 .modal-content-body p {
-    margin-bottom: var(--spacing-lg);
+  margin-bottom: var(--spacing-lg);
 }
+/* © 2025 Gaurav Kumar Yadav — All rights reserved.
 
+GitHub: https://github.com/the-gaurav-codes
+Instagram: https://www.instagram.com/the_gau_rav/
+Email: kumar.gaurav.yadav2007@gmail.com
+
+Unauthorized copying or use of this code is prohibited. */
 .modal-content-body code {
-    background: var(--bg-secondary);
-    padding: var(--spacing-xs) var(--spacing-sm);
-    border-radius: var(--radius-sm);
-    font-family: 'Monaco', 'Menlo', monospace;
-    font-size: 0.9em;
-    border: 1px solid var(--border-color);
+  background: var(--bg-secondary);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--radius-sm);
+  font-family: "Monaco", "Menlo", monospace;
+  font-size: 0.9em;
+  border: 1px solid var(--border-color);
 }
 
 .modal-footer {
-    border-top: 1px solid var(--border-color);
-    padding-top: var(--spacing-xl);
+  border-top: 1px solid var(--border-color);
+  padding-top: var(--spacing-xl);
 }
 
 .modal-tags {
-    margin-bottom: var(--spacing-xl);
+  margin-bottom: var(--spacing-xl);
 }
+/* © 2025 Gaurav Kumar Yadav — All rights reserved.
 
+GitHub: https://github.com/the-gaurav-codes
+Instagram: https://www.instagram.com/the_gau_rav/
+Email: kumar.gaurav.yadav2007@gmail.com
+
+Unauthorized copying or use of this code is prohibited. */
 .modal-tags h4 {
-    font-size: var(--font-size-base);
-    font-weight: 600;
-    color: var(--text-color);
-    margin-bottom: var(--spacing-md);
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: var(--spacing-md);
 }
 
 .tags-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--spacing-sm);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
 }
 
 .tag {
-    background: var(--bg-secondary);
-    color: var(--text-color);
-    padding: var(--spacing-xs) var(--spacing-sm);
-    border-radius: var(--radius-sm);
-    font-size: var(--font-size-sm);
-    border: 1px solid var(--border-color);
+  background: var(--bg-secondary);
+  color: var(--text-color);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-sm);
+  border: 1px solid var(--border-color);
 }
+/* © 2025 Gaurav Kumar Yadav — All rights reserved.
 
+GitHub: https://github.com/the-gaurav-codes
+Instagram: https://www.instagram.com/the_gau_rav/
+Email: kumar.gaurav.yadav2007@gmail.com
+
+Unauthorized copying or use of this code is prohibited. */
 .modal-share h4 {
-    font-size: var(--font-size-base);
-    font-weight: 600;
-    color: var(--text-color);
-    margin-bottom: var(--spacing-md);
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: var(--spacing-md);
 }
 
 .share-buttons {
-    display: flex;
-    gap: var(--spacing-sm);
+  display: flex;
+  gap: var(--spacing-sm);
 }
+/* © 2025 Gaurav Kumar Yadav — All rights reserved.
 
+GitHub: https://github.com/the-gaurav-codes
+Instagram: https://www.instagram.com/the_gau_rav/
+Email: kumar.gaurav.yadav2007@gmail.com
+
+Unauthorized copying or use of this code is prohibited. */
 .share-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 2.5rem;
-    height: 2.5rem;
-    border-radius: 50%;
-    border: 1px solid var(--border-color);
-    background: var(--bg-secondary);
-    color: var(--text-secondary);
-    cursor: pointer;
-    transition: all var(--transition-fast);
-}
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  border: 1px solid var(--border-color);
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}/* © 2025 Gaurav Kumar Yadav — All rights reserved.
+
+GitHub: https://github.com/the-gaurav-codes
+Instagram: https://www.instagram.com/the_gau_rav/
+Email: kumar.gaurav.yadav2007@gmail.com
+
+Unauthorized copying or use of this code is prohibited. */
 
 .share-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .share-twitter:hover {
-    background: #1da1f2;
-    color: white;
-    border-color: #1da1f2;
+  background: #1da1f2;
+  color: white;
+  border-color: #1da1f2;
 }
+/* © 2025 Gaurav Kumar Yadav — All rights reserved.
 
+GitHub: https://github.com/the-gaurav-codes
+Instagram: https://www.instagram.com/the_gau_rav/
+Email: kumar.gaurav.yadav2007@gmail.com
+
+Unauthorized copying or use of this code is prohibited. */
 .share-linkedin:hover {
-    background: #0077b5;
-    color: white;
-    border-color: #0077b5;
+  background: #0077b5;
+  color: white;
+  border-color: #0077b5;
 }
 
 .share-copy:hover {
-    background: var(--primary-color);
-    color: white;
-    border-color: var(--primary-color);
+  background: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color);
 }
 
 /* Back to Top Button */
 .back-to-top {
-    position: fixed;
-    bottom: var(--spacing-xl);
-    right: var(--spacing-xl);
-    background: var(--primary-color);
-    color: white;
-    border: none;
-    border-radius: 50%;
-    width: 3rem;
-    height: 3rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: all var(--transition-normal);
-    opacity: 0;
-    visibility: hidden;
-    z-index: 1000;
-    box-shadow: 0 4px 15px rgba(30, 58, 138, 0.25);
+  position: fixed;
+  bottom: var(--spacing-xl);
+  right: var(--spacing-xl);
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+  box-shadow: 0 4px 15px rgba(30, 58, 138, 0.25);
 }
+/* © 2025 Gaurav Kumar Yadav — All rights reserved.
 
+GitHub: https://github.com/the-gaurav-codes
+Instagram: https://www.instagram.com/the_gau_rav/
+Email: kumar.gaurav.yadav2007@gmail.com
+
+Unauthorized copying or use of this code is prohibited. */
 .back-to-top.visible {
-    opacity: 1;
-    visibility: visible;
+  opacity: 1;
+  visibility: visible;
 }
 
 .back-to-top:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(30, 58, 138, 0.35);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(30, 58, 138, 0.35);
 }
+/* © 2025 Gaurav Kumar Yadav — All rights reserved.
 
+GitHub: https://github.com/the-gaurav-codes
+Instagram: https://www.instagram.com/the_gau_rav/
+Email: kumar.gaurav.yadav2007@gmail.com
+
+Unauthorized copying or use of this code is prohibited. */
 /* No Results Message */
 .no-results {
-    text-align: center;
-    padding: var(--spacing-3xl);
-    color: var(--text-secondary);
-    grid-column: 1 / -1;
-    background: var(--bg-secondary);
-    border-radius: var(--radius-lg);
-    border: 1px solid var(--border-color);
+  text-align: center;
+  padding: var(--spacing-3xl);
+  color: var(--text-secondary);
+  grid-column: 1 / -1;
+  background: var(--bg-secondary);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-color);
 }
 
 .no-results i {
-    font-size: var(--font-size-4xl);
-    margin-bottom: var(--spacing-lg);
-    opacity: 0.3;
-    color: var(--primary-color);
+  font-size: var(--font-size-4xl);
+  margin-bottom: var(--spacing-lg);
+  opacity: 0.3;
+  color: var(--primary-color);
 }
 
 .no-results h3 {
-    font-size: var(--font-size-xl);
-    font-weight: 600;
-    color: var(--text-color);
-    margin-bottom: var(--spacing-sm);
+  font-size: var(--font-size-xl);
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: var(--spacing-sm);
 }
 
 /* Active nav link enhancement */
 .nav-link.active {
-    color: var(--primary-color);
-    position: relative;
+  color: var(--primary-color);
+  position: relative;
 }
+/* © 2025 Gaurav Kumar Yadav — All rights reserved.
 
+GitHub: https://github.com/the-gaurav-codes
+Instagram: https://www.instagram.com/the_gau_rav/
+Email: kumar.gaurav.yadav2007@gmail.com
+
+Unauthorized copying or use of this code is prohibited. */
 .nav-link.active::after {
-    content: '';
-    position: absolute;
-    bottom: -8px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 6px;
-    height: 6px;
-    background: var(--primary-color);
-    border-radius: 50%;
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 6px;
+  height: 6px;
+  background: var(--primary-color);
+  border-radius: 50%;
 }
 
 /* RESPONSIVE FIXES */
 @media (max-width: 768px) {
-    .blog-hero {
-        padding: 6rem 0 4rem 0;
-        min-height: auto;
-    }
+  .blog-hero {
+    padding: 6rem 0 4rem 0;
+    min-height: auto;
+  }
+/* © 2025 Gaurav Kumar Yadav — All rights reserved.
 
-    .hero-title {
-        font-size: 2.5rem;
-    }
+GitHub: https://github.com/the-gaurav-codes
+Instagram: https://www.instagram.com/the_gau_rav/
+Email: kumar.gaurav.yadav2007@gmail.com
 
-    .hero-features {
-        gap: var(--spacing-lg);
-        flex-direction: column;
-        align-items: center;
-    }
+Unauthorized copying or use of this code is prohibited. */
+  .hero-title {
+    font-size: 2.5rem;
+  }
 
-    .blog-stats {
-        grid-template-columns: repeat(2, 1fr);
-        gap: var(--spacing-lg);
-    }
+  .hero-features {
+    gap: var(--spacing-lg);
+    flex-direction: column;
+    align-items: center;
+  }
 
-    .blog-grid {
-        grid-template-columns: 1fr;
-        gap: var(--spacing-xl);
-    }
+  .blog-stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-lg);
+  }
 
-    .newsletter-form .form-group {
-        flex-direction: column;
-        gap: var(--spacing-md);
-    }
+  .blog-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-xl);
+  }
 
-    .input-wrapper {
-        min-width: auto;
-    }
+  .newsletter-form .form-group {
+    flex-direction: column;
+    gap: var(--spacing-md);
+  }
 
-    .newsletter {
-        padding: var(--spacing-2xl);
-    }
+  .input-wrapper {
+    min-width: auto;
+  }
+/* © 2025 Gaurav Kumar Yadav — All rights reserved.
 
-    .blog-controls {
-        gap: var(--spacing-lg);
-    }
+GitHub: https://github.com/the-gaurav-codes
+Instagram: https://www.instagram.com/the_gau_rav/
+Email: kumar.gaurav.yadav2007@gmail.com
 
-    .filter-section {
-        align-items: stretch;
-    }
+Unauthorized copying or use of this code is prohibited. */
+  .newsletter {
+    padding: var(--spacing-2xl);
+  }
 
-    .filter-tags {
-        justify-content: flex-start;
-    }
+  .blog-controls {
+    gap: var(--spacing-lg);
+  }
 
-    .modal-body {
-        padding: var(--spacing-xl);
-    }
+  .filter-section {
+    align-items: stretch;
+  }
+/* © 2025 Gaurav Kumar Yadav — All rights reserved.
 
-    .modal-title {
-        font-size: var(--font-size-2xl);
-    }
+GitHub: https://github.com/the-gaurav-codes
+Instagram: https://www.instagram.com/the_gau_rav/
+Email: kumar.gaurav.yadav2007@gmail.com
 
-    .footer-main {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
+Unauthorized copying or use of this code is prohibited. */
+  .filter-tags {
+    justify-content: flex-start;
+  }
 
-    .footer-links {
-        grid-template-columns: repeat(2, 1fr);
-        gap: var(--spacing-xl);
-    }
+  .modal-body {
+    padding: var(--spacing-xl);
+  }
+
+  .modal-title {
+    font-size: var(--font-size-2xl);
+  }
+/* © 2025 Gaurav Kumar Yadav — All rights reserved.
+
+GitHub: https://github.com/the-gaurav-codes
+Instagram: https://www.instagram.com/the_gau_rav/
+Email: kumar.gaurav.yadav2007@gmail.com
+
+Unauthorized copying or use of this code is prohibited. */
+  .footer-main {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footer-links {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-xl);
+  }
 }
+/* © 2025 Gaurav Kumar Yadav — All rights reserved.
 
+GitHub: https://github.com/the-gaurav-codes
+Instagram: https://www.instagram.com/the_gau_rav/
+Email: kumar.gaurav.yadav2007@gmail.com
+
+Unauthorized copying or use of this code is prohibited. */
 @media (max-width: 480px) {
-    .hero-features {
-        flex-direction: column;
-        align-items: center;
-        gap: var(--spacing-md);
-    }
+  .hero-features {
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-md);
+  }
 
-    .blog-stats {
-        grid-template-columns: 1fr;
-    }
+  .blog-stats {
+    grid-template-columns: 1fr;
+  }
+/* © 2025 Gaurav Kumar Yadav — All rights reserved.
 
-    .newsletter-form .form-group {
-        gap: var(--spacing-sm);
-    }
+GitHub: https://github.com/the-gaurav-codes
+Instagram: https://www.instagram.com/the_gau_rav/
+Email: kumar.gaurav.yadav2007@gmail.com
 
-    .footer-links {
-        grid-template-columns: 1fr;
-        gap: var(--spacing-lg);
-    }
+Unauthorized copying or use of this code is prohibited. */
+  .newsletter-form .form-group {
+    gap: var(--spacing-sm);
+  }
 
-    .footer-bottom {
-        flex-direction: column;
-        text-align: center;
-    }
+  .footer-links {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
 
-    .footer-bottom-links {
-        justify-content: center;
-    }
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+/* © 2025 Gaurav Kumar Yadav — All rights reserved.
+
+GitHub: https://github.com/the-gaurav-codes
+Instagram: https://www.instagram.com/the_gau_rav/
+Email: kumar.gaurav.yadav2007@gmail.com
+
+Unauthorized copying or use of this code is prohibited. */
+  .footer-bottom-links {
+    justify-content: center;
+  }
 }
 
 /* Print Styles */
 @media print {
-    .nav,
-    .loading-overlay,
-    .hero-cta,
-    .newsletter-section,
-    .modal,
-    .back-to-top {
-        display: none !important;
-    }
+  .nav,
+  .loading-overlay,
+  .hero-cta,
+  .newsletter-section,
+  .modal,
+  .back-to-top {
+    display: none !important;
+  }
 
-    .blog-hero {
-        padding: 2rem 0;
-        background: none !important;
-    }
+  .blog-hero {
+    padding: 2rem 0;
+    background: none !important;
+  }
+/* © 2025 Gaurav Kumar Yadav — All rights reserved.
 
-    .blog-card {
-        page-break-inside: avoid;
-        box-shadow: none;
-        border: 1px solid #ccc;
-    }
+GitHub: https://github.com/the-gaurav-codes
+Instagram: https://www.instagram.com/the_gau_rav/
+Email: kumar.gaurav.yadav2007@gmail.com
 
-    .footer {
-        border-top: 2px solid #000;
-        background: none !important;
-    }
+Unauthorized copying or use of this code is prohibited. */
+  .blog-card {
+    page-break-inside: avoid;
+    box-shadow: none;
+    border: 1px solid #ccc;
+  }
+
+  .footer {
+    border-top: 2px solid #000;
+    background: none !important;
+  }
 }
+/* © 2025 Gaurav Kumar Yadav — All rights reserved.
 
+GitHub: https://github.com/the-gaurav-codes
+Instagram: https://www.instagram.com/the_gau_rav/
+Email: kumar.gaurav.yadav2007@gmail.com
+
+Unauthorized copying or use of this code is prohibited. */
 /* Accessibility */
 @media (prefers-reduced-motion: reduce) {
-    * {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-    }
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 
-    .particle {
-        animation: none;
-    }
+  .particle {
+    animation: none;
+  }
+/* © 2025 Gaurav Kumar Yadav — All rights reserved.
 
-    .spinner-ring {
-        animation: none;
-    }
+GitHub: https://github.com/the-gaurav-codes
+Instagram: https://www.instagram.com/the_gau_rav/
+Email: kumar.gaurav.yadav2007@gmail.com
+
+Unauthorized copying or use of this code is prohibited. */
+  .spinner-ring {
+    animation: none;
+  }
 }
 
 /* Focus styles */
@@ -1549,22 +2107,35 @@ button:focus-visible,
 a:focus-visible,
 input:focus-visible,
 textarea:focus-visible {
-    outline: 2px solid var(--primary-color);
-    outline-offset: 2px;
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
 }
+/* © 2025 Gaurav Kumar Yadav — All rights reserved.
 
+GitHub: https://github.com/the-gaurav-codes
+Instagram: https://www.instagram.com/the_gau_rav/
+Email: kumar.gaurav.yadav2007@gmail.com
+
+Unauthorized copying or use of this code is prohibited. */
 /* High contrast mode */
 @media (prefers-contrast: high) {
-    .blog-card {
-        border: 2px solid var(--border-color);
-    }
+  .blog-card {
+    border: 2px solid var(--border-color);
+  }
 
-    .filter-tag {
-        border: 2px solid var(--border-color);
-    }
+  .filter-tag {
+    border: 2px solid var(--border-color);
+  }
 
-    .btn-cta,
-    .btn-subscribe {
-        border: 2px solid currentColor;
-    }
+  .btn-cta,
+  .btn-subscribe {
+    border: 2px solid currentColor;
+  }
 }
+/* © 2025 Gaurav Kumar Yadav — All rights reserved.
+
+GitHub: https://github.com/the-gaurav-codes
+Instagram: https://www.instagram.com/the_gau_rav/
+Email: kumar.gaurav.yadav2007@gmail.com
+
+Unauthorized copying or use of this code is prohibited. */
