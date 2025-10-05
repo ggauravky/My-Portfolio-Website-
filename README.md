@@ -1,96 +1,119 @@
-# My Portfolio & Blog
+# My Portfolio Website & Blog
 
-A personal portfolio website designed to showcase my skills, projects, and experience in web development, data science, and AI/ML. It features a clean, responsive, single-page layout with a separate, fully-functional blog.
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)  
+[Live Site](https://gauravky.vercel.app/)
 
-## Features
+---
 
--   **Fully Responsive**: Adapts seamlessly to all screen sizes, from mobile to desktop.
--   **Light/Dark Theme**: A user-friendly theme switcher that saves your preference in local storage.
--   **Dynamic Content**: Skills, projects, and blog posts are loaded from external `JSON` files, making content updates simple and quick without touching the HTML.
--   **Interactive Projects Section**: Includes live search and tag-based filtering to easily navigate through projects.
--   **Detailed Project Modals**: Click on any project to view more details, including descriptions, tech stack, and links, in an accessible modal window.
--   **Functional Blog**: A complete blog with a dedicated page, search, and category filters, also powered by a `JSON` file.
--   **Smooth Animations**: Subtle scroll-based animations using the Intersection Observer API for a modern user experience.
--   **Contact Form**: Integrated with Formspree for a hassle-free way to get in touch.
+## 🚀 Introduction
 
-## Tech Stack
+Welcome to my personal portfolio and blog website! This site is built to showcase my skills, projects, and blog writings in web development, data science, and AI/ML. It has a clean, responsive design with dynamic content loading via JSON files, and supports features like theme switching, project filtering, and blog search.
 
--   **Frontend**: HTML5, CSS3 (Flexbox & Grid), Vanilla JavaScript (ES6+)
--   **Content Management**: `JSON` files for skills, projects, and blog posts.
--   **Deployment**: Ready to be deployed on any static hosting platform (Vercel, Netlify, GitHub Pages).
+---
 
-## Project Structure
+## 🧰 Tech Stack & Features
 
-```
+- **Frontend:** HTML5, CSS3 (Flexbox & Grid), Vanilla JavaScript (ES6+)  
+- **Content Management:** JSON files (`projects.json`, `skills.json`, `blog.json`)  
+- **Deployment:** Static hosting (e.g. Vercel)  
+- **Key Features:**
+  - Fully responsive layout for mobile / desktop / tablets  
+  - Light / dark theme toggling (persisted in browser)  
+  - Dynamic loading of skills, projects, and blog posts  
+  - Project filtering and modals with detailed view  
+  - Blog with search and category filtering  
+  - Contact form (via Formspree)  
+  - Smooth scroll animations using Intersection Observer  
+
+---
+
+## 📁 Project Structure
+
+```text
 .
-├── index.html          # The main portfolio page
-├── blog.html           # The blog page
-├── projects.html       # A placeholder page for all projects
-├── style.css           # Main stylesheet for the portfolio
-├── script.js           # Main JavaScript for the portfolio
-├── blog.css            # Stylesheet for the blog page
-├── blog.js             # JavaScript for the blog page
+├── index.html
+├── blog.html
+├── projects.html
+├── style.css
+├── script.js
+├── blog.css
+├── blog.js
 ├── data/
-│   ├── projects.json   # Data for the project showcase
-│   └── skills.json     # Data for the skills section
-├── blog.json           # Data for the blog posts
-├── assets/             # Images, logos, and other static files
-└── README.md
+│   ├── projects.json
+│   └── skills.json
+├── blog.json
+├── assets/
+│   └── (images, logos, etc.)
+└── LICENSE
 ```
 
-## Getting Started
+---
 
-To get a local copy up and running, follow these simple steps.
+## 💼 Portfolio Projects
 
-### Prerequisites
+Here are some example projects showcased in the portfolio (these are defined in `data/projects.json`):
 
-You need a local server to run the project due to the use of the `fetch` API to load JSON data.
+| Project Name | Description | Technologies | Live / Repo Link |
+|--------------|-------------|--------------|------------------|
+| Project A | A web app to … | React, Node.js, MongoDB | [Live / Repo]() |
+| Project B | Data analysis dashboard | Python, Pandas, Flask | [Live / Repo]() |
+| Project C | ML model deployment | TensorFlow, FastAPI | [Live / Repo]() |
 
-### Installation & Setup
+> ⚠️ Replace above with your actual project names, descriptions, tech stack, and links in `projects.json` and this README.
 
-1.  **Clone the repository:**
-    ```bash
-    git clone [https://github.com/your-username/my-portfolio-website.git](https://github.com/your-username/my-portfolio-website.git)
-    cd my-portfolio-website
-    ```
-2.  **Run a local server.** Here are a few options:
-    -   **Using Python:**
-        ```bash
-        python -m http.server
-        ```
-    -   **Using Node.js (with `http-server` package):**
-        ```bash
-        npx http-server
-        ```
-    -   **Using the VS Code Live Server extension.**
+---
 
-3.  Open your browser and navigate to `http://localhost:8000` (or the address provided by your local server).
+## 🎨 Logos & Branding
 
-## Customization Guide
+You can include logos or icons in your README by putting image files into `assets/` and referencing them here. For example:
 
-1.  **Update Personal Information (`index.html`):**
-    -   Change the page `<title>` and meta tags.
-    -   Edit the "About Me" section with your own bio.
-    -   Update social media `href` attributes in the hero and contact sections.
-    -   Modify the "Experience" section with your work history.
-    -   Replace the `action` URL in the `<form>` tag with your own Formspree endpoint.
+```md
+![My Logo](assets/logo.png)
+```
 
-2.  **Update Skills (`data/skills.json`):**
-    -   Edit the skill categories and the list of items under each to match your skillset.
+You can also add technology logos (e.g. HTML5, CSS3, JavaScript) using shields or small icons.
 
-3.  **Update Projects (`data/projects.json`):**
-    -   Add your project objects to the `projects` array.
-    -   Set the `id` of your top project as the value for the `featured` key.
-    -   Make sure all image paths in the `images` array are correct.
+---
 
-4.  **Update Blog Posts (`blog.json`):**
-    -   Add new post objects to the `posts` array.
-    -   Ensure the image paths are correct.
+## 📥 How to Download & Run Locally
 
-5.  **Replace Images (`assets/`):**
-    -   Add your own images (profile picture, project screenshots, etc.) to the `assets` folder.
-    -   Update the corresponding paths in the `.html` and `.json` files.
+1. Clone this repository:
 
-## License
+   ```sh
+   git clone https://github.com/ggauravky/My-Portfolio-Website-.git
+   cd My-Portfolio-Website-
+   ```
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
+2. Serve via a local HTTP server (needed because the site uses `fetch` to load JSON):
+
+   - **Python**:
+     ```sh
+     python -m http.server 8000
+     ```
+   - **Node.js (http-server)**:
+     ```sh
+     npx http-server
+     ```
+   - Or use **VS Code Live Server** plugin.
+
+3. Open your browser and go to `http://localhost:8000` (or the port used by your server).
+
+4. Edit content:
+   - Update `data/projects.json`, `data/skills.json`, `blog.json`
+   - Replace images in `assets/`
+   - Change text in HTML, meta tags, and contact form `action` URL as needed
+
+---
+
+## 📦 License (MIT)
+
+This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for full details.
+
+---
+
+## ℹ️ Notes & Credits
+
+- Theme toggling is saved in local storage  
+- JSON‑driven content allows for easy updates without editing HTML  
+- Animations via Intersection Observer  
+- Contact form is integrated using Formspree (or any similar service)  
