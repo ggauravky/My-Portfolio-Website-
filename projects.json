@@ -39,7 +39,7 @@
         "HTML5",
         "CSS3",
         "JavaScript",
-        "CSS Grid",
+        "CSS3",
         "Responsive Design"
       ],
       "category": "Frontend",
@@ -109,9 +109,9 @@
         "CSS3",
         "JavaScript (ES6+)",
         "Local Storage API",
-        "CSS Grid",
+        "CSS3",
         "Flexbox",
-        "CSS Custom Properties",
+        "CSS3",
         "Responsive Design"
       ],
       "category": "Frontend",
@@ -292,8 +292,7 @@
         "Performance Optimization",
         "Accessibility Tools"
       ],
-      "category": 
-        "Food Delivery",
+      "category": "Food Delivery",
       "difficulty": "intermediate",
       "status": "completed",
       "duration": "5-6 days",
@@ -316,6 +315,40 @@
         "Accessibility features for inclusive design",
         "Optimized performance for fast loading",
         "Seamless adaptability across devices and browsers"
+      ]
+    },
+{
+      "id": "10",
+      "title": "Python Grocery Store Application",
+      "description": "A full-stack grocery store management system built using Python, Flask, and MySQL with frontend integration.",
+      "longDescription": "This project is a complete grocery store application demonstrating full-stack development using Python and Flask for the backend, MySQL for database management, and HTML/CSS/JavaScript for the frontend. It follows a three-tier architecture consisting of database, business logic, and presentation layers. Features include product management, customer orders, stock updates, and interactive user interfaces. The playlist provides a step-by-step walkthrough of database design, backend logic, and frontend integration, making it an excellent learning resource for practical full-stack development.",
+      "tech": [
+        "Python",
+        "Flask",
+        "MySQL",
+        "HTML5",
+        "CSS3",
+        "JavaScript",
+        "3-tier Architecture"
+      ],
+      "category": "E-Commerce",
+      "difficulty": "intermediate",
+      "status": "in-progress",
+      "duration": "working..",
+      "github": null,
+      "live": null,
+      "images": [
+        "assets/grocery_overview.png"
+      ],
+      "features": [
+        "Database schema design for products, orders, and customers",
+        "Product management (add, update, delete, list)",
+        "Customer order handling with stock updates",
+        "Frontend integration using HTML, CSS, and JavaScript",
+        "Backend APIs built with Flask",
+        "MySQL database connectivity with Python",
+        "3-tier project architecture (UI, business logic, DB)",
+        "Step-by-step educational playlist for full-stack learning"
       ]
     }
   ]
