@@ -49,26 +49,12 @@ Welcome to my personal portfolio and blog website! This site is built to showcas
 
 ---
 
-## 💼 Portfolio Projects
-
-Here are some example projects showcased in the portfolio (these are defined in `data/projects.json`):
-
-| Project Name | Description | Technologies | Live / Repo Link |
-|--------------|-------------|--------------|------------------|
-| Project A | A web app to … | React, Node.js, MongoDB | [Live / Repo]() |
-| Project B | Data analysis dashboard | Python, Pandas, Flask | [Live / Repo]() |
-| Project C | ML model deployment | TensorFlow, FastAPI | [Live / Repo]() |
-
-> ⚠️ Replace above with your actual project names, descriptions, tech stack, and links in `projects.json` and this README.
-
----
-
 ## 🎨 Logos & Branding
 
 You can include logos or icons in your README by putting image files into `assets/` and referencing them here. For example:
 
 ```md
-![My Logo](assets/logo.png)
+![My Logo](assets/logo.jpg)
 ```
 
 You can also add technology logos (e.g. HTML5, CSS3, JavaScript) using shields or small icons.
