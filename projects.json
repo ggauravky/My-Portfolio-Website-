@@ -333,12 +333,17 @@
       ],
       "category": "E-Commerce",
       "difficulty": "intermediate",
-      "status": "in-progress",
-      "duration": "working..",
-      "github": null,
-      "live": null,
+      "status": "completed",
+      "duration": "3 weeks",
+      "github": "https://github.com/ggauravky/My-all-Python-Projects-/tree/main/004%20Grocery%20Store%20Application",
+      "live": "https://gauravky.pythonanywhere.com/static/index.html",
       "images": [
-        "assets/grocery_overview.png"
+        "assets/progro1.png",
+        "assets/progro2.png",
+        "assets/progro3.png",
+        "assets/progro4.png",
+        "assets/progro5.png",
+        "assets/progro6.png"
       ],
       "features": [
         "Database schema design for products, orders, and customers",
